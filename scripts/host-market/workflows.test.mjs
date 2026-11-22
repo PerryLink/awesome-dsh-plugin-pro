@@ -102,3 +102,14 @@ test('the npmmirror sync ping uses the sync-task route and never fails silently'
   assert.doesNotMatch(runs, /npmmirror[^\n]*\|\| true/, 'a failed sync must surface as a warning')
   assert.match(runs, /::warning::npmmirror sync request failed/)
 })
+
+test('host index generation step times out before its job so downstream feed publish is not skipped as cancelled', () => {
+  const refresh = workflows.get('refresh-host-market.yml').jobs.refresh
+  const genStep = refresh.steps.find((step) => step.name === 'Generate and validate without write credentials')
+  assert.ok(genStep, 'generation step must exist')
+  assert.equal(typeof genStep['timeout-minutes'], 'number', 'generation step must declare timeout-minutes')
+  assert.ok(
+    genStep['timeout-minutes'] < refresh['timeout-minutes'],
+    'step timeout must sit strictly below the job timeout so a timeout concludes as failure rather than cancelled',
+  )
+})

@@ -50,3 +50,40 @@ test('optional npm download reads retain zero, omit failed counts and skip Git a
     await new Promise(resolve => server.close(resolve))
   }
 })
+
+test('npm download reads retry HTTP 429 and degrade gracefully once retries are exhausted', async () => {
+  const attempts = new Map()
+  const fetcher = async (url) => {
+    const name = decodeURIComponent(new URL(url).pathname.split('/').at(-1))
+    const count = (attempts.get(name) ?? 0) + 1
+    attempts.set(name, count)
+    if (name === '@owner/flaky' && count === 1) {
+      return new Response('', { status: 429, headers: { 'retry-after': '0' } })
+    }
+    if (name === '@owner/throttled') {
+      return new Response('', { status: 429, headers: { 'retry-after': '0' } })
+    }
+    return new Response(JSON.stringify({
+      package: name, downloads: 42, start: '2026-11-07', end: '2026-11-13',
+    }), { status: 200, headers: { 'content-type': 'application/json' } })
+  }
+  const plugin = (name) => ({
+    name,
+    metadata: { sortKeys: {} },
+    versions: [{ version: '1.0.0', publishTimestamp: 1, source: { type: 'npm', registry: 'https://registry.npmjs.org/' } }],
+  })
+  const index = {
+    format: 1,
+    title: 'Test',
+    metadata: { sortKeys: {} },
+    plugins: [plugin('@owner/flaky'), plugin('@owner/throttled')],
+  }
+  const result = await applyDownloadMetrics(index, fetcher, { intervalMs: 0, maxRateLimitRetries: 2 })
+  assert.equal(attempts.get('@owner/flaky'), 2)
+  assert.equal(attempts.get('@owner/throttled'), 3)
+  assert.equal(index.plugins[0].metadata.sortKeys.npm_weekly_downloads, 42)
+  assert.equal(index.plugins[1].metadata.sortKeys.npm_weekly_downloads, undefined)
+  assert.equal(result.evidence.length, 1)
+  assert.equal(result.diagnostics.length, 1)
+  assert.match(result.diagnostics[0].reason, /HTTP 429/)
+})

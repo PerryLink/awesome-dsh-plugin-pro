@@ -1,7 +1,23 @@
 /** Optional public npm usage counts; failures omit the metric without rejecting an installable plugin. */
 import { setTimeout as delay } from 'node:timers/promises'
 
-export async function applyDownloadMetrics(index, fetcher = fetch, { intervalMs = 1500 } = {}) {
+function retryAfterMs(response, attempt, intervalMs) {
+  const header = response.headers?.get?.('retry-after')?.trim()
+  if (header) {
+    const seconds = Number(header)
+    if (Number.isFinite(seconds) && seconds >= 0) return Math.min(30_000, Math.ceil(seconds * 1000))
+    const dateMs = Date.parse(header) - Date.now()
+    if (Number.isFinite(dateMs) && dateMs >= 0) return Math.min(30_000, dateMs)
+  }
+  if (intervalMs <= 0) return 0
+  return Math.min(30_000, Math.max(intervalMs * 2, 2000) * attempt)
+}
+
+export async function applyDownloadMetrics(
+  index,
+  fetcher = fetch,
+  { intervalMs = 800, maxRateLimitRetries = 2 } = {},
+) {
   const plugins = index.plugins.filter(plugin => plugin.versions.some(version =>
     version.source.type === 'npm' && version.source.registry === 'https://registry.npmjs.org/'))
   const unscoped = plugins.filter(plugin => !plugin.name.startsWith('@'))
@@ -12,13 +28,21 @@ export async function applyDownloadMetrics(index, fetcher = fetch, { intervalMs 
   const diagnostics = [], evidence = []
   for (const plugin of index.plugins) delete plugin.metadata.sortKeys.npm_weekly_downloads
   for (const [position, batch] of batches.entries()) {
-    if (position > 0) await delay(intervalMs)
+    if (position > 0 && intervalMs > 0) await delay(intervalMs)
     let payload
     try {
       const names = batch.map(plugin => encodeURIComponent(plugin.name)).join(',')
-      const response = await fetcher(`https://api.npmjs.org/downloads/point/last-week/${names}`, {
-        signal: AbortSignal.timeout(15000), redirect: 'error', headers: { accept: 'application/json' },
-      })
+      const url = `https://api.npmjs.org/downloads/point/last-week/${names}`
+      let response
+      for (let attempt = 0; attempt <= maxRateLimitRetries; attempt++) {
+        response = await fetcher(url, {
+          signal: AbortSignal.timeout(15000), redirect: 'error', headers: { accept: 'application/json' },
+        })
+        if (response.status !== 429 || attempt === maxRateLimitRetries) break
+        const waitMs = retryAfterMs(response, attempt + 1, intervalMs)
+        await response.body?.cancel()
+        if (waitMs > 0) await delay(waitMs)
+      }
       if (!response.ok) {
         await response.body?.cancel()
         throw Error(`HTTP ${response.status}`)

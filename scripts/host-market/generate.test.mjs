@@ -134,3 +134,114 @@ test('latest feeds keep verified host fallbacks while excluding private and depr
     assert.equal(excluded.diagnostics[0].code, code)
   }
 })
+
+test('budget-driven wave verification verifies featured picks, respects star boundaries, preserves npm-over-Git precedence, and skips low-star tail', async () => {
+  const npmFetched = []
+  const gitFetched = []
+  const row = (full_name, stargazers_count, install) => ({
+    full_name,
+    stargazers_count,
+    packages: { mode: 'command', targets: [{ install }] },
+  })
+  const makeBigPackument = (name) => {
+    const doc = packument(name)
+    doc.versions['1.0.0'].description = `${name} ${'x'.repeat(240)}`
+    return doc
+  }
+  const waveFeed = {
+    schema_version: 2,
+    entries: [
+      row('owner/high-1', 100, 'high-1'),
+      row('owner/high-git', 100, 'https://github.com/owner/high-git#main'),
+      row('owner/mid-a', 50, 'mid-a'),
+      row('owner/mid-b', 50, 'mid-b'),
+      row('owner/low-npm', 2, 'low-npm'),
+      row('owner/low-shared', 1, 'shared-pkg'),
+      row('owner/low-git', 0, 'https://github.com/owner/low-git#main'),
+      row('owner/featured-pick', 0, 'featured-pick'),
+    ],
+    featured: { entries: [] },
+    featuredRepositories: ['owner/featured-pick'],
+  }
+  const result = await generateIndex(
+    waveFeed,
+    async (name) => {
+      npmFetched.push(name)
+      return makeBigPackument(name)
+    },
+    async (target) => {
+      gitFetched.push(target.url)
+      const pkgName = target.url.includes('high-git') ? 'shared-pkg' : 'low-git-pkg'
+      const plugin = projectPackage(pkgName, ['latest'], makeBigPackument(pkgName)).plugin
+      return { plugins: [plugin], evidence: [], diagnostics: [] }
+    },
+    undefined,
+    { targetBytes: 900, budgetHeadroomBytes: 0, waveTargetSize: 2 },
+  )
+  const names = result.index.plugins.map((p) => p.name)
+  assert.ok(names.includes('featured-pick'), 'low-star featured pick is verified in Wave 0')
+  assert.ok(names.includes('high-1'), 'high-star npm survives')
+  assert.ok(names.includes('shared-pkg'), 'same-named npm preempts high-star Git target')
+  assert.equal(
+    result.index.plugins.find((p) => p.name === 'shared-pkg').versions[0].source.type,
+    'npm',
+    'npm wins over Git even when the npm candidate came from a lower-star wave',
+  )
+  assert.ok(
+    result.diagnostics.some((d) => d.code === 'duplicate_package' && d.name === 'shared-pkg'),
+    'preempted Git duplicate is recorded in diagnostics',
+  )
+  assert.ok(!npmFetched.includes('low-npm'), 'low-star npm tail below budget cutoff is not fetched')
+  assert.ok(!gitFetched.includes('https://github.com/owner/low-git'), 'low-star Git tail below budget cutoff is not fetched')
+  assert.ok(result.skippedBelowBudgetCutoff >= 2)
+  assert.equal(result.candidates, 8)
+  assert.equal(result.npmCandidates, 6)
+  assert.equal(result.gitCandidates, 2)
+  assert.equal(result.verifiedNpmCandidates + result.verifiedGitCandidates, result.verifiedCandidates)
+  assert.equal(result.verifiedCandidates + result.skippedBelowBudgetCutoff, result.candidates)
+  assert.equal(typeof result.verificationCutoffStars, 'number')
+})
+
+test('low-star preempted npm package does not inflate committed bytes and skip higher-star waves', async () => {
+  const npmFetched = []
+  const row = (full_name, stargazers_count, install) => ({
+    full_name,
+    stargazers_count,
+    packages: { mode: 'command', targets: [{ install }] },
+  })
+  const makeSizedPackument = (name, pad = 200) => {
+    const doc = packument(name)
+    doc.versions['1.0.0'].description = `${name} ${'x'.repeat(pad)}`
+    return doc
+  }
+  const feedWithPreemption = {
+    schema_version: 2,
+    entries: [
+      row('owner/top-git', 100, 'https://github.com/owner/top-git#main'),
+      row('owner/mid-npm', 50, 'mid-npm'),
+      row('owner/low-preempted', 1, 'preempted-pkg'),
+      row('owner/tail-npm', 0, 'tail-npm'),
+    ],
+    featured: { entries: [] },
+    featuredRepositories: [],
+  }
+  const result = await generateIndex(
+    feedWithPreemption,
+    async (name) => {
+      npmFetched.push(name)
+      // Give the preempted 1-star npm package a huge description; it must NOT
+      // count toward Wave 1 (stars=100) committed bytes and skip stars=50.
+      return makeSizedPackument(name, name === 'preempted-pkg' ? 2000 : 200)
+    },
+    async () => {
+      const plugin = projectPackage('preempted-pkg', ['latest'], makeSizedPackument('preempted-pkg', 200)).plugin
+      return { plugins: [plugin], evidence: [], diagnostics: [] }
+    },
+    undefined,
+    { targetBytes: 400, budgetHeadroomBytes: 0, waveTargetSize: 1 },
+  )
+  assert.ok(npmFetched.includes('preempted-pkg'), 'same-named npm still preempts high-star Git')
+  assert.ok(npmFetched.includes('mid-npm'), '50-star wave is NOT skipped by a 1-star preempted npm package')
+  assert.ok(!npmFetched.includes('tail-npm'), '0-star tail is skipped once committed 50-star wave fills budget')
+  assert.equal(result.verificationCutoffStars, 50)
+})

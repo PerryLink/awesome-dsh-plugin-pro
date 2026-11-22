@@ -74,17 +74,33 @@ const branchName = (value) => {
   return trimmed !== '' && isSafeBranchName(trimmed) ? trimmed : 'main';
 };
 
+const categoryByKey = new Map(assignableCategories.map((entry) => [entry[0], entry]));
+const overrideMapCache = new WeakMap();
+
+function overridesMapFor(overrides) {
+  let map = overrideMapCache.get(overrides);
+  if (!map) {
+    map = new Map();
+    for (const [key, value] of Object.entries(overrides)) {
+      const lower = key.toLowerCase();
+      if (!map.has(lower)) map.set(lower, value);
+    }
+    overrideMapCache.set(overrides, map);
+  }
+  return map;
+}
+
 // Same category assignment as scripts/render.mjs: category_overrides first
 // (keys matched case-insensitively, like update.mjs), then pattern matching
 // over name + description + topics, then the fallback category.
 export function categoryForRepo(curated, repo) {
-  const overrides = curated.category_overrides || {};
-  const override = Object.entries(overrides).find(
-    ([key]) => key.toLowerCase() === String(repo.full_name).toLowerCase(),
-  )?.[1];
-  if (override) {
-    const match = assignableCategories.find(([key]) => key === override);
-    if (match) return match;
+  const overrides = curated.category_overrides;
+  if (overrides && typeof overrides === 'object') {
+    const override = overridesMapFor(overrides).get(String(repo.full_name).toLowerCase());
+    if (override) {
+      const match = categoryByKey.get(override);
+      if (match) return match;
+    }
   }
   const name = repo.name || String(repo.full_name).split('/')[1];
   const haystack = [name, repo.description, ...(repo.topics || [])].filter(Boolean).join(' ');

@@ -94,9 +94,9 @@ export function selectTopPlugins(plugins, ranks, max = MAX_PLUGINS, featured = n
 }
 
 /** Trim the serialized index down to the gateway byte budget: drop the
- * lowest-starred, non-featured plugins one at a time (same stable order as
- * selection) and re-serialize until the text fits. Featured entries survive
- * unless nothing else remains; `dropped` feeds the selection report. */
+ * lowest-starred, non-featured plugins (same stable order as selection) until
+ * the compact serialized text fits. Featured entries survive unless nothing
+ * else remains; `dropped` feeds the selection report. */
 export function trimIndexToBudget(index, text, ranks, featured, targetBytes = INDEX_TARGET_BYTES) {
   if (Buffer.byteLength(text) <= targetBytes) return { index, text, dropped: 0 }
   const compareText = (a, b) => (a < b ? -1 : a > b ? 1 : 0)
@@ -105,21 +105,50 @@ export function trimIndexToBudget(index, text, ranks, featured, targetBytes = IN
     [...featured].map((name) => String(name).toLowerCase()),
   )
   const isFeatured = (plugin) => featuredRepos.has(rankOf(plugin.name).repo.toLowerCase())
-  let current = index
-  let currentText = text
-  let dropped = 0
-  while (Buffer.byteLength(currentText) > targetBytes && current.plugins.length > 0) {
-    const pool = current.plugins.filter((plugin) => !isFeatured(plugin))
-    if (pool.length === 0) break
-    const victim = [...pool].sort((x, y) => {
+  const victims = index.plugins
+    .filter((plugin) => !isFeatured(plugin))
+    .sort((x, y) => {
       const a = rankOf(x.name), b = rankOf(y.name)
       return a.stars - b.stars || compareText(a.repo, b.repo) || compareText(x.name, y.name)
-    })[0]
-    current = { ...current, plugins: current.plugins.filter((plugin) => plugin !== victim) }
-    currentText = JSON.stringify(current) + '\n'
-    dropped++
+    })
+  if (victims.length === 0) return { index, text, dropped: 0 }
+  const serializeAfterDropping = (count) => {
+    const droppedSet = new Set(victims.slice(0, count))
+    const nextIndex = { ...index, plugins: index.plugins.filter((plugin) => !droppedSet.has(plugin)) }
+    const nextText = JSON.stringify(nextIndex) + '\n'
+    return { index: nextIndex, text: nextText, bytes: Buffer.byteLength(nextText) }
   }
-  return { index: current, text: currentText, dropped }
+  // Compute compact byte size directly from per-plugin JSON lengths so we avoid
+  // repeatedly serializing multi-megabyte snapshots during trimming.
+  const pluginBytes = new Map()
+  let totalPluginBytes = 0
+  for (const plugin of index.plugins) {
+    const bytes = Buffer.byteLength(JSON.stringify(plugin))
+    pluginBytes.set(plugin, bytes)
+    totalPluginBytes += bytes
+  }
+  const shellBytes = Buffer.byteLength(JSON.stringify({ ...index, plugins: [] }) + '\n')
+  let remainingCount = index.plugins.length
+  let estimatedBytes = shellBytes + totalPluginBytes + Math.max(0, remainingCount - 1)
+  let dropCount = 0
+  for (const victim of victims) {
+    dropCount++
+    estimatedBytes -= pluginBytes.get(victim) + (remainingCount > 1 ? 1 : 0)
+    remainingCount--
+    if (estimatedBytes <= targetBytes) break
+  }
+  let result = serializeAfterDropping(dropCount)
+  while (result.bytes > targetBytes && dropCount < victims.length) {
+    dropCount++
+    result = serializeAfterDropping(dropCount)
+  }
+  while (dropCount > 1) {
+    const fewer = serializeAfterDropping(dropCount - 1)
+    if (fewer.bytes > targetBytes) break
+    dropCount--
+    result = fewer
+  }
+  return { index: result.index, text: result.text, dropped: dropCount }
 }
 
 /** Validate registry identity, availability and runtime requirements for one exact version. */
@@ -212,17 +241,50 @@ export function projectPackage(name, selectors, packument) {
   return { plugin, diagnostics }
 }
 
+async function runPool(items, concurrency, worker) {
+  const results = new Array(items.length)
+  if (!items.length) return results
+  let cursor = 0
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, items.length) }, async () => {
+      while (cursor < items.length) {
+        const i = cursor++
+        results[i] = await worker(items[i], i)
+      }
+    }),
+  )
+  return results
+}
+
+const MIN_DISCOVERY_METADATA_BYTES = 64
+
 export async function generateIndex(
   feed,
   fetchPackument,
   fetchGit = readGitTarget,
   verifyNpm,
+  options = {},
 ) {
   if (feed?.schema_version !== 2 || !Array.isArray(feed.entries))
     throw new Error('Expected a curated market-v2 feed')
+  const {
+    targetBytes = INDEX_TARGET_BYTES,
+    budgetHeadroomBytes = 64 * 1024,
+    npmConcurrency = 10,
+    gitConcurrency = 6,
+    waveTargetSize = 300,
+  } = options
   const npmRanks = new Map(), gitRanks = new Map(), ranks = new Map()
   const blockedRepositories = new Set(
     (feed.excludedRepositories ?? []).map((name) => String(name).toLowerCase()),
+  )
+  const featured = new Set(
+    [
+      ...(feed.featuredRepositories ?? []),
+      ...(feed.featured?.entries ?? []).map((entry) => entry.full_name),
+    ]
+      .filter(Boolean)
+      .map((name) => String(name).toLowerCase()),
   )
   const targets = new Map()
   const gitTargets = new Map()
@@ -263,153 +325,250 @@ export async function generateIndex(
       targets.get(parsed.name).add(parsed.selector)
     }
   }
-  const entries = [...targets]
-  const results = new Array(entries.length)
-  let cursor = 0
-  await Promise.all(
-    Array.from({ length: Math.min(6, entries.length) }, async () => {
-      while (cursor < entries.length) {
-        const i = cursor++
-        const [name, selectors] = entries[i]
-        try {
-          // A registry edge 5xx/timeout must not cost the whole publication.
-          const packument = await retryOnce(() => fetchPackument(name), {
-            onRetry: (error) => console.warn(`retrying packument ${name} after: ${error.message}`),
-          })
-          const result = projectPackage(name, [...selectors], packument)
-          if (result.plugin && verifyNpm) {
-            const verified = await verifyNpm(result.plugin, packument)
-            results[i] = {
-              ...verified,
-              diagnostics: [...result.diagnostics, ...verified.diagnostics],
-            }
-          } else results[i] = result
-        } catch (error) {
-          // The pinned reader's bounded size rejection is a policy exclusion,
-          // not a transient lookup failure. Integrity/network errors stay fatal.
-          const sizeLimited =
-            /^(?:[^\n]+: )?(?:unpacked )?tarball exceeds \d+ bytes$/.test(error.message)
-          results[i] = {
-            fetchFailed: !sizeLimited,
-            diagnostics: [
-              {
-                name,
-                code: sizeLimited ? 'package_size_limit' : 'npm_fetch_failed',
-                status: sizeLimited ? 'excluded' : 'error',
-                reason: error.message,
-              },
-            ],
-          }
-        }
-      }
-    }),
-  )
-  const plugins = results.flatMap((result) =>
-    result.plugin ? [result.plugin] : [],
-  )
-  for (const plugin of plugins) ranks.set(plugin.name, npmRanks.get(plugin.name))
-  diagnostics.push(...results.flatMap((result) => result.diagnostics))
-  const gitKeys = [...gitTargets.keys()]
-  const gitEntries = [...gitTargets.values()]
-  const gitResults = new Array(gitEntries.length)
-  let nextGit = 0
-  await Promise.all(
-    Array.from({ length: Math.min(4, gitEntries.length) }, async () => {
-      while (nextGit < gitEntries.length) {
-        const i = nextGit++,
-          target = gitEntries[i]
-        try {
-          // Transient clone/timeout failures get one more attempt; permanent
-          // source problems (missing ref/repo, temp-dir permission) do not.
-          gitResults[i] = await retryOnce(() => fetchGit(target), {
-            shouldRetry: (error) => !classifyGitFailure(error).permanent,
-            onRetry: (error) =>
-              console.warn(`retrying git ${target.target} after: ${error.message}`),
-          })
-        } catch (error) {
-          const failure = classifyGitFailure(error)
-          gitResults[i] = {
-            plugins: [],
-            evidence: [],
-            fetchFailed: !failure.permanent,
-            diagnostics: [
-              {
-                code: failure.code,
-                status: failure.permanent ? 'excluded' : 'error',
-                reason: error.message,
-              },
-            ],
-          }
-        }
-      }
-    }),
-  )
-  const seen = new Set(plugins.map((p) => p.name))
-  for (let i = 0; i < gitResults.length; i++) {
-    const result = gitResults[i],
-      target = gitEntries[i].target
-    diagnostics.push(...result.diagnostics.map((d) => ({ target, ...d })))
-    for (const plugin of result.plugins) {
-      if (seen.has(plugin.name)) {
-        diagnostics.push({
-          target,
-          name: plugin.name,
-          code: 'duplicate_package',
-          status: 'excluded',
-          reason: '同名包已收录；优先 npm，再按目录来源顺序，避免来源替换',
-        })
-        continue
-      }
-      seen.add(plugin.name)
-      plugins.push(plugin)
-      ranks.set(plugin.name, gitRanks.get(gitKeys[i]))
+
+  const featuredNpm = [], featuredGit = []
+  const byStars = new Map()
+  const bucketFor = (stars) => {
+    let bucket = byStars.get(stars)
+    if (!bucket) {
+      bucket = { npm: [], git: [] }
+      byStars.set(stars, bucket)
+    }
+    return bucket
+  }
+  for (const [name, selectors] of targets) {
+    const rank = npmRanks.get(name)
+    if (featured.has(rank.repo.toLowerCase())) featuredNpm.push([name, selectors])
+    else bucketFor(rank.stars).npm.push([name, selectors])
+  }
+  for (const [key, target] of gitTargets) {
+    const rank = gitRanks.get(key)
+    if (featured.has(rank.repo.toLowerCase())) featuredGit.push([key, target])
+    else bucketFor(rank.stars).git.push([key, target])
+  }
+  const waves = []
+  if (featuredNpm.length || featuredGit.length) {
+    waves.push({ featured: true, minStars: Infinity, npm: featuredNpm, git: featuredGit })
+  }
+  const sortedStars = [...byStars.keys()].sort((a, b) => b - a)
+  let currentWave = null
+  for (const stars of sortedStars) {
+    const bucket = byStars.get(stars)
+    if (!currentWave) currentWave = { featured: false, minStars: stars, npm: [], git: [] }
+    currentWave.npm.push(...bucket.npm)
+    currentWave.git.push(...bucket.git)
+    currentWave.minStars = stars
+    if (currentWave.npm.length + currentWave.git.length >= waveTargetSize) {
+      waves.push(currentWave)
+      currentWave = null
     }
   }
-  const featured = new Set(
-    [
-      ...(feed.featuredRepositories ?? []),
-      ...(feed.featured?.entries ?? []).map((entry) => entry.full_name),
-    ]
-      .filter(Boolean)
-      .map((name) => String(name).toLowerCase()),
-  )
-  // Cap only after every candidate has passed source, compatibility and
+  if (currentWave) waves.push(currentWave)
+
+  const verifyOneNpm = async ([name, selectors]) => {
+    try {
+      // A registry edge 5xx/timeout must not cost the whole publication.
+      const packument = await retryOnce(() => fetchPackument(name), {
+        onRetry: (error) => console.warn(`retrying packument ${name} after: ${error.message}`),
+      })
+      const result = projectPackage(name, [...selectors], packument)
+      if (result.plugin && verifyNpm) {
+        const verified = await verifyNpm(result.plugin, packument)
+        return {
+          ...verified,
+          diagnostics: [...result.diagnostics, ...verified.diagnostics],
+        }
+      }
+      return result
+    } catch (error) {
+      // The pinned reader's bounded size rejection is a policy exclusion,
+      // not a transient lookup failure. Integrity/network errors stay fatal.
+      const sizeLimited =
+        /^(?:[^\n]+: )?(?:unpacked )?tarball exceeds \d+ bytes$/.test(error.message)
+      return {
+        fetchFailed: !sizeLimited,
+        diagnostics: [
+          {
+            name,
+            code: sizeLimited ? 'package_size_limit' : 'npm_fetch_failed',
+            status: sizeLimited ? 'excluded' : 'error',
+            reason: error.message,
+          },
+        ],
+      }
+    }
+  }
+
+  const verifyOneGit = async ([, target]) => {
+    try {
+      // Transient clone/timeout failures get one more attempt; permanent
+      // source problems (missing ref/repo, temp-dir permission) do not.
+      return await retryOnce(() => fetchGit(target), {
+        shouldRetry: (error) => !classifyGitFailure(error).permanent,
+        onRetry: (error) =>
+          console.warn(`retrying git ${target.target} after: ${error.message}`),
+      })
+    } catch (error) {
+      const failure = classifyGitFailure(error)
+      return {
+        plugins: [],
+        evidence: [],
+        fetchFailed: !failure.permanent,
+        diagnostics: [
+          {
+            code: failure.code,
+            status: failure.permanent ? 'excluded' : 'error',
+            reason: error.message,
+          },
+        ],
+      }
+    }
+  }
+
+  const verifiedNpmNames = new Set()
+  const seen = new Set()
+  const eligiblePlugins = []
+  const bareBytesByName = new Map()
+  const repositoryExclusions = []
+  const npmEvidence = []
+  const gitEvidence = []
+  let fetchFailures = 0
+  let verifiedNpmCount = 0
+  let verifiedGitCount = 0
+  let verificationCutoffStars = null
+  const stopThreshold = Number.isFinite(targetBytes)
+    ? targetBytes + budgetHeadroomBytes
+    : Infinity
+
+  // Cap only after every verified candidate has passed source, compatibility and
   // package-level repository exclusion checks. A repository that is itself an
   // editor's pick is exempt from that block: leaderboard/board exclusions
   // police star provenance, not market fitness, and the curated pick is the
   // editorial override. Packages from other excluded repositories that merely
   // reference a featured repository are exempt too — featuring the upstream is
   // the decision that its packages ship.
-  const eligiblePlugins = []
-  const repositoryExclusions = []
-  for (const plugin of plugins) {
+  const admitPlugin = (plugin, rank) => {
     const blocked = blockedPluginRepository(plugin, blockedRepositories)
-    if (!blocked) {
-      eligiblePlugins.push(plugin)
-      continue
+    if (blocked && !featured.has(blocked.slug)) {
+      repositoryExclusions.push({
+        name: plugin.name,
+        repository: blocked.slug,
+        reference: blocked.reference,
+      })
+      diagnostics.push({
+        name: plugin.name,
+        code: 'excluded_repository',
+        status: 'excluded',
+        reason: `包或 Git 来源指向已排除仓库 ${blocked.slug}`,
+      })
+      return
     }
-    if (featured.has(blocked.slug)) {
+    if (blocked) {
       diagnostics.push({
         name: plugin.name,
         code: 'featured_repository_exempt',
         status: 'included',
         reason: `包或 Git 来源指向编辑推荐仓库 ${blocked.slug}，豁免包级仓库排除`,
       })
-      eligiblePlugins.push(plugin)
-      continue
     }
-    repositoryExclusions.push({
-      name: plugin.name,
-      repository: blocked.slug,
-      reference: blocked.reference,
-    })
-    diagnostics.push({
-      name: plugin.name,
-      code: 'excluded_repository',
-      status: 'excluded',
-      reason: `包或 Git 来源指向已排除仓库 ${blocked.slug}`,
-    })
+    ranks.set(plugin.name, rank)
+    eligiblePlugins.push(plugin)
+    bareBytesByName.set(plugin.name, Buffer.byteLength(JSON.stringify(plugin)) + 1)
   }
+
+  const committedLowerBound = (minStars) => {
+    let bytes = 0
+    let count = 0
+    for (const plugin of eligiblePlugins) {
+      const rank = ranks.get(plugin.name)
+      const isCommitted = featured.has(rank.repo.toLowerCase()) || rank.stars >= minStars
+      if (!isCommitted) continue
+      bytes += bareBytesByName.get(plugin.name) + MIN_DISCOVERY_METADATA_BYTES
+      count++
+    }
+    return { bytes, count }
+  }
+
+  const mergeNpmBatch = (batchItems, batchResults) => {
+    for (let i = 0; i < batchItems.length; i++) {
+      const [name] = batchItems[i]
+      const result = batchResults[i]
+      if (result.fetchFailed) fetchFailures++
+      diagnostics.push(...result.diagnostics)
+      if (result.evidence?.length) npmEvidence.push(...result.evidence)
+      if (result.plugin) {
+        seen.add(result.plugin.name)
+        admitPlugin(result.plugin, npmRanks.get(name))
+      }
+    }
+  }
+
+  for (const wave of waves) {
+    const npmBatch = wave.npm.filter(([name]) => !verifiedNpmNames.has(name))
+    for (const [name] of npmBatch) verifiedNpmNames.add(name)
+    verifiedNpmCount += npmBatch.length
+    verifiedGitCount += wave.git.length
+    const [npmResults, gitResults] = await Promise.all([
+      runPool(npmBatch, npmConcurrency, verifyOneNpm),
+      runPool(wave.git, gitConcurrency, verifyOneGit),
+    ])
+    mergeNpmBatch(npmBatch, npmResults)
+
+    // Preserve npm-over-Git precedence even when a same-named npm candidate
+    // sits in a lower-star wave that has not run yet.
+    const preemptedNpm = []
+    for (const result of gitResults) {
+      for (const plugin of result.plugins) {
+        if (targets.has(plugin.name) && !verifiedNpmNames.has(plugin.name)) {
+          verifiedNpmNames.add(plugin.name)
+          preemptedNpm.push([plugin.name, targets.get(plugin.name)])
+        }
+      }
+    }
+    if (preemptedNpm.length) {
+      verifiedNpmCount += preemptedNpm.length
+      const preemptedResults = await runPool(preemptedNpm, npmConcurrency, verifyOneNpm)
+      mergeNpmBatch(preemptedNpm, preemptedResults)
+    }
+
+    for (let i = 0; i < gitResults.length; i++) {
+      const [key, targetEntry] = wave.git[i]
+      const result = gitResults[i]
+      const target = targetEntry.target
+      if (result.fetchFailed) fetchFailures++
+      if (result.evidence?.length) gitEvidence.push(...result.evidence)
+      diagnostics.push(...result.diagnostics.map((d) => ({ target, ...d })))
+      for (const plugin of result.plugins) {
+        if (seen.has(plugin.name)) {
+          diagnostics.push({
+            target,
+            name: plugin.name,
+            code: 'duplicate_package',
+            status: 'excluded',
+            reason: '同名包已收录；优先 npm，再按目录来源顺序，避免来源替换',
+          })
+          continue
+        }
+        seen.add(plugin.name)
+        admitPlugin(plugin, gitRanks.get(key))
+      }
+    }
+
+    if (!wave.featured) {
+      const committed = committedLowerBound(wave.minStars)
+      if (committed.bytes >= stopThreshold || committed.count >= MAX_PLUGINS) {
+        verificationCutoffStars = wave.minStars
+        break
+      }
+    }
+  }
+
+  const totalNpmCandidates = targets.size
+  const totalGitCandidates = gitTargets.size
+  const skippedNpmCandidates = totalNpmCandidates - verifiedNpmCount
+  const skippedGitCandidates = totalGitCandidates - verifiedGitCount
+  const skippedBelowBudgetCutoff = skippedNpmCandidates + skippedGitCandidates
+  if (skippedBelowBudgetCutoff === 0) verificationCutoffStars = null
   const selection = selectTopPlugins(eligiblePlugins, ranks, MAX_PLUGINS, featured)
   const hasPinnedPick = featured.has(SUBSCRIPTION_PICK.full_name)
   const selectedPlugins = [...selection.plugins]
@@ -439,17 +598,20 @@ export async function generateIndex(
     expectedFeaturedRepositoryCount: feed.featured?.expected_repository_count,
     selectionPolicy: hasPinnedPick ? PINNED_SELECTION_POLICY : SELECTION_POLICY,
     diagnostics,
-    candidates: entries.length + gitEntries.length,
-    npmCandidates: entries.length,
-    gitCandidates: gitEntries.length,
+    candidates: totalNpmCandidates + totalGitCandidates,
+    verifiedCandidates: verifiedNpmCount + verifiedGitCount,
+    npmCandidates: totalNpmCandidates,
+    gitCandidates: totalGitCandidates,
+    verifiedNpmCandidates: verifiedNpmCount,
+    verifiedGitCandidates: verifiedGitCount,
+    skippedBelowBudgetCutoff,
+    verificationCutoffStars,
     uniqueTargets: sourceTargets.size,
-    npmEvidence: results.flatMap((r) => r.evidence ?? []),
-    gitEvidence: gitResults.flatMap((r) => r.evidence),
+    npmEvidence,
+    gitEvidence,
     selection,
     repositoryExclusions,
-    fetchFailures: [...results, ...gitResults].filter(
-      (result) => result.fetchFailed,
-    ).length,
+    fetchFailures,
   }
 }
 
@@ -459,6 +621,7 @@ async function main() {
     throw new Error(
       'Usage: node scripts/host-market/generate.mjs <market-v2.json> <output.json>',
     )
+  const startedAt = Date.now()
   const raw = await readFile(feedPath)
   const feed = JSON.parse(raw)
   const evidence = []
@@ -489,30 +652,55 @@ async function main() {
         timeoutMs: 180_000,
         maxTarballBytes: 64 * 1024 * 1024,
       }),
+    { targetBytes: INDEX_TARGET_BYTES },
   )
+  const verifiedAt = Date.now()
   await mkdir(dirname(resolve(outputPath)), { recursive: true })
+  // Pre-trim before fetching npm download metrics so only plugins near the
+  // gateway byte budget (plus 128 KiB headroom for download counts) hit the
+  // downloads API, then re-trim to the exact budget after metrics land.
+  let serialized = JSON.stringify(result.index) + '\n'
+  const preTrimmed = trimIndexToBudget(
+    result.index,
+    serialized,
+    result.ranks,
+    result.featured,
+    INDEX_TARGET_BYTES + 128 * 1024,
+  )
+  if (preTrimmed.dropped > 0) {
+    result.index = preTrimmed.index
+    serialized = preTrimmed.text
+  }
   const downloadMetrics = await applyDownloadMetrics(result.index)
+  const metricsAt = Date.now()
   result.diagnostics.push(...downloadMetrics.diagnostics)
   // Compact JSON serialization eliminates ~20% indentation whitespace, reclaiming
   // ~1 MiB of the 5 MiB gateway byte budget for verified plugins.
-  let serialized = JSON.stringify(result.index) + '\n'
+  serialized = JSON.stringify(result.index) + '\n'
   // Byte-budget selection: the gateway serves the whole JSON, so inclusion is
   // bounded by serialized size, not a plugin count. Verified plugins entered
   // by stars above; here the tail is trimmed (lowest-starred non-featured
   // first) until the text fits the working budget below the 5 MiB gateway cap.
-  {
-    const trimmed = trimIndexToBudget(result.index, serialized, result.ranks, result.featured)
-    if (trimmed.dropped > 0) {
-      result.index = trimmed.index
-      serialized = trimmed.text
-      result.selection.droppedByBudget = trimmed.dropped
-      result.selection.droppedByLimit =
-        result.selection.eligiblePlugins - result.index.plugins.length
+  const finalTrimmed = trimIndexToBudget(result.index, serialized, result.ranks, result.featured)
+  if (finalTrimmed.dropped > 0) {
+    result.index = finalTrimmed.index
+    serialized = finalTrimmed.text
+  }
+  const totalDroppedByBudget = preTrimmed.dropped + finalTrimmed.dropped
+  if (totalDroppedByBudget > 0) {
+    result.selection.droppedByBudget = totalDroppedByBudget
+    result.selection.droppedByLimit =
+      result.selection.eligiblePlugins - result.index.plugins.length
+    if (result.index.plugins.length > 0) {
       result.selection.cutoffStars = Math.min(
         ...result.index.plugins.map(plugin => result.ranks.get(plugin.name)?.stars ?? -1),
       )
     }
   }
+  const includedNames = new Set(result.index.plugins.map((plugin) => plugin.name))
+  const npmDownloadEvidence = downloadMetrics.evidence.filter((entry) =>
+    includedNames.has(entry.name),
+  )
   const reasons = Object.fromEntries(
     [...new Set(result.diagnostics.map((d) => d.code))]
       .sort()
@@ -567,6 +755,10 @@ async function main() {
     summary: {
       npmCandidates: result.npmCandidates,
       gitCandidates: result.gitCandidates,
+      verifiedNpmCandidates: result.verifiedNpmCandidates,
+      verifiedGitCandidates: result.verifiedGitCandidates,
+      skippedBelowBudgetCutoff: result.skippedBelowBudgetCutoff,
+      verificationCutoffStars: result.verificationCutoffStars,
       uniqueTargets: result.uniqueTargets,
       eligiblePluginsBeforeLimit: result.selection.eligiblePlugins,
       excludedByRepositoryPolicy: result.repositoryExclusions.length,
@@ -590,6 +782,7 @@ async function main() {
       eligiblePlugins: result.selection.eligiblePlugins,
       included: result.index.plugins.length,
       droppedByLimit: result.selection.eligiblePlugins - result.index.plugins.length,
+      droppedByBudget: result.selection.droppedByBudget ?? 0,
       cutoffStars: result.selection.cutoffStars,
     },
     indexSha256: createHash('sha256').update(serialized).digest('hex'),
@@ -598,13 +791,14 @@ async function main() {
     ...(feed.subscriptionCandidates ? { candidateSelection: feed.subscriptionCandidates } : {}),
     feedSha256: createHash('sha256').update(raw).digest('hex'),
     candidates: result.candidates,
+    verifiedCandidates: result.verifiedCandidates,
     included: result.index.plugins.length,
     repositoryExclusions: result.repositoryExclusions,
     diagnostics: result.diagnostics,
     evidence,
     gitEvidence: result.gitEvidence,
     npmEvidence: result.npmEvidence,
-    npmDownloadEvidence: downloadMetrics.evidence,
+    npmDownloadEvidence,
   }
   const reportText = JSON.stringify(report) + '\n'
   if (
@@ -615,10 +809,21 @@ async function main() {
   await writeFile(`${outputPath}.report.json`, reportText)
   await writeFile(outputPath, serialized)
   assertPublishable(result)
+  const finishedAt = Date.now()
+  console.log(
+    `[timing] verify=${((verifiedAt - startedAt) / 1000).toFixed(1)}s ` +
+      `metrics=${((metricsAt - verifiedAt) / 1000).toFixed(1)}s ` +
+      `finalize=${((finishedAt - metricsAt) / 1000).toFixed(1)}s ` +
+      `total=${((finishedAt - startedAt) / 1000).toFixed(1)}s ` +
+      `(verified ${result.verifiedNpmCandidates}/${result.npmCandidates} npm, ` +
+      `${result.verifiedGitCandidates}/${result.gitCandidates} git, ` +
+      `skipped=${result.skippedBelowBudgetCutoff}, ` +
+      `report=${(Buffer.byteLength(reportText) / 1024).toFixed(0)} KiB)`,
+  )
   console.log(
     `Generated ${result.index.plugins.length}/${result.selection.eligiblePlugins} verified plugins ` +
       `(${result.selection.droppedByLimit} beyond the index byte budget) ` +
-      `from ${result.candidates} sources; ${result.diagnostics.length} diagnostics. ${outputPath}`,
+      `from ${result.verifiedCandidates}/${result.candidates} verified sources; ${result.diagnostics.length} diagnostics. ${outputPath}`,
   )
 }
 

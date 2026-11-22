@@ -23,6 +23,7 @@ for (const [key, name] of Object.entries(inputs)) {
 const featuredRaw = await readFile(resolve(root, 'data/featured.json'))
 const featured = JSON.parse(featuredRaw)
 hashes['data/featured.json'] = createHash('sha256').update(featuredRaw).digest('hex')
+const buildStartedAt = Date.now()
 values.market = buildMarketShadow({
   ...values,
   featured: {
@@ -36,6 +37,10 @@ feed.subscriptionCandidates.sourceSha256 = hashes
 const input = resolve(root, '.output/host-market/candidates.json')
 await mkdir(resolve(root, '.output/host-market'), { recursive: true })
 await writeFile(input, JSON.stringify(feed) + '\n')
+console.log(
+  `[timing] candidates=${((Date.now() - buildStartedAt) / 1000).toFixed(2)}s ` +
+    `(entries=${feed.entries.length}, featured=${feed.featuredRepositories.length})`,
+)
 const run = spawnSync(
   process.execPath,
   [
