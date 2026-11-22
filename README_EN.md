@@ -26,11 +26,11 @@ Two ways to browse and install plugins from this catalog inside DSH (both instal
 
 No extra plugin required — add the curated index directly to DSH's built-in Discover tab (**DSH ≥ V0.2.1-rc.2**):
 
-**Subscription URL: [`https://bruc3van.com/dsh-plugins/index.json`](https://bruc3van.com/dsh-plugins/index.json)**
+**Subscription URL: [`https://dsh-market-pro.com/index.json`](https://dsh-market-pro.com/index.json)** (legacy `https://bruc3van.com/dsh-plugins/index.json` remains active)
 
 1. **Enable custom markets:** **Plugins** → **More** beside **Experimental plugins** → enable **Custom plugin markets**.
 2. **Add subscription:** open the **Discover** tab → **Add index source** (or top-left dropdown → **Manage index sources…**), paste the URL above, and click **Add**.
-3. **Browse & install:** select **Bruce's Plugin Picks** from the dropdown to filter and install.
+3. **Browse & install:** select **dsh-market-pro.com** from the dropdown to filter and install.
 
 ## 🗺️ Ecosystem at a glance
 

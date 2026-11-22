@@ -581,7 +581,7 @@ export async function generateIndex(
   diagnostics.push(...applyPresentation(selectedPlugins))
   const index = {
     format: 1,
-    title: { en: "Bruce's Plugin Picks", zh: 'Bruce 的精选插件' },
+    title: { en: 'dsh-market-pro.com', zh: 'DSH Market Pro' },
     description: {
       en: "DSH community plugin picks by Bruce, sourced from awesome-dsh-plugin-pro. npm metadata and Git commits are verified; inclusion is not a security review.",
       zh: 'Bruce 整理的 DSH 社区插件精选，数据来自 awesome-dsh-plugin-pro。核实 npm 元数据与 Git 提交；收录不代表安全审查。',

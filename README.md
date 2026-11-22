@@ -26,11 +26,11 @@
 
 无需额外安装插件，直接把精选索引接入 DSH 内置「发现」页（需 **DSH ≥ V0.2.1-rc.2**）：
 
-**订阅链接：[`https://bruc3van.com/dsh-plugins/index.json`](https://bruc3van.com/dsh-plugins/index.json)**
+**订阅链接：[`https://dsh-market-pro.com/index.json`](https://dsh-market-pro.com/index.json)**（旧地址 `https://bruc3van.com/dsh-plugins/index.json` 持续兼容）
 
 1. **开启自定义市场**：左侧 **插件** → **实验性插件** 旁 **更多** → 打开 **自定义插件市场**。
 2. **添加订阅源**：切到 **发现** 标签 → 点击 **添加索引源**（或左上角下拉菜单 **管理索引源…**），粘贴上方链接并添加。
-3. **浏览安装**：在下拉菜单选择 **Bruce 的精选插件** 即可按分类与标签筛选安装。
+3. **浏览安装**：在下拉菜单选择 **DSH Market Pro** 即可按分类与标签筛选安装。
 
 ## 🗺️ 生态全景
 
