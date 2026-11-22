@@ -19,7 +19,7 @@
 
 1. 读取已有分批证据中仍未映射、且元数据合格的仓库；
 2. 按 Star 再核验下一批最多 200 个未映射已核准仓库；
-3. **只追加** `data/packages.json` 新 key，不改已有映射，不代填 `engines.dsh`；自动映射按**上游文档意图**区分跟踪与固定：README 写明无版本（或 `@latest`）npm 形式 → 写入**跟踪式目标** `npm:包名`，每日重新核验并把线上输出固定到当时的精确版本或 commit；README 带引用的 Git 目标按文档原样记录；README 只给固定版本 → 写入已核验的精确版本；Git 无 README 安装文档（repo-fallback）→ 跟踪仓库本身，由每日核验固定 head commit。条目里人工固定的 `@版本` / `#tag` / `#commit` 是**手工固定项**，保持原意、永不改写；
+3. **只追加** `data/packages.json` 新 key，不改已有映射，不代填 `engines.dsh`；按最新策展口径（见 `AGENTS.md`），npm 目标一律记**无版本钉**（`@latest` 归一为无版本，仅保留 `@next` 等 channel dist-tag），由每日核验动态跟踪并在输出中固定精确版本；GitHub 目标一律记**裸仓库地址** `github:owner/repo`（剥离 `#tag`/`#SHA`/分支钉，仅保留 monorepo 子包定位 `#path:`），由每日核验固定 head commit；
 4. 身份可追溯（npm `repository`/`homepage` 对上 GitHub、包名与仓库一致、或 README 写明该包；Git 来源经本仓库固定提交取证）的条目自动写入；未声明 `engines.dsh` 按官方 dshRange 视为不受限，可以自动映射；
 5. 模板/占位包名、npm 身份对不上仓库的条目写入 `mapping-pending.md`，不自动上架。
 
