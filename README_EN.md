@@ -35,12 +35,12 @@ No extra plugin required — add the curated index directly to DSH's built-in Di
 ## 🗺️ Ecosystem at a glance
 
 <!-- dsh:panorama:start -->
-As of 2026-11-21 the catalog lists **29,675** verified repositories. Here is the shape of it:
+As of 2026-11-21 the catalog lists **29,678** verified repositories. Here is the shape of it:
 
 ```mermaid
 mindmap
-  root((DSH ecosystem 29675))
-    UI and experience · 8299
+  root((DSH ecosystem 29678))
+    UI and experience · 8300
       Usage and billing panels
       Sidebar workbenches
       Skins and desktop pets
@@ -52,7 +52,7 @@ mindmap
     Utilities and more · 3395
       Files and encodings
       Format conversion
-    Developer tools · 3218
+    Developer tools · 3219
       Git and diff
       Model gateways and keys
       Debugging and diagnostics
@@ -68,7 +68,7 @@ mindmap
       Knowledge bases and cross-session memory
       Deep research
       Academia and math
-    Design media and vision · 2068
+    Design media and vision · 2069
       Image understanding and OCR
       Design canvas and UI restoration
       Speech synthesis and recognition
@@ -383,7 +383,7 @@ Self-submitted recommendations from plugin authors, following the [contributing 
 - **Market data (npm feed):** [awesome-dsh-plugin-feed](https://www.npmjs.com/package/awesome-dsh-plugin-feed) publishes `market-catalog.json` (schema 3: the complete reviewed catalog, each row carrying `install_status` and its install mapping, plus the official subscription and the editorial picks) and `packages.json` (the install-mapping source). It is projected by `scripts/safe-market-catalog.mjs`, packaged by `publish-npm-feed.mjs`, and mirrored through npmmirror.
 - **Chinese by default, bilingual:** native readability for the main audience, with a dedicated English entry point.
 
-As of 2026-11-21, the catalog lists **29,675** repositories across **41** primary languages; **27,313** declare a license and **29,351** are neither archived nor disabled (the catalog updates after each review merge — see [CATALOG.md](./CATALOG.md) for current numbers).
+As of 2026-11-21, the catalog lists **29,678** repositories across **41** primary languages; **27,316** declare a license and **29,354** are neither archived nor disabled (the catalog updates after each review merge — see [CATALOG.md](./CATALOG.md) for current numbers).
 
 ## ⚠️ Usage & safety
 

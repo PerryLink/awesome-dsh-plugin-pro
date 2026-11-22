@@ -4,7 +4,7 @@ DSH 插件全量目录的「界面与体验（M–S）」分册 / The "UI & Expe
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **1992**
+- 本册收录 / Entries in this volume: **1993**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -767,6 +767,7 @@ DSH 插件全量目录的「界面与体验（M–S）」分册 / The "UI & Expe
 | [rakutek/dsh-intelligent-ui](https://github.com/rakutek/dsh-intelligent-ui) | Turn LLM responses into live interactive mini-apps, calculators, and themed Mermaid diagrams inside DeepSeek Harness | JavaScript | 1 | MIT | 2026-10-18 |
 | [RangeKing/dsh-whale-buddy](https://github.com/RangeKing/dsh-whale-buddy) | 🐋 A quietly alive DeepSeek whale for DeepSeek Harness Web: an inline thinking whale and a right-edge Whale Dock. 一只静谧灵动的 DeepSeek 小鲸鱼：行内思考伴随，侧边常驻交互。 | TypeScript | 1 | NOASSERTION | 2026-09-28 |
 | [Raybbish/dsh-poker-plugin](https://github.com/Raybbish/dsh-poker-plugin) | Unofficial local multiplayer Texas Hold'em plugin for the DSH Web UI, with optional server-side AI players. | TypeScript | 1 | MIT | 2026-09-11 |
+| [Raysnows/dsh-vendor-quick-switch](https://github.com/Raysnows/dsh-vendor-quick-switch) | Vendor-first quick model switching for DeepSeek Harness: a side index beside the shipped model menu plus an in-menu mode. | JavaScript | 1 | MIT | 2026-11-18 |
 | [RayYeung1989/claude-parchment-theme](https://github.com/RayYeung1989/claude-parchment-theme) | 一款 Claude 风格的 dsh插件：为 DSH WebUI 打造，暖羊皮纸 Parchment 色板、Terracotta 品牌色与衬线字体 | JavaScript | 1 | MIT | 2026-10-22 |
 | [rayzhu1109/dsh-balance](https://github.com/rayzhu1109/dsh-balance) | balance record &amp; usage tracking | JavaScript | 1 | MIT | 2026-09-09 |
 | [Rccccc6/Tongji-AGI-Credit](https://github.com/Rccccc6/Tongji-AGI-Credit) | 同济 AGI 平台积分余额面板 + 小鲸鱼挂件接入（DSH 插件） | JavaScript | 1 | MIT | 2026-11-05 |

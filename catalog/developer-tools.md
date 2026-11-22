@@ -4,7 +4,7 @@ DSH 插件全量目录的「开发者工具」分册 / The "Developer Tools" vol
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **3218**
+- 本册收录 / Entries in this volume: **3219**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -845,6 +845,7 @@ DSH 插件全量目录的「开发者工具」分册 / The "Developer Tools" vol
 | [Rainier-Z/dsh-workspace-monitor](https://github.com/Rainier-Z/dsh-workspace-monitor) | DSH workspace monitor — command-driven PollingMonitor plugin | JavaScript | 2 | MIT | 2026-09-27 |
 | [rand0wn/dsh-minimal-anchor](https://github.com/rand0wn/dsh-minimal-anchor) | DeepSeek Harness (dsh) plugin: prune the tool schema and inject a structural preamble on a session's first turn only | TypeScript | 2 | MIT | 2026-09-14 |
 | [rannyrjjy/dsh-fuzz](https://github.com/rannyrjjy/dsh-fuzz) | DeepSeek Harness 插件：在 diffprobe 之上做差分 fuzz 与逻辑测试（抽值 → 计划 → 执行 → 判定），默认只读。 | Python | 2 | MIT | 2026-11-07 |
+| [Raysnows/dsh-rescue-guard](https://github.com/Raysnows/dsh-rescue-guard) | Standalone rescue for a broken DeepSeek Harness profile: crash classification, pre-flight checks, safe mode and manifest snapshots, plus a zero-cost event-driven crash watcher. | JavaScript | 2 | MIT | 2026-11-18 |
 | [REALOIYO/what-sub-agents-doing-now](https://github.com/REALOIYO/what-sub-agents-doing-now) | 看到每个子代理此刻在干什么：回传它自己写的进度，而不只是 running/inactive。只读、不遮蔽上游工具。 \| See what each subagent is doing right now: surface the progress notes a child wrote itself. Read-only, non-shadowing. (DeepSeek Harness plugin) | JavaScript | 2 | MIT | 2026-10-31 |
 | [recyvan/dsh-model-proxy](https://github.com/recyvan/dsh-model-proxy) | model proxy plugin for DeepSeek Harness | JavaScript | 2 | MIT | 2026-11-06 |
 | [renjianguojinqianfan/dsh-skill-eval](https://github.com/renjianguojinqianfan/dsh-skill-eval) | DSH 插件：用 LLM judge 评测技能 description 的触发准确率（欠触发/过触发） | JavaScript | 2 | MIT | 2026-08-25 |

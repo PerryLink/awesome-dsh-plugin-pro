@@ -4,7 +4,7 @@ DSH 插件全量目录的「设计、媒体与视觉」分册 / The "Design, Med
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **2068**
+- 本册收录 / Entries in this volume: **2069**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -967,6 +967,7 @@ DSH 插件全量目录的「设计、媒体与视觉」分册 / The "Design, Med
 | [qq247505/DeepSeek-VisionPlus](https://github.com/qq247505/DeepSeek-VisionPlus) | DeepSeek VisionPlus — official-grade vision extension for DeepSeek Harness. Routes image understanding to a free vision-model pool (Zhipu GLM, SiliconFlow Qwen) with automatic fallback, rate limiting, one-click platform tests and live status lines; text stays on DeepSeek. One-command install. MIT. | TypeScript | 1 | MIT | 2026-09-09 |
 | [randomix777/dsh-sprite-gen](https://github.com/randomix777/dsh-sprite-gen) | Sprite Sheet Generator with AI Image Generation for DeepSeek Harness | JavaScript | 1 | MIT | 2026-10-11 |
 | [Raymond-Hear/dsh-video-downloader](https://github.com/Raymond-Hear/dsh-video-downloader) | 一个帮你高效下载各平台视频的DeepSeek Harness 插件。贴一个链接，用本机 yt-dlp 下载视频 / 音频 / 字幕 / 封面 —— 支持 YouTube、哔哩哔哩、X、TikTok 等上千个站点。 | JavaScript | 1 | MIT | 2026-11-16 |
+| [Raysnows/dsh-test-autofix](https://github.com/Raysnows/dsh-test-autofix) | DSH 测试自动修复：给 agent 一个 run_tests 工具，跑测试并把结构化失败（文件/行号/断言）直接交给它修复。自动识别 pytest / jest / vitest / cargo / go / npm，Windows 中文断言不乱码，同一失败反复出现时自动停止。 | JavaScript | 1 | MIT | 2026-11-18 |
 | [RayzPub/dsh-plugin-garmin](https://github.com/RayzPub/dsh-plugin-garmin) | dsh-plugin-garmin 是专为佳明表盘开发的 DeepSeek Harness (dsh) 插件。用户只需在聊天窗口中通过自然语言对话，即可完成针对 Garmin Fenix 7 系列（260×260、64 色 MIP 显示屏）的表盘设计、矢量仿真预览、资源合规校验、Monkey C 源码生成以及最终 .prg 安装二进制的编译打包 | TypeScript | 1 | MIT | 2026-09-29 |
 | [Ren-xing/dsh-audio-tools](https://github.com/Ren-xing/dsh-audio-tools) | DSH audio tools: probe, convert/extract audio tracks, and transcribe speech with your own ffmpeg + whisper.cpp or any OpenAI-compatible API. | JavaScript | 1 | MIT | 2026-11-13 |
 | [retampweb/dsh-have-voice](https://github.com/retampweb/dsh-have-voice) | A local voice for your agent: Kokoro-82M on CPU behind a 150-line daemon. ~2.2x real time, first sound under a second, no cloud. | Python | 1 | MIT | 2026-11-06 |

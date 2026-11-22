@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T03:31:21.466Z",
+  "generated_at": "2026-11-22T03:39:19.094Z",
   "snapshot_date": "2026-11-21",
   "pending": [
     {
@@ -1526,34 +1526,6 @@
     },
     {
       "first_seen": "2026-11-21",
-      "full_name": "Raysnows/dsh-rescue-guard",
-      "html_url": "https://github.com/Raysnows/dsh-rescue-guard",
-      "description": "Standalone rescue for a broken DeepSeek Harness profile: crash classification, pre-flight checks, safe mode and manifest snapshots, plus a zero-cost event-driven crash watcher.",
-      "language": "JavaScript",
-      "stargazers_count": 2,
-      "forks_count": 0,
-      "license": "MIT",
-      "created_at": "2026-11-07T15:45:10Z",
-      "pushed_at": "2026-11-21T10:43:17Z",
-      "topics": [
-        "cordis",
-        "crash",
-        "deepseek",
-        "deepseek-harness",
-        "devtools",
-        "diagnostics",
-        "dsh",
-        "dsh-plugin",
-        "recovery",
-        "rescue",
-        "rollback",
-        "safe-mode",
-        "snapshot",
-        "watchdog"
-      ]
-    },
-    {
-      "first_seen": "2026-11-21",
       "full_name": "Raysnows/dsh-stall-guard",
       "html_url": "https://github.com/Raysnows/dsh-stall-guard",
       "description": "DSH 卡顿守卫：下载卡住时自动中止，并把「换源」提示写给智能体。按类型独立配置，不调用任何模型。",
@@ -1575,53 +1547,6 @@
         "dsh-plugins",
         "dsharpplus",
         "stallguard"
-      ]
-    },
-    {
-      "first_seen": "2026-11-21",
-      "full_name": "Raysnows/dsh-test-autofix",
-      "html_url": "https://github.com/Raysnows/dsh-test-autofix",
-      "description": "DSH 测试自动修复：给 agent 一个 run_tests 工具，跑测试并把结构化失败（文件/行号/断言）直接交给它修复。自动识别 pytest / jest / vitest / cargo / go / npm，Windows 中文断言不乱码，同一失败反复出现时自动停止。",
-      "language": "JavaScript",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "license": "MIT",
-      "created_at": "2026-10-19T14:13:16Z",
-      "pushed_at": "2026-10-23T16:23:04Z",
-      "topics": [
-        "deepseek",
-        "deepseek-harness",
-        "deepseek-harness-plugin",
-        "deepseek-harness-plugins",
-        "dsh",
-        "dsh-plugin",
-        "dsh-plugin-desktop",
-        "dsh-plugin-market",
-        "dsh-plugins",
-        "dsharpplus",
-        "test",
-        "testing",
-        "testing-tools"
-      ]
-    },
-    {
-      "first_seen": "2026-11-21",
-      "full_name": "Raysnows/dsh-vendor-quick-switch",
-      "html_url": "https://github.com/Raysnows/dsh-vendor-quick-switch",
-      "description": "Vendor-first quick model switching for DeepSeek Harness: a side index beside the shipped model menu plus an in-menu mode.",
-      "language": "JavaScript",
-      "stargazers_count": 1,
-      "forks_count": 0,
-      "license": "MIT",
-      "created_at": "2026-11-16T17:47:05Z",
-      "pushed_at": "2026-11-18T16:07:51Z",
-      "topics": [
-        "cordis",
-        "deepseek",
-        "deepseek-harness",
-        "dsh",
-        "dsh-plugin",
-        "model-switcher"
       ]
     },
     {
@@ -5602,10 +5527,7 @@
   ],
   "missing": [
     "1250589385/dsh-quick-send",
-    "1250589385/dsh-rescue-guard",
     "1250589385/dsh-stall-guard",
-    "1250589385/dsh-test-autofix",
-    "1250589385/dsh-vendor-quick-switch",
     "bx33661/dsh-omv",
     "Carrick-K7/dsh-carrick-optimize",
     "ethan0084/dsh-cockpit",
@@ -5616,7 +5538,6 @@
     "qifenglun1/dsh-prompt",
     "raheemmiyasin/dsh-theme-palette",
     "ssamurias/dsh-fish",
-    "topmindspace/dsh-super-mind",
     "WSL043/dsh-reasoning-slider",
     "xia-sc/dsh-opencode-go",
     "xia-sc/dsh-update-notifier"

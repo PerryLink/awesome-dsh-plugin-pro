@@ -10,9 +10,9 @@ This page automatically lists public repositories under GitHub's [`dsh-plugin` t
 
 The catalog is split into one volume per category — the full list outgrew GitHub's single-page Markdown rendering limit. Each row below is a complete volume.
 
-- Repositories: **29675**
+- Repositories: **29678**
 - Primary languages: **41**
-- Declared licenses: **27313**
+- Declared licenses: **27316**
 - Refreshed: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -23,14 +23,14 @@ The catalog is split into one volume per category — the full list outgrew GitH
 | [生态与资源 / Ecosystem & Resources](./catalog/ecosystem-resources.md) | 1259 |
 | [界面与体验（A–F） / UI & Experience (A–F)](./catalog/ui-experience.md) | 2334 |
 | [界面与体验（G–L） / UI & Experience (G–L)](./catalog/ui-experience-g-l.md) | 1986 |
-| [界面与体验（M–S） / UI & Experience (M–S)](./catalog/ui-experience-m-s.md) | 1992 |
+| [界面与体验（M–S） / UI & Experience (M–S)](./catalog/ui-experience-m-s.md) | 1993 |
 | [界面与体验（T–Z） / UI & Experience (T–Z)](./catalog/ui-experience-t-z.md) | 1987 |
-| [设计、媒体与视觉 / Design, Media & Vision](./catalog/media-vision.md) | 2068 |
+| [设计、媒体与视觉 / Design, Media & Vision](./catalog/media-vision.md) | 2069 |
 | [网页与浏览器（A–M） / Web & Browser (A–M)](./catalog/web-browser.md) | 1650 |
 | [网页与浏览器（N–Z） / Web & Browser (N–Z)](./catalog/web-browser-n-z.md) | 1191 |
 | [集成与分享 / Integrations & Sharing](./catalog/integrations-sharing.md) | 2119 |
 | [知识与研究 / Knowledge & Research](./catalog/knowledge-research.md) | 2104 |
-| [开发者工具 / Developer Tools](./catalog/developer-tools.md) | 3218 |
+| [开发者工具 / Developer Tools](./catalog/developer-tools.md) | 3219 |
 | [多 Agent 编排与协作 / Multi-Agent Orchestration & Teams](./catalog/multi-agents.md) | 840 |
 | [Agent、自动化与工作流（A–F） / Agents, Automation & Workflows (A–F)](./catalog/agents-workflows.md) | 937 |
 | [Agent、自动化与工作流（G–M） / Agents, Automation & Workflows (G–M)](./catalog/agents-workflows-g-m.md) | 1097 |

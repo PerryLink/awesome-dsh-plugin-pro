@@ -176,10 +176,7 @@
   "123wansui-989/dsh-flight-compare": "2026-10-05",
   "123zxs345/dsh-plugin-companion-memory": "2026-11-04",
   "1250589385/dsh-quick-send": "2026-10-19",
-  "1250589385/dsh-rescue-guard": "2026-11-08",
   "1250589385/dsh-stall-guard": "2026-10-23",
-  "1250589385/dsh-test-autofix": "2026-10-23",
-  "1250589385/dsh-vendor-quick-switch": "2026-11-17",
   "1264459640/dsh-trellis": "2026-08-16",
   "1273984347/dsh-github-gate": "2026-10-20",
   "1274623767/dsh-workspace-open": "2026-08-18",
@@ -22980,7 +22977,6 @@
   "topkie/dsh-lattice": "2026-10-25",
   "toplchx/dsh-financial-analysis": "2026-08-17",
   "topmindspace/dsh-super-kanban": "2026-11-14",
-  "topmindspace/dsh-super-mind": "2026-11-17",
   "toposferapro/dsh-status-beacon": "2026-10-06",
   "torfqy/dsh-paper-mode": "2026-10-30",
   "tortoise014/dsh-tasks-panel": "2026-11-05",
@@ -29698,5 +29694,8 @@
   "JMINN0/android-adb-direct": "2026-11-21",
   "SamuelChung2010/DSHift": "2026-11-21",
   "xiaowill/dsh-server-pulse": "2026-11-21",
-  "zer0-lyz/dsh-ty-workbench": "2026-11-21"
+  "zer0-lyz/dsh-ty-workbench": "2026-11-21",
+  "raysnows/dsh-test-autofix": "2026-10-23",
+  "raysnows/dsh-vendor-quick-switch": "2026-11-17",
+  "raysnows/dsh-rescue-guard": "2026-11-08"
 }

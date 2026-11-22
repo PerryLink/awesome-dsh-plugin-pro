@@ -216767,15 +216767,6 @@
       "install_mode": "manual",
       "manual_instructions": "README 文档化 npm 名 dsh-keepawake，registry 404（corpus sweep 2026-11-21 核验）；发布后可恢复 npm 映射。"
     },
-    "1250589385/dsh-rescue-guard": {
-      "packages": [],
-      "status": "readme-verified",
-      "verified_date": "2026-11-21",
-      "verified_via": "review",
-      "verified_by": "review",
-      "install_mode": "manual",
-      "manual_instructions": "npm 名 dsh-rescue-guard 的 registry repository 指向 raysnows/dsh-rescue-guard（他人包，corpus sweep 2026-11-21 核验）——同名不同主，不录。"
-    },
     "berrybearl/dsh-cli-subagent": {
       "packages": [],
       "status": "readme-verified",
@@ -241840,6 +241831,15 @@
       "verified_date": "2026-11-21",
       "verified_via": "review",
       "verified_by": "review"
+    },
+    "raysnows/dsh-rescue-guard": {
+      "packages": [],
+      "status": "readme-verified",
+      "verified_date": "2026-11-21",
+      "verified_via": "review",
+      "verified_by": "review",
+      "install_mode": "manual",
+      "manual_instructions": "npm 名 dsh-rescue-guard 的 registry repository 指向 raysnows/dsh-rescue-guard（他人包，corpus sweep 2026-11-21 核验）——同名不同主，不录。"
     }
   }
 }
