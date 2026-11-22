@@ -4,7 +4,7 @@ DSH 插件全量目录的「网页与浏览器（A–M）」分册 / The "Web & 
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **1783**
+- 本册收录 / Entries in this volume: **1782**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -17,7 +17,6 @@ DSH 插件全量目录的「网页与浏览器（A–M）」分册 / The "Web & 
 | [Ebony-Vinyl/EAC-Desktop](https://github.com/Ebony-Vinyl/EAC-Desktop) | Embracing All Creation (Desktop) — Dedicated to the Harmonious Coexistence of Hundreds of DSH Plugins / 揽尽万象（桌面版） —— 致力于让数百个DSH插件和谐共存 | JavaScript | 3735 | MIT | 2026-11-21 |
 | [dsh-tauri/deepseek-harness-desktop](https://github.com/dsh-tauri/deepseek-harness-desktop) | DSH Tauri 桌面版 \| Better DSH desktop, zero environment setup, preset plugins, Windows / macOS / Linux. | TypeScript | 3699 | MIT | 2026-11-21 |
 | [chuspeeism/dashi-taskboard](https://github.com/chuspeeism/dashi-taskboard) | 现代化可灵活嵌入的任务面板，支持 Codex、DeepSeek Harness | JavaScript | 3515 | Apache-2.0 | 2026-11-21 |
-| [liguobao/ds-harness-remote](https://github.com/liguobao/ds-harness-remote) | 基于 DeepSeek Harness 插件机制构建的远程访问方案，通过低延迟、端到端加密的 P2P 网络，支持使用 PC、移动端 和 Web 随时访问本地设备上的DSH 、CodeX、Cursor、Claude Code等工作区。 (Built on DeepSeek Harness plugins, this low-latency, end-to-end encrypted P2P solution lets PC, mobile, and web clients access local DSH, Codex, Cursor, and Claude Code workspaces.) | TypeScript | 3493 | MIT | 2026-11-21 |
 | [helloHub1212/dsh-windows-mcp](https://github.com/helloHub1212/dsh-windows-mcp) | Windows desktop automation for DeepSeek Harness: the in-box MCP client bridge mounted against CursorTouch/Windows-MCP, with an off-by-default Computer Use switch and an in-app dependency installer. | JavaScript | 2081 | MIT | 2026-11-21 |
 | [DDDMUC/dsh-free-search](https://github.com/DDDMUC/dsh-free-search) | 为DeepSeek Harness提供的免费网络搜索服务商：即使没有API密钥也可使用。Free web search provider for DeepSeek Harness:usable even without an API key. | JavaScript | 1567 | MIT | 2026-11-21 |
 | [liustack/modsearch](https://github.com/liustack/modsearch) | 🥇 The strongest free web search plugin for DeepSeek Harness, and the search bridge for every model without native web access. Free, no signup, no API key. Ask the web or X, get structured JSON evidence. \| 🥇 全网最强的 DeepSeek Harness 免费联网搜索插件，免费免注册免 API key。为不能联网的模型补上搜索，问网页或 X，拿回结构化 JSON 证据（搜索、抓取、引用）。 | TypeScript | 1028 | MIT | 2026-11-21 |

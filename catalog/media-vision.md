@@ -4,13 +4,14 @@ DSH 插件全量目录的「设计、媒体与视觉」分册 / The "Design, Med
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **1953**
+- 本册收录 / Entries in this volume: **1957**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
 | Project | Description | Language | Stars | License | Updated |
 | --- | --- | --- | ---: | --- | --- |
 | [onehumanbeing/esp32-iphone-agent](https://github.com/onehumanbeing/esp32-iphone-agent) | Manina AI: let an AI model use a real iPhone with a $7 ESP32: AirPlay eyes, USB HID hands, any OpenAI-compatible vision model. No Mac, no developer account, no jailbreak. | Swift | 5189 | MIT | 2026-11-21 |
+| [liustack/modlens](https://github.com/liustack/modlens) | The first vision plugin for DeepSeek Harness, and the vision bridge for every text-only coding agent. Paste an image, get structured JSON evidence (OCR, layout, semantics). \| 全网最强 DeepSeek Harness 外挂视觉插件，为 DeepSeek、GLM 等纯文本模型外挂视觉能力，粘贴图片即得结构化 JSON 证据（OCR、版面、语义）。 | TypeScript | 5049 | MIT | 2026-11-21 |
 | [sixtysevenlf/dsh-blender-plugin](https://github.com/sixtysevenlf/dsh-blender-plugin) | DSH × Blender 直连插件 v3.0.6：15 个模型工具让 AI 驱动 GUI Blender（视口 / 自定义视角 / 无头 worker / 作业层 / 事务回滚 / 配方库），34 family / 228 op 契约层；npm 安装 + addon zip，GUI 优先、无头备用；dsh-TUI 选中 chip / @ 提及 / /blender，随包建模 skill，支持 WSL / Windows / macOS。 | Python | 2226 | BSD-3-Clause | 2026-11-21 |
 | [Devin-AXIS/deepseek-design](https://github.com/Devin-AXIS/deepseek-design) | Independent native Design (including PPT) and Video plugins for DeepSeek Harness. | HTML | 1971 | NOASSERTION | 2026-11-21 |
 | [Ebony-Vinyl/EAC-design-world](https://github.com/Ebony-Vinyl/EAC-design-world) | DeepSeek Harness 本地视频制作与设计插件：多轨剪辑、模板与设计体系、原生预览画布和真实文件导出 | JavaScript | 1782 | AGPL-3.0 | 2026-11-21 |
@@ -18,10 +19,11 @@ DSH 插件全量目录的「设计、媒体与视觉」分册 / The "Design, Med
 | [ysr666/dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | Eyes for text-only DeepSeek Harness agents: built-in free vision chain (no key) + pixel-level vision tools (Q&amp;A, grounding, crop, pixel diff, colors, OCR, SVG trace, cutout, screenshots). One-command install, no Python, image turns work like ordinary tool-calling turns. | JavaScript | 1297 | MIT | 2026-11-21 |
 | [op7418/dsh-guizang-design](https://github.com/op7418/dsh-guizang-design) | 歸藏设计 · DeepSeek Harness 插件：网页 PPT、图文卡片、网页排版、去 AI 味四个 skill，一套设计系统；作品库、内容生产工作流、语气档案 | HTML | 1016 | AGPL-3.0 | 2026-11-21 |
 | [Anionex/dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) | \[dsh\]为纯文本模型设计更强大的视觉工具箱：一行安装使用、粘贴图片直接识别、多张图片问答、截图到前端UI 还原等｜DeepSeek Harness-native integration for agent-vision-toolkit: image Q&amp;A, long-screenshot OCR, UI restoration, grounding, pixel diff, Artifacts, and Web UI. | TypeScript | 950 | MIT | 2026-11-21 |
+| [zenstory-ai/oh-story-dsh](https://github.com/zenstory-ai/oh-story-dsh) | DeepSeek Harness 故事创作插件：集成网文写作、短剧漫剧、小说改游戏与视频解说四个可视化工作台 ｜ DeepSeek Harness plugin for novels, short dramas, games &amp; video recaps | Python | 812 | MIT | 2026-11-21 |
 | [chenxiachan/thoughtdag](https://github.com/chenxiachan/thoughtdag) | Your thinking deserves a map: an infinite canvas where LLM conversations grow into an editable thought graph. Wires are the context. | TypeScript | 800 | MIT | 2026-11-21 |
 | [fourzkw/dsh-drawai](https://github.com/fourzkw/dsh-drawai) | DSH 右侧栏里的可编辑画布 —— 加上让模型直接改图的两个工具 | JavaScript | 800 | NOASSERTION | 2026-11-21 |
-| [dream-num/dsh-univer-office](https://github.com/dream-num/dsh-univer-office) | Give DeepSeek Harness a real office environment.  Univer Office Plugin brings spreadsheets, docs, slides, canvases, relational tables, and more into one runtime — with connected data, validation, versioned changes, and isolated worktrees for multi-agent collaboration. | TypeScript | 744 | Apache-2.0 | 2026-11-21 |
 | [liangmianya/dsh-synapse](https://github.com/liangmianya/dsh-synapse) | A visual, non-linear conversation workspace plugin for DeepSeek Harness ; A canvas-based session explorer and branching workspace for DeepSeek Harness. | JavaScript | 737 | MIT | 2026-11-21 |
+| [SAOS-3624/dsh-see-now](https://github.com/SAOS-3624/dsh-see-now) | 让 AI 实时看见你的屏幕：按变化量筛选帧、多帧拼进一张图，静止画面几乎不花 token | JavaScript | 730 | Apache-2.0 | 2026-11-21 |
 | [SAOS-3624/dsh-video-storyboard](https://github.com/SAOS-3624/dsh-video-storyboard) | Scene-aware storyboard for DeepSeek Harness: 9-16 numbered cells with timestamps + transcript + an audio envelope, packed into ONE image (384 tokens). Two tools: video_storyboard and video_zoom. | JavaScript | 585 | Apache-2.0 | 2026-11-21 |
 | [kingcharleslzy-ai/DSH-Spicy](https://github.com/kingcharleslzy-ai/DSH-Spicy) | 完美适配 Purge 的 NSFW content creation 插件。在 DeepSeek Harness 中用自托管模型创作成人向图像、有声视频与多镜头短片，支持参考图编辑、LoRA 风格控制和 Agent 分镜剪辑。 | TypeScript | 461 | Apache-2.0 | 2026-11-21 |
 | [sorsama/deepseek-harness-mobile](https://github.com/sorsama/deepseek-harness-mobile) | Android companion for DeepSeek Harness \| chat, goals, approvals &amp; notifications from your phone, over your LAN. Kotlin + Jetpack Compose. | Kotlin | 358 | MIT | 2026-11-21 |
@@ -508,6 +510,7 @@ DSH 插件全量目录的「设计、媒体与视觉」分册 / The "Design, Med
 | [hige6/imgpost](https://github.com/hige6/imgpost) | 图邮 (imgpost)：让你的 DSH 能发图给你 —— 本地图片、网页图片、AI 生图，一键发进对话里。 | JavaScript | 2 | MIT | 2026-10-22 |
 | [huangdejie/dsh-speech-plugin](https://github.com/huangdejie/dsh-speech-plugin) | Speech plugin for DeepSeek Harness: per-message voice playback, auto-announce, and dictation via mic — cloud TTS/ASR on Alibaba DashScope or Volcengine (freely combinable), with Web Speech API fallback. | TypeScript | 2 | MIT | 2026-11-17 |
 | [huarnot/chemdraw-bridge](https://github.com/huarnot/chemdraw-bridge) | ChemDraw Bridge — a DSH plugin that turns CAS numbers, names, paper/SI PDFs, and SciFinder exports into native ChemDraw source files. | JavaScript | 2 | — | 2026-11-03 |
+| [HuoGu-Hub/dsh-sense-img](https://github.com/HuoGu-Hub/dsh-sense-img) | DSH插件：商汤生图模型调用插件 | JavaScript | 2 | — | 2026-11-14 |
 | [hyper-dsh-plugins/dsh-open-eyes](https://github.com/hyper-dsh-plugins/dsh-open-eyes) | A lightweight DeepSeek Harness vision delegation tool for text-only routes, with native OpenAI Responses, Chat Completions, and Anthropic Messages adapters. | TypeScript | 2 | MIT | 2026-09-09 |
 | [ijgvt/short-drama-director-dsh](https://github.com/ijgvt/short-drama-director-dsh) | DeepSeek Harness short-drama director plugin for script-to-assets, video prompts and ComfyUI workflows | JavaScript | 2 | NOASSERTION | 2026-11-05 |
 | [JessenReinhart/dsh-snapcompact](https://github.com/JessenReinhart/dsh-snapcompact) | Bitmap-frame context compression plugin for DeepSeek Harness (DSH): deterministic pixel-font visual archiving of conversation history | JavaScript | 2 | — | 2026-10-31 |
@@ -757,6 +760,7 @@ DSH 插件全量目录的「设计、媒体与视觉」分册 / The "Design, Med
 | [gjy1992/dsh-diagram](https://github.com/gjy1992/dsh-diagram) | dsh (DeepSeek Harness) 架构图生成与 draw.io 导出插件：YAML DSL -&gt; ELK 布局 -&gt; 明文 .drawio | JavaScript | 1 | MIT | 2026-10-02 |
 | [gloryxpnv/dsh-tool-vision](https://github.com/gloryxpnv/dsh-tool-vision) | Local-first vision for DeepSeek Harness: structured JSON evidence (OCR/layout/semantics) from local VLMs (LM Studio/Ollama), zero API cost, images never leave your machine. | JavaScript | 1 | MIT | 2026-09-09 |
 | [gmleong/dsh-img](https://github.com/gmleong/dsh-img) | Give text-only models eyes: analyze_image tool for DeepSeek Harness, backed by free Chinese vision APIs (GLM-4V-Flash / Qwen-VL) or any OpenAI-compatible endpoint. 给纯文本模型装上眼睛的 dsh 插件。 | JavaScript | 1 | MIT | 2026-08-16 |
+| [god1sdfghjkl/dsh-plugin-voice-local](https://github.com/god1sdfghjkl/dsh-plugin-voice-local) | Local full-duplex voice for DeepSeek Harness: pluggable ONNX TTS + sherpa-onnx ASR, in-host, loopback-only, 7 themes. | JavaScript | 1 | MIT | 2026-11-13 |
 | [H-table/dsh-bg-tool](https://github.com/H-table/dsh-bg-tool) | DSH 插件：本地 rembg GPU 抠图工具（remove_background）— DeepSeek Harness plugin for background removal with local rembg GPU service | JavaScript | 1 | MIT | 2026-11-17 |
 | [hangyesite/dsh-shortvideo-export](https://github.com/hangyesite/dsh-shortvideo-export) | DSH plugin: download watermark-free Douyin and Xiaohongshu videos, transcribe with local or cloud ASR, proofread, and export Markdown/SRT/VTT/JSON/HTML/DOCX. | Python | 1 | MIT | 2026-11-10 |
 | [HanmoZhang0909/ai-dream](https://github.com/HanmoZhang0909/ai-dream) | AI Dream — A shape for every feeling. AI emotional ambient medium for DeepSeek Harness. | JavaScript | 1 | MIT | 2026-11-20 |
@@ -768,7 +772,6 @@ DSH 插件全量目录的「设计、媒体与视觉」分册 / The "Design, Med
 | [hbycwzm001/dsh-plugin-media-extract](https://github.com/hbycwzm001/dsh-plugin-media-extract) | DSH plugin: link -&gt; original video + caption + transcript (Douyin/XHS/TikTok/YouTube/FB/X/IG) | JavaScript | 1 | MIT | 2026-11-21 |
 | [Henryang777/dsh-illustrated-teaching](https://github.com/Henryang777/dsh-illustrated-teaching) | 图解教学：DeepSeek Harness 插件——把任何知识点自动渲染成精美图解画廊（8 套小红书科普风模板，专为本科学习设计） | TypeScript | 1 | MIT | 2026-08-17 |
 | [heqi698/dsh-go-kugimiya-voice](https://github.com/heqi698/dsh-go-kugimiya-voice) | 钉宫理惠语音包 for dsh-go (voice assets from zthxxx/kugimiya-rainbow-fart, MIT) | JavaScript | 1 | NOASSERTION | 2026-11-19 |
-| [hezhongtang/dsh-capability-optimizer](https://github.com/hezhongtang/dsh-capability-optimizer) | External-expert consultation for DeepSeek Harness: headless Claude Code CLI with role personas (advisor/reviewer/designer, extensible), replies as reference answers — thinking effort, model fallback, panels, settings workspace. · DSH 外部专家咨询：headless 调用 Claude Code CLI，角色人设（advisor/reviewer/designer，可扩展）回复即参考答案——推理等级、模型回退、并行会诊、设置工作区。 | JavaScript | 1 | MIT | 2026-09-27 |
 | [hffek/dsh-steer-note](https://github.com/hffek/dsh-steer-note) | Seamless mid-turn steering for DeepSeek Harness: text, images, files, read receipts, and draft rescue. | JavaScript | 1 | MIT | 2026-11-09 |
 | [HiBer2007/DSH-Document-Writer](https://github.com/HiBer2007/DSH-Document-Writer) | 12-stage document writing pipeline for DeepSeek Harness (DSH): Markdown-first, human rewrite, independent review, user gates, docx/pptx. | JavaScript | 1 | LGPL-3.0 | 2026-11-12 |
 | [honghudavy-star/DSH_plugins_4U](https://github.com/honghudavy-star/DSH_plugins_4U) | DSH 自建插件集合：微信桥接器 + GUI 微信入口补丁，一键安装 | JavaScript | 1 | — | 2026-09-12 |
@@ -1854,6 +1857,7 @@ DSH 插件全量目录的「设计、媒体与视觉」分册 / The "Design, Med
 | [xby-skill/xby-extract-image](https://github.com/xby-skill/xby-extract-image) | MCP服务器提供从本地文件、URL提取图像并转换为base64格式的功能，适用于LLM分析。 | TypeScript | 0 | MIT | 2026-09-02 |
 | [xby-skill/xby-image-detect](https://github.com/xby-skill/xby-image-detect) | 检测图像中的80类COCO目标（人、车、动物、日常物品等），输出边界框、置信度和类别标签。 | TypeScript | 0 | MIT | 2026-09-02 |
 | [xby-skill/xby-mathematical-visualization](https://github.com/xby-skill/xby-mathematical-visualization) | 基于JSXGraph的MCP协议服务器，提供13种数学可视化工具，适用于教育数学、工程和科学应用。 | TypeScript | 0 | MIT | 2026-09-02 |
+| [xby-skill/xby-pic](https://github.com/xby-skill/xby-pic) | 包括通用文本识别、手写识别、车牌识别、身份证识别、日常物体检测、昆虫识别、植物识别、护照识别、港澳台通行证识别、银行卡识别、营业执照识别、驾驶证识别、行驶证识别、动物识别、电动自行车检测、手机检测、手势检测、火焰检测、香烟检测、人头人体检测、野生动物检测、鸟类识别、宠物情绪识别、菜品识别、安全帽人体检测、行人检测、反光衣检测、车辆检测、图像分类、目标检测、旋转目标检测、人体姿态估计和万物识别。 | TypeScript | 0 | MIT | 2026-10-16 |
 | [xby-skill/xby-speech-synthesis](https://github.com/xby-skill/xby-speech-synthesis) | 一个集成了Microsoft Edge高质量语音合成能力的MCP服务器，支持多语言语音生成、音频合并和云端存储。 | TypeScript | 0 | MIT | 2026-09-02 |
 | [xby-skill/xby-wikimedia-search-images](https://github.com/xby-skill/xby-wikimedia-search-images) | 该MCP服务器使AI助手能够在Wikimedia Commons上搜索图片，提供详细的元数据和可选的缩略图组合，帮助AI模型进行视觉比较。 | TypeScript | 0 | MIT | 2026-09-02 |
 | [xbyzzZ/dsh_design](https://github.com/xbyzzZ/dsh_design) | Clickable HTML prototype canvas for DeepSeek Harness. | JavaScript | 0 | MIT | 2026-09-12 |

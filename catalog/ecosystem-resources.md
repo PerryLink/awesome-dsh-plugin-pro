@@ -4,7 +4,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **1386**
+- 本册收录 / Entries in this volume: **1389**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -17,6 +17,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [MichengAI/dsh-skills-manager](https://github.com/MichengAI/dsh-skills-manager) | DSH Skills Manager — 在 DeepSeek Harness 中统一加载并安全管理本机 Agent Skills · Load and safely manage local Agent Skills in DSH | JavaScript | 602 | Apache-2.0 | 2026-11-21 |
 | [dshplugin/dsh-plugin-hub](https://github.com/dshplugin/dsh-plugin-hub) | DSH Plugin 插件市场 - DeepSeek Harness Plugin Market (DSH) 下载与安装 · 插件大全 | TypeScript | 553 | MIT | 2026-11-20 |
 | [bruc3van/awesome-dsh-plugin-pro](https://github.com/bruc3van/awesome-dsh-plugin-pro) | DSH 插件精选专业版：核实真插件，剔除蹭标签和非插件项目，提供场景分类、精选推荐、热度排行与可订阅数据。 | JavaScript | 529 | MIT | 2026-11-20 |
+| [FeatherHunter/dsh-mattpocock-skills-deck](https://github.com/FeatherHunter/dsh-mattpocock-skills-deck) | 🌹安装即自带mattpocock/skills v1.3.2的27个工程与效率技能，无需手动装技能。520亿token打造本插件，在原始技能之上提供10倍的开发效率，也能帮助新手更快上手该技能套件。支持 GitHub 与 GitLab 的 issue；本地 Markdown 为预览版。感谢您的使用和支持💗 | TypeScript | 401 | MIT | 2026-11-21 |
 | [pax-beehive/dsh-hub-cli](https://github.com/pax-beehive/dsh-hub-cli) | Open-source CLI, schemas, resolver, and DSH agent tools for DSH Plugin Hub | TypeScript | 274 | MIT | 2026-11-03 |
 | [awesome-dsh-plugin/dsh-find-plugin](https://github.com/awesome-dsh-plugin/dsh-find-plugin) | Find DSH plugins inside the agent — live GitHub dsh-plugin topic search, star-ranked / 会话内搜索发现 DSH 插件 | JavaScript | 239 | MIT | 2026-11-21 |
 | [weijiafu14/pi2dsh](https://github.com/weijiafu14/pi2dsh) | Bridge the Pi and DeepSeek Harness ecosystems: one Pi Host ABI runs unmodified Pi extensions as native DSH plugins. 打通 Pi 与 DSH 生态。 | TypeScript | 219 | MIT | 2026-11-19 |
@@ -429,6 +430,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [bugtakue/dsh-ronge-adaptive-skill-archive](https://github.com/bugtakue/dsh-ronge-adaptive-skill-archive) | Context-aware, self-evolving skill cockpit for DeepSeek Harness: recommendations with reasons, 10% exploration, live "now using", plan/immersive modes, experience memory, local safety scan, update diff/rollback, 6,399-skill index. MIT. | JavaScript | 1 | MIT | 2026-11-03 |
 | [Carrick-K7/dsh-plugin-source](https://github.com/Carrick-K7/dsh-plugin-source) | DeepSeek Harness plugin: group the Settings plugin list by origin (official/community), show version, upstream repo link and local-dev marker. Read-only, zero network. | JavaScript | 1 | MIT | 2026-10-11 |
 | [cccc11f3/dsh-install-radar](https://github.com/cccc11f3/dsh-install-radar) | Session install radar for DeepSeek Harness | JavaScript | 1 | MIT | 2026-11-12 |
+| [ccl4-56-23-5/DSH-Plugins](https://github.com/ccl4-56-23-5/DSH-Plugins) | DSH插件：最高指令1.1.2、Api-Switcher2.1.5。完整源码、图文使用说明与最新版安装包。 | JavaScript | 1 | MIT | 2026-10-28 |
 | [chancelu/dsh-llmwiki](https://github.com/chancelu/dsh-llmwiki) | Local Markdown wiki as long-term memory for DeepSeek Harness — RRF-fused retrieval (keyword + wikilink graph + temporal), token-budget injection, auto-capture. Ported from llmwiki. | TypeScript | 1 | MIT | 2026-09-12 |
 | [chaochaokongbai/dsh-beginner-hub](https://github.com/chaochaokongbai/dsh-beginner-hub) | 🧭 DSH新手台：大白话输入需求 → 路由成可直接用的方案（话术/技能/进阶玩法），一键填入新会话 | JavaScript | 1 | MIT | 2026-09-17 |
 | [ChenLaoshiYF/dsh-mcpguard](https://github.com/ChenLaoshiYF/dsh-mcpguard) | DSH 安全插件：扫描 skills 与 MCP 配置中会伤到 AI Agent 的内容——提示注入、同形字混淆等。 | JavaScript | 1 | MIT | 2026-11-07 |
@@ -460,6 +462,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [engbonuonga/dsh-wordpress-admin](https://github.com/engbonuonga/dsh-wordpress-admin) | Full WordPress and WooCommerce administration from DeepSeek Harness: posts, pages, products, media, themes, plugins, templates and menus over the WordPress REST API. | JavaScript | 1 | MIT | 2026-11-06 |
 | [eomis/packhub-workbench-assistant](https://github.com/eomis/packhub-workbench-assistant) | DSH Desktop workbench installer, switcher, and updater | JavaScript | 1 | MIT | 2026-09-11 |
 | [EricXu20266/dsh-skillmanager](https://github.com/EricXu20266/dsh-skillmanager) | DSH skill manager — list, group and enable/disable skills, delegate creation to the host agent | TypeScript | 1 | — | 2026-11-02 |
+| [eya46/dsh-plugins](https://github.com/eya46/dsh-plugins) | Personal plugins for dsh projects. | TypeScript | 1 | — | 2026-11-02 |
 | [fanghedeng/dsh-skill-gogo](https://github.com/fanghedeng/dsh-skill-gogo) | Skill GoGo: a DSH panel plugin to browse, group, preview, export, install and rename skills, plus a multi-select skill menu in the composer. | JavaScript | 1 | MIT | 2026-10-26 |
 | [Fanlr1/dsh-plugins](https://github.com/Fanlr1/dsh-plugins) | Community plugins for DeepSeek Harness (DSH): multi-edit, bash, loop-guard, hub-finder, session-tidy | JavaScript | 1 | MIT | 2026-11-10 |
 | [Fectivnfy112357/crossplug](https://github.com/Fectivnfy112357/crossplug) | crossplug — AI coding-agent plugin bridge: convert plugins between DSH / MiniMax Code (mcode) / pi, agent-plugins.org 1.0.0 packages, pi extensions; dual-side installers | JavaScript | 1 | — | 2026-08-16 |

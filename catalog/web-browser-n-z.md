@@ -4,19 +4,16 @@ DSH 插件全量目录的「网页与浏览器（N–Z）」分册 / The "Web & 
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **1267**
+- 本册收录 / Entries in this volume: **1263**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
 | Project | Description | Language | Stars | License | Updated |
 | --- | --- | --- | ---: | --- | --- |
 | [Tencent/BrowserSkill](https://github.com/Tencent/BrowserSkill) | Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent. | TypeScript | 10638 | MIT | 2026-11-21 |
-| [shaobeichen/dsh-pocket](https://github.com/shaobeichen/dsh-pocket) | 把 DeepSeek Harness 装进你的口袋：电脑上跑 dsh web，手机扫码即同步访问（局域网 + 公网，实时同屏）Put DeepSeek Harness in your pocket: run dsh web on your computer and access it synchronously by scanning a QR code on your phone (LAN + public network, real‑time screen mirroring) | JavaScript | 3106 | GPL-2.0 | 2026-11-21 |
 | [omdsh-dev/dsh-browser](https://github.com/omdsh-dev/dsh-browser) | Chrome sidebar extension that lets DeepSeek Harness operate your browser directly, no vision capabilities required. 一款 Chrome 侧边栏扩展程序，可让 DeepSeek Harness 直接操控您的浏览器，无需视觉能力。 | TypeScript | 1116 | MIT | 2026-11-21 |
-| [toby-bridges/api-relay-audit](https://github.com/toby-bridges/api-relay-audit) | Local security audit for AI API relays and LLM proxies: detects prompt injection, model substitution, tool-call rewriting, SSE anomalies, error leakage, and Web3 wallet risks. Website: https://apirelayaudit.com | Python | 925 | AGPL-3.0 | 2026-11-20 |
 | [saya-ch/dsh-mobile](https://github.com/saya-ch/dsh-mobile) | DeepSeek Harness 的安全移动访问插件与 Android App，支持局域网和多种远程通道、iPhone/iPad 主屏幕 Web App 与网页推送，并提供移动界面适配、设备管理和自定义扩展。 | TypeScript | 904 | Apache-2.0 | 2026-11-21 |
 | [Yu-tao-Li/dsh-computer-use-win](https://github.com/Yu-tao-Li/dsh-computer-use-win) | DeepSeek Harness的Windows电脑操控插件 / Windows computer use for DeepSeek Harness | JavaScript | 841 | MIT | 2026-11-21 |
-| [zenstory-ai/oh-story-dsh](https://github.com/zenstory-ai/oh-story-dsh) | DeepSeek Harness 故事创作插件：集成网文写作、短剧漫剧、小说改游戏与视频解说四个可视化工作台 ｜ DeepSeek Harness plugin for novels, short dramas, games &amp; video recaps | Python | 812 | MIT | 2026-11-21 |
 | [omdsh-dev/dsh-ego-browser](https://github.com/omdsh-dev/dsh-ego-browser) | DSH（DeepSeek Harness）插件：把 ego-lite 浏览器（给 AI Agent 用的 Chromium）接入 HARNESS——13 个结构化 ego_* 工具（文本语义快照、语义定位点击、表单填充、截图、CDP 控制、任务空间隔离），内置 ego 运行时，Linux + Chrome 开箱即用，无需克隆官方仓库或手动构建。 | TypeScript | 562 | NOASSERTION | 2026-11-21 |
 | [zhuzhaoyun/Molio](https://github.com/zhuzhaoyun/Molio) | A local-first personal knowledge layer for AI agents. Build evolving knowledge spaces with LLM Wiki, knowledge graphs, and agent workflows. | TypeScript | 451 | NOASSERTION | 2026-11-17 |
 | [xiajiajun516/dsh-config-manager](https://github.com/xiajiajun516/dsh-config-manager) | DeepSeek Harness (DSH) backup &amp; restore plugin — export, import, migrate and sync your complete DSH configuration, plugins, MCP servers, skills and workspace. One-click migration to another machine. | TypeScript | 372 | MIT | 2026-11-21 |
@@ -334,7 +331,6 @@ DSH 插件全量目录的「网页与浏览器（N–Z）」分册 / The "Web & 
 | [ThreeBody6666/dsh-computer-use](https://github.com/ThreeBody6666/dsh-computer-use) | Native Windows Computer Use and configurable vision tools for DeepSeek Harness. | JavaScript | 2 | MIT | 2026-09-20 |
 | [ThzxxArt/dsh-novel-write-engine](https://github.com/ThzxxArt/dsh-novel-write-engine) | 一个给 DeepSeek Harness 用的确定性小说创作引擎：模型负责写，引擎负责裁决、记账和兜底。把长篇小说连载的状态、门禁、规则和账本，从提示词搬进代码。 | TypeScript | 2 | MIT | 2026-11-11 |
 | [tindoreal/dsh-auto-export-intel](https://github.com/tindoreal/dsh-auto-export-intel) | 汽车出口情报台：全球海关政策 / 国内出口政策 / 出口数据 / 海外工厂 / 进口与销量 / 新闻预警 / 新车发布 / 内容分发与运营数据的 DSH Web 插件 | JavaScript | 2 | MIT | 2026-11-18 |
-| [TinyPandaGame/SpecsRelay-DSH](https://github.com/TinyPandaGame/SpecsRelay-DSH) | 把 DeepSeek 对话整理成开发需求，交给 DSH Agent 执行。仅支持 anywhere-labs DSH Desktop。 | JavaScript | 2 | MIT | 2026-09-25 |
 | [toddpan/dsh-xiaozhi](https://github.com/toddpan/dsh-xiaozhi) | 把小智（Xiaozhi.me）语音助手接入 DSH Web：DSH 作为 MCP 工具提供方，把 35 个 DSH Web 接口封装成 16 个语音友好工具，自带 DSH Web 设置页。 · Connect the Xiaozhi voice assistant to DSH Web as an MCP tool provider: 35 DSH Web endpoints woven into 16 voice-friendly tools, with a DSH Web settings page. | TypeScript | 2 | NOASSERTION | 2026-11-04 |
 | [Townrain/dsh-precise-cache](https://github.com/Townrain/dsh-precise-cache) | Five-decimal cache-hit readout beside the chat stats line for the DeepSeek Harness Web GUI (dsh-plugin) | JavaScript | 2 | MIT | 2026-08-24 |
 | [toyvfish/dsh-model-seat](https://github.com/toyvfish/dsh-model-seat) | DeepSeek Harness 的模型选择器：品牌LOGO、带简介的分组模型列表、搜索、推理式滑块和可自定义的配置。 | JavaScript | 2 | MIT | 2026-10-12 |

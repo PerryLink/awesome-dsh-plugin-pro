@@ -4,7 +4,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（G–M）」分册 / 
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **978**
+- 本册收录 / Entries in this volume: **982**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -646,6 +646,10 @@ DSH 插件全量目录的「Agent、自动化与工作流（G–M）」分册 / 
 | [jackiehank/SoL-dsh](https://github.com/jackiehank/SoL-dsh) | Ports the four efficiency mechanisms of NVlabs/SoL-Pi to DeepSeek Harness (DSH) as a Cordis plugin bundle | JavaScript | 0 | MIT | 2026-11-01 |
 | [JackZo400/dsh-group-feed](https://github.com/JackZo400/dsh-group-feed) | dsh 插件：群聊上下文投喂——非 @ 的消息攒批挂进上下文（零 token、不唤醒模型），每天再压成日结 · Batched group-chat context feeding for dsh: zero-token injection plus daily digests. | JavaScript | 0 | MIT | 2026-09-27 |
 | [jalllychun/dsh-managed-approval](https://github.com/jalllychun/dsh-managed-approval) | Codex-inspired managed approval for DeepSeek Harness | TypeScript | 0 | MIT | 2026-08-17 |
+| [jarvisai615-debug/dsh-plugin-a-gate-must-read-what-the-reader-reads](https://github.com/jarvisai615-debug/dsh-plugin-a-gate-must-read-what-the-reader-reads) | a-gate-must-read-what-the-reader-reads: a skill published from Jarvis | — | 0 | NOASSERTION | 2026-09-26 |
+| [jarvisai615-debug/dsh-plugin-reply-short](https://github.com/jarvisai615-debug/dsh-plugin-reply-short) | reply-short: a skill published from Jarvis | — | 0 | NOASSERTION | 2026-09-26 |
+| [jarvisai615-debug/dsh-plugin-the-supervisor-also-sleeps](https://github.com/jarvisai615-debug/dsh-plugin-the-supervisor-also-sleeps) | the-supervisor-also-sleeps: a skill published from Jarvis | — | 0 | NOASSERTION | 2026-09-26 |
+| [jarvisai615-debug/dsh-plugin-turn-a-defect-into-a-written-rule](https://github.com/jarvisai615-debug/dsh-plugin-turn-a-defect-into-a-written-rule) | turn-a-defect-into-a-written-rule: a skill published from Jarvis | — | 0 | NOASSERTION | 2026-09-26 |
 | [JasperGuWP/dsh-plugin-market](https://github.com/JasperGuWP/dsh-plugin-market) | DeepSeek Harness 插件技能库：浏览/预检/一键安装/更新/卸载 dsh 插件与 Skill 技能包，设置页一键重启与 harness 本体自更新。Plugin &amp; skill marketplace for deepseek-harness. | JavaScript | 0 | — | 2026-08-23 |
 | [JayDong9130/dsh-evolution-lab](https://github.com/JayDong9130/dsh-evolution-lab) | Proof-carrying Skill self-evolution for DeepSeek Harness | TypeScript | 0 | MIT | 2026-09-12 |
 | [Jaye1465/dsh-fresh-session](https://github.com/Jaye1465/dsh-fresh-session) | DSH Web/Desktop plugin: New Session creates a genuinely fresh Session from the current preset and model allowlist instead of reusing a blank shell. | JavaScript | 0 | MIT | 2026-11-15 |

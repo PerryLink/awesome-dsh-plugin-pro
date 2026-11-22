@@ -4,7 +4,7 @@ DSH 插件全量目录的「界面与体验（M–S）」分册 / The "UI & Expe
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **2160**
+- 本册收录 / Entries in this volume: **2156**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -15,14 +15,11 @@ DSH 插件全量目录的「界面与体验（M–S）」分册 / The "UI & Expe
 | [omdsh-dev/DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 开放的侧边栏底座，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/侧边对话/Git/子代理页面 ｜ Open sidebar foundation, supports third-party extensions to register new sidebar pages. Built-in file rendering/editing, terminal, side chat, Git, and sub-agent pages. | TypeScript | 5274 | MIT | 2026-11-21 |
 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | Whale Girl skin series for DeepSeek Harness. 适用于 DeepSeek Harness 的，鲸鱼娘系列皮肤。 | TypeScript | 3130 | NOASSERTION | 2026-11-21 |
 | [oneclickvirt/ecs](https://github.com/oneclickvirt/ecs) | VPS Fusion Monster — Server Benchmark (Go Edition) Aims to be the most comprehensive and fastest server benchmarking project, built in Go with zero external dependencies.  VPS 融合怪服务器测评项目 · Go 版本 致力于成为最全面和最快速的服务器测评项目，使用 Go 语言实现，零环境依赖零广告 | Go | 2484 | GPL-3.0 | 2026-11-21 |
-| [omdsh-dev/dsh-mnemon](https://github.com/omdsh-dev/dsh-mnemon) | Composable, view-based context for DeepSeek Harness. Pluggable sources and strategies, with layered memory and self-evolving skills out of the box. | TypeScript | 1077 | MIT | 2026-11-21 |
 | [omdsh-dev/dsh-genui](https://github.com/omdsh-dev/dsh-genui) | GenUI for DeepSeek Harness: interactive UI components rendered inline in assistant replies via the dsh-ui fence — layout, charts, plots, forms, quizzes, mermaid, 3D scenes, and an action event loop back to the model. Ships the fence-teaching host plugin, the browser renderer (client half), and the genui skill. | TypeScript | 1044 | MIT | 2026-11-21 |
 | [ningbainb/deepseek-harness-desktop](https://github.com/ningbainb/deepseek-harness-desktop) | Open-source Windows desktop client and GUI for DeepSeek Harness — zero-setup installer with Codex, plugins, skills, SSH, mobile remote access, and 11 skins. | JavaScript | 950 | BSD-3-Clause | 2026-11-21 |
 | [Nagi-ovo/dsh-ads](https://github.com/Nagi-ovo/dsh-ads) | 把 DSH 变成 2005 年门户网站｜Parody ads, fake games, and popups for the DSH Web UI | TypeScript | 735 | BSD-3-Clause | 2026-11-21 |
-| [SAOS-3624/dsh-see-now](https://github.com/SAOS-3624/dsh-see-now) | 让 AI 实时看见你的屏幕：按变化量筛选帧、多帧拼进一张图，静止画面几乎不花 token | JavaScript | 730 | Apache-2.0 | 2026-11-21 |
 | [Nwflower/dsh-claude-style](https://github.com/Nwflower/dsh-claude-style) | Claude Code Desktop theme for DeepSeek Harness｜ 为 DeepSeek Harness 复刻 Claude Code Desktop 风格与交互体验的主题插件 | TypeScript | 680 | NOASSERTION | 2026-11-21 |
 | [QCYTSN/dsh-dafeiyu](https://github.com/QCYTSN/dsh-dafeiyu) | Desktop-native BigFish companion for DeepSeek Harness — real Agent status, always on top on Windows. | JavaScript | 628 | MIT | 2026-11-21 |
-| [Mars-Sea/dsh-commandcode-provider](https://github.com/Mars-Sea/dsh-commandcode-provider) | Command Code provider plugin for DeepSeek Harness (dsh). Adds Command Code model access, live model catalog, plan-aware model selection, reasoning effort, image input, web search, and multi-account support. | TypeScript | 489 | MIT | 2026-11-21 |
 | [Roland0511/dsh-marktext](https://github.com/Roland0511/dsh-marktext) | MarkText (muya) WYSIWYG Markdown editor for the DeepSeek Harness right sidebar | JavaScript | 389 | MIT | 2026-11-21 |
 | [oneclickvirt/oneclickvirt](https://github.com/oneclickvirt/oneclickvirt) | Universal Virtualization Management Platform   可扩展的通用虚拟化管理平台，支持 Proxmox VE / LXD (GPU) / Incus (GPU) / Docker / Podman / Containerd / Qemu / Kubevirt | Go | 384 | GPL-3.0 | 2026-11-19 |
 | [runzhliu/welink](https://github.com/runzhliu/welink) | 🔍微信聊天数据分析的本地化AI-agent(Docker/Windows/MacOS) · AI分身 / 大模型分析 / 好友排行 / 词云 / 情感趋势 / 群聊画像 | TypeScript | 325 | AGPL-3.0 | 2026-11-16 |
@@ -211,7 +208,6 @@ DSH 插件全量目录的「界面与体验（M–S）」分册 / The "UI & Expe
 | [SkyWingDN/dsh-fairy-zzz](https://github.com/SkyWingDN/dsh-fairy-zzz) | 第三方修改版（非官方），基于 AssassinVIX/fairy-zzz-plugin（MIT）与 Chengzhibense/Fairy-DSH（Apache-2.0）修改。Fairy Ⅲ / 绝区零 H.D.D 皮肤 for DeepSeek Harness：性能优化 + 用量气泡 / 拖拽眼徽 / 外观三档 / 欢迎页文案 + 可选本地 GPT-SoVITS 语音。 | JavaScript | 6 | MIT | 2026-11-19 |
 | [Stellum-Waq/dsh-pet-ronaldo](https://github.com/Stellum-Waq/dsh-pet-ronaldo) | C罗桌宠 · DeepSeek Harness 桌面宠物插件：葡萄牙 7 号 chibi 吉祥物，随 Agent 状态切换动画，对话完成 SIU 庆祝 + 提示音，支持导入自定义 spritesheet 统一管理 | JavaScript | 6 | MIT | 2026-10-05 |
 | [sueqet/dsh-todo-board](https://github.com/sueqet/dsh-todo-board) | Cross-session TODO board for DeepSeek Harness (dsh): a draggable floating panel groups tasks by working directory, each task carries a run mode (remind / auto-continue in the current session / auto-open a new session) and two checkboxes (AI done, user verified). | JavaScript | 6 | MIT | 2026-11-14 |
-| [sunbigfly/dsh-multi-user-service](https://github.com/sunbigfly/dsh-multi-user-service) | 在一套 DSH 中提供统一服务账号登录、成员目录边界、权限、会话、文件及用量管理。 | JavaScript | 6 | MIT | 2026-11-19 |
 | [swaylq/dsh-digipet](https://github.com/swaylq/dsh-digipet) | 在 DeepSeek Harness 里孵一只数码兽：吃你的真实工作长大，数码宝贝式分支进化，零 token、模型不知道它存在 \| Digimon-style raising game for DSH — feeds on your real work, zero tokens. | JavaScript | 6 | MIT | 2026-11-11 |
 | [MakerFlyFly/DSH-better-classifier](https://github.com/MakerFlyFly/DSH-better-classifier) | Nested folders, colored tags, and tree search for DeepSeek Harness. | TypeScript | 5 | MIT | 2026-11-21 |
 | [mekos2772/dsh-plugin-mimi](https://github.com/mekos2772/dsh-plugin-mimi) | 鲸鱼娘 Mimi：DeepSeek Harness（DSH）桌面宠物插件，内置 Windows Computer Use 与桌宠聊天好感度。 | Python | 5 | MIT | 2026-11-01 |
@@ -1177,7 +1173,6 @@ DSH 插件全量目录的「界面与体验（M–S）」分册 / The "UI & Expe
 | [Mika-Maki/dsh-cheerful](https://github.com/Mika-Maki/dsh-cheerful) | DSH 插件：cheer 工具 + 礼炮彩带效果（V0.1-Unstable，实验性） | JavaScript | 0 | MIT | 2026-10-30 |
 | [Mikajin1206/dsh-glm-quota](https://github.com/Mikajin1206/dsh-glm-quota) | DeepSeek Harness plugin: view GLM Coding Plan quota (5-hour / weekly remaining allowance, monthly MCP calls) from open.bigmodel.cn or api.z.ai | JavaScript | 0 | MIT | 2026-11-15 |
 | [mikazuhe13-ui/dsh-hook](https://github.com/mikazuhe13-ui/dsh-hook) | DSH (DeepSeek Harness) lifecycle hooks settings panel plugin — 7-event coverage, guard rules with live toggles, run status. dsh-plugin | JavaScript | 0 | MIT | 2026-10-07 |
-| [mikel38487/cvc-catalog-sync-plugin](https://github.com/mikel38487/cvc-catalog-sync-plugin) | DSH plugin for CheapVibeCode with three switchable features: model catalog and reasoning-level sync, price-multiplier badges in the model picker, and the account balance in the sidebar | JavaScript | 0 | MIT | 2026-11-20 |
 | [mikijiyun/dsh-token-rush](https://github.com/mikijiyun/dsh-token-rush) | DSH Web GUI 悬浮仪表：实时 token 消耗 / 估算金额 / 账户余额，高峰时段自动变橙红色。A floating token / cost / balance HUD that turns orange-red during DeepSeek rush hours. | JavaScript | 0 | MIT | 2026-09-30 |
 | [miku05231/dsh-provider-quote](https://github.com/miku05231/dsh-provider-quote) | DSH 插件：对正在使用的模型提供商询价（余额 + 单价，参考 cc-switch 的「服务商询价」） | JavaScript | 0 | MIT | 2026-10-18 |
 | [MikyWang/dsh-private-remote](https://github.com/MikyWang/dsh-private-remote) | DeepSeek Harness remote plugin: continue a paired Harness Host's workspaces, sessions, streaming replies and approvals in the official Desktop UI | JavaScript | 0 | MIT | 2026-10-25 |
@@ -1290,6 +1285,7 @@ DSH 插件全量目录的「界面与体验（M–S）」分册 / The "UI & Expe
 | [MrXiongBear/dsh-orchestrator-canvas](https://github.com/MrXiongBear/dsh-orchestrator-canvas) | 工作画布流：图即真相的编排闸门（Brief→Decompose→Dispatch→Verify→Accept）+ 只读编排画布。 | JavaScript | 0 | MIT | 2026-11-03 |
 | [MrXiongBear/dsh-usage-dashboard](https://github.com/MrXiongBear/dsh-usage-dashboard) | DSH 插件：侧边栏显示 API 余额、消费估算与峰谷时段，附完整用量仪表盘与服务商切换 | JavaScript | 0 | MIT | 2026-11-03 |
 | [mryouyouHK/youyou-sidebar-logo-animation](https://github.com/mryouyouHK/youyou-sidebar-logo-animation) | Morphs the sidebar whale and sweeps a marquee across DEEPSEEK HARNESS while a session generates, marks conversation titles with a whale icon, plays a whale-dive animation while a conversation loads, and draws a light rotating rainbow ring around any focused composer. | JavaScript | 0 | MIT | 2026-11-06 |
+| [MrZMrsL/dsh-saiboroom](https://github.com/MrZMrsL/dsh-saiboroom) | 赛博房间 · 给 DeepSeek Harness 的侧栏人格面板：会换姿态的像素角色 + 会写进系统提示的心情引擎 + 按真实模型计价的账单 + 随录 + 每晚做梦沉淀 + 本地记忆检索 | JavaScript | 0 | NOASSERTION | 2026-11-20 |
 | [MST19711/dsh-balance-panel](https://github.com/MST19711/dsh-balance-panel) | Floating Balance Panel for the DSH Web UI — live remaining % for the 5h / weekly / monthly windows, supporting OpenCode Go and Z.AI-CN | JavaScript | 0 | MIT | 2026-09-10 |
 | [MST19711/dsh-session-sound](https://github.com/MST19711/dsh-session-sound) | Session pause &amp; completion sounds for the DeepSeek Harness Web UI — 15 Ubuntu Yaru sounds, independently configurable. DeepSeek Harness Web 端会话暂停/结束提示音插件：内置 15 个 Ubuntu Yaru 音效，两种提示音独立配置。 | JavaScript | 0 | MIT | 2026-08-15 |
 | [msun1999/dsh-next-suggestion](https://github.com/msun1999/dsh-next-suggestion) | Inline next-reply suggestion for the DeepSeek Harness composer: predicts your most likely next message and fills it on Tab. | JavaScript | 0 | MIT | 2026-10-22 |

@@ -4,18 +4,16 @@ DSH 插件全量目录的「界面与体验（T–Z）」分册 / The "UI & Expe
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **2144**
+- 本册收录 / Entries in this volume: **2141**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
 | Project | Description | Language | Stars | License | Updated |
 | --- | --- | --- | ---: | --- | --- |
 | [zhu1090093659/dsh-web](https://github.com/zhu1090093659/dsh-web) | DeepSeek Harness (DSH) Web 插件聚合生态 · 万物皆插件，通过创意工坊分发｜｜DeepSeek Harness (DSH) Web Plugin Aggregation Ecosystem · Everything is a plugin, distributed via the Creative Workshop | TypeScript | 10578 | Apache-2.0 | 2026-11-21 |
-| [T-Auto/dsh-ops](https://github.com/T-Auto/dsh-ops) | A toolkit for low-level operations in DSH, designed to reduce token usage and task execution time / DSH 底层操作工具插件，旨在减少 Token 消耗与任务耗时 | JavaScript | 5971 | MIT | 2026-11-21 |
 | [ZSeven-W/dsh-game-studio](https://github.com/ZSeven-W/dsh-game-studio) | Describe a small game in one sentence, play it in the DeepSeek Harness sidebar, swap in AI art, and publish to GitHub Pages or Cloudflare in one click. | JavaScript | 776 | MIT | 2026-11-21 |
 | [V1ki/dsh-plugin-subscriptions](https://github.com/V1ki/dsh-plugin-subscriptions) | Use ChatGPT (Codex), Claude, and Grok (X Premium) subscriptions as DeepSeek Harness LLM providers — OAuth login in the web UI, no API keys | TypeScript | 630 | MIT | 2026-11-21 |
 | [yyh-001/dsh-meme](https://github.com/yyh-001/dsh-meme) | DeepSeek Harness 表情包插件：输入框一键发图、文字 token 斗图、情绪主动发图、AI 自动学图，图库市场一键安装。 · Meme/sticker plugin for DeepSeek Harness: one-click picker in the composer, text-token memes, mood-driven sending, AI learns your images, marketplace packs. | JavaScript | 597 | MIT | 2026-11-21 |
-| [WSL043/dsh-codex-subscription](https://github.com/WSL043/dsh-codex-subscription) | Use your ChatGPT Plus / Pro (Codex) subscription in DeepSeek Harness (DSH): GPT-6 &amp; Codex models, images, web search and quota via ChatGPT sign-in — no OpenAI API key. Beta: control DSH from the ChatGPT mobile app. 在 DSH 中使用 ChatGPT 订阅，并可用 ChatGPT 手机 App 远程控制。 | JavaScript | 523 | MIT | 2026-11-21 |
 | [ZSeven-W/dsh-ios](https://github.com/ZSeven-W/dsh-ios) | DeepSeek Harness (DSH) plugin: a live iOS Simulator — and a USB-connected iPhone — inside the conversation. 22 agent tools for booting, building, driving the UI by accessibility identity, OCR text or list rows, plus a streaming sidebar panel you can tap and drag on. | TypeScript | 481 | MIT | 2026-11-21 |
 | [WYH66666666/DSH-Transparent-UI-Plugin](https://github.com/WYH66666666/DSH-Transparent-UI-Plugin) | 是一层高自由度的玻璃质感主题，套在 DeepSeek Harness 网页端。顶栏、侧边栏、输入框、统计行、轨迹视图都成了磨砂玻璃片。玻璃模糊度、磨砂度、背景（流体或自定义壁纸，壁纸还能单独调模糊和磨砂）全都能在设置卡片里自由调节。关掉开关就回到原生界面，不改 DSH 任何一行源码。 | JavaScript | 440 | AGPL-3.0 | 2026-11-21 |
 | [vlln/whale-girl](https://github.com/vlln/whale-girl) | DSH Web GUI 桌面宠物插件（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍的积累型伙伴。 | JavaScript | 413 | MIT | 2026-11-21 |
@@ -88,7 +86,6 @@ DSH 插件全量目录的「界面与体验（T–Z）」分册 / The "UI & Expe
 | [xtxo/dsh-ui](https://github.com/xtxo/dsh-ui) | DeepSeek Harness desktop | Rust | 15 | MIT | 2026-09-11 |
 | [wai549077/dsh-aliyun-balance](https://github.com/wai549077/dsh-aliyun-balance) | DSH 插件：悬浮一行显示阿里云代金券 + 账户余额（还能花的钱），悬停看券面值/已用/最早失效时间。只读 BSS 存量，不做消费统计。 | JavaScript | 14 | MIT | 2026-11-21 |
 | [zhijun-dai/Catppuccin-dsh-theme](https://github.com/zhijun-dai/Catppuccin-dsh-theme) | 🐱 Soothing pastel theme for DeepSeek Harness | JavaScript | 14 | NOASSERTION | 2026-11-18 |
-| [titanwings/dsh-plannotator](https://github.com/titanwings/dsh-plannotator) | DSH 计划批注插件：选中计划原文、逐条批注，并把结构化反馈送回 Agent。 / A DSH plan-review plugin for anchored annotations and structured Agent feedback. | TypeScript | 13 | MIT | 2026-11-10 |
 | [xinxing1708/DSH-Codex-Style](https://github.com/xinxing1708/DSH-Codex-Style) | 为Deepseek-Harness制作的Codex界面的UI插件 | JavaScript | 13 | MIT | 2026-11-17 |
 | [Zephinel/dsh-intelligent-ui](https://github.com/Zephinel/dsh-intelligent-ui) | Intelligent UI extension for DeepSeek Harness: render OpenUI Lang answers as interactive pages. | TypeScript | 13 | MIT | 2026-11-16 |
 | [ZSeven-W/dsh-qa](https://github.com/ZSeven-W/dsh-qa) | DeepSeek Harness plugin that does QA: an agent explores your app like a real user and leaves evidence, then the explored path is exported as a deterministic replay scenario you run every release. Orchestrates the browser, macOS desktop, iOS and Android drivers — never a false green. | JavaScript | 13 | MIT | 2026-11-20 |

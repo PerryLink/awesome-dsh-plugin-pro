@@ -4,16 +4,16 @@ DSH 插件全量目录的「界面与体验（G–L）」分册 / The "UI & Expe
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **2131**
+- 本册收录 / Entries in this volume: **2130**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
 | Project | Description | Language | Stars | License | Updated |
 | --- | --- | --- | ---: | --- | --- |
-| [liustack/modlens](https://github.com/liustack/modlens) | The first vision plugin for DeepSeek Harness, and the vision bridge for every text-only coding agent. Paste an image, get structured JSON evidence (OCR, layout, semantics). \| 全网最强 DeepSeek Harness 外挂视觉插件，为 DeepSeek、GLM 等纯文本模型外挂视觉能力，粘贴图片即得结构化 JSON 证据（OCR、版面、语义）。 | TypeScript | 5049 | MIT | 2026-11-21 |
 | [kelai141/dsh-mobile-apk](https://github.com/kelai141/dsh-mobile-apk) | dsh 安卓壳 APK——WebView UI + 内嵌 Termux 运行时快照（解压即跑），为dsh本地运行设计的高性能方案 | Kotlin | 1122 | MIT | 2026-11-21 |
 | [Han-1413141/dsh-cost-meter](https://github.com/Han-1413141/dsh-cost-meter) | Cost tracking for DeepSeek Harness: session and model costs, token usage, budgets, provider balances, and coding-plan quotas. Bilingual English/Chinese UI. | JavaScript | 741 | MIT | 2026-11-21 |
 | [kingOfSoySauce/dsh-liang-skin](https://github.com/kingOfSoySauce/dsh-liang-skin) | DeepSeek Harness 滑动变阻器皮肤 | TypeScript | 402 | — | 2026-11-20 |
+| [lxj5820/dsh-boot-animation](https://github.com/lxj5820/dsh-boot-animation) | DSH plugin: replaces the kernel boot page with a full-window video clip, then dissolves into the app. 中文说明见 MANUAL.md | JavaScript | 361 | NOASSERTION | 2026-11-21 |
 | [kingOfSoySauce/dsh-skin-market](https://github.com/kingOfSoySauce/dsh-skin-market) | 浏览、搜索、安装并管理 DSH 皮肤 | TypeScript | 335 | MIT | 2026-11-19 |
 | [huiliyi37/dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 官方 DeepSeek Harness 的交互式终端 UI 插件：自研 ANSI 极简交互渲染、流式 Markdown/工具卡、16+ 主题、slash 命令与选择器、输入历史与本地偏好持久化、LSP 诊断、memory记忆，很丝滑的开发体验。 | TypeScript | 315 | Apache-2.0 | 2026-11-20 |
 | [huaguoxingkong/dsh-prompt-rewriter](https://github.com/huaguoxingkong/dsh-prompt-rewriter) | 输入框旁一键提示词增强：把半成品草稿原地改成可执行的提示词，只改不发送。 | JavaScript | 299 | MIT | 2026-11-21 |
@@ -572,7 +572,6 @@ DSH 插件全量目录的「界面与体验（G–L）」分册 / The "UI & Expe
 | [GIGHT111/dsh-workspace-inspector](https://github.com/GIGHT111/dsh-workspace-inspector) | DeepSeek Harness (dsh) Web 右侧面板插件：Token 用量与占比、全部历史消息目录（可折叠/点击跳转）、上下文压力、工作区文件树（点击系统默认打开）。跨平台（macOS / Windows / Linux）。 | TypeScript | 1 | MIT | 2026-08-14 |
 | [giiiiiithub/terminal](https://github.com/giiiiiithub/terminal) | DeepSeek Harness Plugin，Web UI 的终端面板：node-pty 真实 PTY + xterm.js 浏览器渲染，开箱即用的交互式 shell | JavaScript | 1 | MIT | 2026-10-11 |
 | [GIT121995/dsh-feiyu-wardrobe](https://github.com/GIT121995/dsh-feiyu-wardrobe) | 🐋 大肥鱼衣橱 — DSH 插件：token 花销变鱼粮 + 侧边栏换装小游戏（Q版/少女版双身形、整套穿着立绘、悬浮小鲸鱼，纯本地离线） | JavaScript | 1 | MIT | 2026-11-12 |
-| [god1sdfghjkl/dsh-plugin-voice-local](https://github.com/god1sdfghjkl/dsh-plugin-voice-local) | Local full-duplex voice for DeepSeek Harness: pluggable ONNX TTS + sherpa-onnx ASR, in-host, loopback-only, 7 themes. | JavaScript | 1 | MIT | 2026-11-13 |
 | [godlike985/dsh-sidebar-editor](https://github.com/godlike985/dsh-sidebar-editor) | 在 DSH 右侧栏预览代码文件、按名字搜索工作区文件，并把选中行一键引用进对话框 ｜ Preview code files in the DSH sidebar, search workspace files by name, and reference the selected lines into the composer | JavaScript | 1 | MIT | 2026-10-10 |
 | [gonegirl07/commandcode-go-for-dsh](https://github.com/gonegirl07/commandcode-go-for-dsh) | Command Code Go provider for DeepSeek Harness TUI and Web, including /cc-usage. | JavaScript | 1 | MIT | 2026-09-12 |
 | [gongshiyun/dsh-usage-dashboard](https://github.com/gongshiyun/dsh-usage-dashboard) | DeepSeek Harness（DSH）插件：展示 DeepSeek 账户余额、当前会话预估消耗、历史对话明细（每个对话的 token 与金额），并根据历史会话的平均消耗，估算各模型剩余对话次数。 | JavaScript | 1 | MIT | 2026-09-10 |

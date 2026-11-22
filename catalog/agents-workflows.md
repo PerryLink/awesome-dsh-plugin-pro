@@ -4,7 +4,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（A–F）」分册 / 
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **824**
+- 本册收录 / Entries in this volume: **825**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -679,6 +679,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（A–F）」分册 / 
 | [ColaFly-if/dsh-acceptance-gate](https://github.com/ColaFly-if/dsh-acceptance-gate) | DSH 验收闭环插件：改动先登记验收单，插件自己跑证据，没清零不许收尾。 | JavaScript | 0 | MIT | 2026-11-16 |
 | [ColorlessBoy/murdoku-teacher](https://github.com/ColorlessBoy/murdoku-teacher) | Murdoku 陪玩：DSH 侧边栏插件 + 教学/考官 skill；内含「寻宝 The Treasure Hunt」24×24 竞赛关互动页（GitHub Pages 在线可玩，含 E2E 闭环检测） | JavaScript | 0 | — | 2026-11-10 |
 | [Congcong19655/dsh-projects](https://github.com/Congcong19655/dsh-projects) | claude project style experience in deepseek harness  | JavaScript | 0 | MIT | 2026-11-15 |
+| [CoolrfulDARkness/dsh-handover-protocol](https://github.com/CoolrfulDARkness/dsh-handover-protocol) | 会话头部的标准化交接手续开关按钮，按会话记忆开关状态，注入交接协议指针与全套触发词手续。 | JavaScript | 0 | MIT | 2026-11-20 |
 | [cosmoliu2002/dsh-prompt-enhancer](https://github.com/cosmoliu2002/dsh-prompt-enhancer) | Composer prompt enhancer for DeepSeek Harness: ✨ button + /enhance command, structured prompt rewrite, open-question strip, follows the current session model. | JavaScript | 0 | MIT | 2026-10-18 |
 | [Covertaker/dsh-cc-sessions-hub](https://github.com/Covertaker/dsh-cc-sessions-hub) | Claude Code sessions hub for DeepSeek Harness: list, chat, approvals, previews, subagents | JavaScript | 0 | MIT | 2026-11-14 |
 | [CQQOOQ123/dsh-skill-radar](https://github.com/CQQOOQ123/dsh-skill-radar) | A lightweight automatic skill radar for DeepSeek Harness: auto-scout, auto-load strong matches, and acquire skills with security checks and rollback. | JavaScript | 0 | MIT | 2026-11-12 |

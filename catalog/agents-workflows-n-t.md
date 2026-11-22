@@ -4,7 +4,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（N–T）」分册 / 
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **696**
+- 本册收录 / Entries in this volume: **697**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -58,6 +58,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（N–T）」分册 / 
 | [Tkingxiao/I-am-Yuike](https://github.com/Tkingxiao/I-am-Yuike) | 一个猫娘人格扮演插件（软破限），去除dsh强制加入的附加提示词，只附带工具链和猫娘基准人格的插件 | JavaScript | 14 | MIT | 2026-11-13 |
 | [shenA2024/whale-persona](https://github.com/shenA2024/whale-persona) | 人设引擎 / DeepSeek Harness 插件：一份 config.json 管住 AI 的自称、称呼、立场、工作契约、思维链语言与长期记忆；出厂空白、装上不改变任何行为；记忆由 AI 提议、人工确认才生效（代码强制）。装：npx -y whale-persona。A blank-by-default persona engine for DSH. ZCode adapter retired. | JavaScript | 13 | MIT | 2026-11-14 |
 | [Sky-lll27/DSH-chat-keeper](https://github.com/Sky-lll27/DSH-chat-keeper) | DSH 对话管家：跨工作区对话总表 · 正文搜索（中文子串 / 未打开的旧对话也能搜 / 定位到命中那句并读出上下文）· 按时间批量归档 · 回收站式删除（可恢复、分批、不删除正在运行的对话） | JavaScript | 13 | MIT | 2026-11-21 |
+| [titanwings/dsh-plannotator](https://github.com/titanwings/dsh-plannotator) | DSH 计划批注插件：选中计划原文、逐条批注，并把结构化反馈送回 Agent。 / A DSH plan-review plugin for anchored annotations and structured Agent feedback. | TypeScript | 13 | MIT | 2026-11-10 |
 | [qingmomo233/dsh-thinking-language](https://github.com/qingmomo233/dsh-thinking-language) | 更改 deepseek harness 思考过程语言 | JavaScript | 12 | NOASSERTION | 2026-11-18 |
 | [rinDBeans/dsh-miraculous-standard](https://github.com/rinDBeans/dsh-miraculous-standard) | DeepSeek V4 Pro/Flash unified anchored agent preset for DeepSeek Harness (official API &amp; opencode-go): two-stage RL-aligned bootstrap, model-aware path routing, epoch-aware long-session stability | JavaScript | 12 | MIT | 2026-09-30 |
 | [NEVSTOP-LAB/dsh-approval-mode](https://github.com/NEVSTOP-LAB/dsh-approval-mode) | DSH 审批模式插件，在 DSH 窗口的权限下拉框（Read Only / Workspace Write / Full Access）旁边加一个「审批模式」按钮，在 Workspace Write 模式下工具调用自动放行 | JavaScript | 10 | MIT | 2026-11-13 |

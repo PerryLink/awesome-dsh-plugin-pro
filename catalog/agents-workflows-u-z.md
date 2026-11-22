@@ -4,7 +4,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（U–Z）」分册 / 
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **612**
+- 本册收录 / Entries in this volume: **613**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -394,6 +394,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（U–Z）」分册 / 
 | [xfgil/dsh-loop-guard](https://github.com/xfgil/dsh-loop-guard) | DSH 循环守卫：单轮工具调用上限、重复动作识别、长回合沉默播报。Caps tool calls per turn, detects repeated identical actions, and speaks up when a long turn has gone quiet without addressing the user. | JavaScript | 0 | MIT | 2026-11-03 |
 | [xh0915/dsh-chart](https://github.com/xh0915/dsh-chart) | 航图 · 把一次会话里跑通的步骤，整理成一份下次能直接用的技能 · DeepSeek Harness 插件 | TypeScript | 0 | MIT | 2026-10-23 |
 | [xh0915/dsh-lighthouse](https://github.com/xh0915/dsh-lighthouse) | 灯塔 · 读取当前会话，把删目录、强推、读密钥这类难撤回的操作挑出来，说明影响范围和更稳的做法 · DeepSeek Harness 插件 | TypeScript | 0 | MIT | 2026-10-23 |
+| [XI180/dsh-citation-chips](https://github.com/XI180/dsh-citation-chips) | 一个DSH插件，使模型在引用了检索材料的话末尾，紧跟一个包含链接的数字角标，并在回答结尾附一份 来源 清单 | JavaScript | 0 | — | 2026-10-22 |
 | [xiaaoyun/dsh-auto-continue](https://github.com/xiaaoyun/dsh-auto-continue) | Keeps a DSH Session working while you are away: after each turn it sends one more continuation, until the round budget runs out or you send a message yourself. | JavaScript | 0 | — | 2026-11-14 |
 | [xiamubumu/dsh-aux-degrade](https://github.com/xiamubumu/dsh-aux-degrade) | DSH 1.5 辅助模型降级：让压缩摘要、会话标题这类旁路调用更省更完整，主循环零影响。仅支持 DSH 1.5，后续会跟进更新。 / Auxiliary-model degradation for DSH 1.5: cheaper, complete side calls (reasoning off, token floor, tools stripped). DSH 1.5 only; newer releases will follow. | JavaScript | 0 | MIT | 2026-10-15 |
 | [xiamubumu/dsh-capability-composer](https://github.com/xiamubumu/dsh-capability-composer) | DSH 1.5 能力组合器：按会话或工作区编排工具、技能与 MCP，按需缩小系统提示。仅支持 DSH 1.5，后续会跟进更新。 / Capability composer for DSH 1.5: per-session tool / skill / MCP compositions that shrink the system prompt on demand. DSH 1.5 only; newer releases will follow. | JavaScript | 0 | MIT | 2026-10-15 |

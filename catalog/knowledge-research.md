@@ -4,7 +4,7 @@ DSH 插件全量目录的「知识与研究」分册 / The "Knowledge & Research
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **1932**
+- 本册收录 / Entries in this volume: **1935**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -16,6 +16,7 @@ DSH 插件全量目录的「知识与研究」分册 / The "Knowledge & Research
 | [zilliztech/memsearch](https://github.com/zilliztech/memsearch) | A persistent, unified memory layer for all your AI agents (e.g. Claude Code, Codex, DSH), backed by Markdown and Milvus. | Python | 2917 | MIT | 2026-11-21 |
 | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 你的AI学习搭档：定路线、讲知识、做项目，边学边做，学透一门科目 | JavaScript | 1513 | MIT | 2026-11-21 |
 | [mem9-ai/mem9](https://github.com/mem9-ai/mem9) | Unlimited memory for OpenClaw | TypeScript | 1236 | Apache-2.0 | 2026-11-16 |
+| [omdsh-dev/dsh-mnemon](https://github.com/omdsh-dev/dsh-mnemon) | Composable, view-based context for DeepSeek Harness. Pluggable sources and strategies, with layered memory and self-evolving skills out of the box. | TypeScript | 1077 | MIT | 2026-11-21 |
 | [csyangwen/dsh-memory-evolve](https://github.com/csyangwen/dsh-memory-evolve) | 为 DeepSeek Harness 带来「跨会话长期记忆 + 后台自我进化」能力的纯插件实现：五轨记忆 · git 分支感知 · 回合内自我审查 · 技能自我进化与技能管理器 · 四轨待办 · COI 调度 · 会话广播 · 会话搜索 · 提示词管理器 · 临时信息便签——零核心修改、零运行时依赖，随装随用、卸载即净。 | JavaScript | 880 | MIT | 2026-11-21 |
 | [FuRongJun-1999/dsh-memory](https://github.com/FuRongJun-1999/dsh-memory) | 白箱AGI架构探索：元认知（自我认知循环）、持续学习（知识飞轮）、世界模型（条件空间+语义时空图）、自我改进（自举纪律）、零LLM白箱管线与可审计信任护栏。 | Python | 736 | MIT | 2026-11-21 |
 | [Clearailhc/clearai-dsh](https://github.com/Clearailhc/clearai-dsh) | ClearAI：以本体为纲的原生 DSH 插件 —— 经证据核验的研究长成可浏览的领域本体。 · ClearAI: an ontology-first DSH agent preset — evidence-checked research that grows into a domain ontology. | JavaScript | 702 | Apache-2.0 | 2026-11-18 |
@@ -1651,6 +1652,7 @@ DSH 插件全量目录的「知识与研究」分册 / The "Knowledge & Research
 | [SoulZhou/dsh-context-windows](https://github.com/SoulZhou/dsh-context-windows) | Visual per-model context-window adjustment for WorkBuddy and Trae connectors in DeepSeek Harness | JavaScript | 0 | MIT | 2026-11-09 |
 | [SpBs2004/dsh-paper-reader-studio](https://github.com/SpBs2004/dsh-paper-reader-studio) | Paper reading plugin for DeepSeek Harness: paper library, outline, KaTeX/PDF page reader, selection-to-chat, notes and review material. | JavaScript | 0 | MIT | 2026-11-08 |
 | [SpiritronPersonality/dsh-density-panel](https://github.com/SpiritronPersonality/dsh-density-panel) | Quality-first context compression for DSH: structured tool-output summaries with on-demand recall and a per-window ledger. | JavaScript | 0 | MIT | 2026-11-07 |
+| [sprw-li/dsh-cifkit](https://github.com/sprw-li/dsh-cifkit) | 把 cifkit 搬进 DeepSeek Harness：右侧栏「CIF 工作台」面板 + /cifkit 命令 + 只读工具 cifkit_view（零运行时依赖，浏览零写入） | JavaScript | 0 | MIT | 2026-11-20 |
 | [SPYfighting/dsh-science-plugin](https://github.com/SPYfighting/dsh-science-plugin) | 🧪 Science team workbench for DeepSeek Harness — 9-role research agents, paper-blueprint workflow, task-flow DAG, DB/SSH/figures toolchains | JavaScript | 0 | MIT | 2026-11-15 |
 | [SSHOOTING/dsh-plugin-context-map](https://github.com/SSHOOTING/dsh-plugin-context-map) | DSH plugin: See what is in the current context: which sources were selected, roughly how much each costs, and a compaction preview — read-only. | TypeScript | 0 | NOASSERTION | 2026-11-20 |
 | [SSHOOTING/dsh-plugin-memory-compiler](https://github.com/SSHOOTING/dsh-plugin-memory-compiler) | DSH plugin: Compile a session into sourced memory entries — decisions, constraints and open questions — not a chat summary. Reviewable, editable, deletable. | TypeScript | 0 | NOASSERTION | 2026-11-20 |
@@ -1877,6 +1879,7 @@ DSH 插件全量目录的「知识与研究」分册 / The "Knowledge & Research
 | [ymz001130/dsh-style-memory](https://github.com/ymz001130/dsh-style-memory) | DeepSeek Harness 风格记忆插件：从修订中学习个人写作风格，交付前做 AI 特征门禁。 | JavaScript | 0 | MIT | 2026-11-01 |
 | [YOGEMOW/dsh-siyuan](https://github.com/YOGEMOW/dsh-siyuan) | 把思源笔记 (SiYuan) 接入 DeepSeek Harness：9 个 Agent 工具 + 左栏文档树 + 右栏笔记视图（Agentero 风格）+ 回答一键存入 | JavaScript | 0 | MIT | 2026-11-08 |
 | [Yogioo/dsh-agentmemory](https://github.com/Yogioo/dsh-agentmemory) | dsh plugin bridging agentmemory REST API: memory_search / memory_remember / memory_forget / memory_health | JavaScript | 0 | MIT | 2026-08-25 |
+| [youchen-yc/dsh-heartprint](https://github.com/youchen-yc/dsh-heartprint) | 心印：AI 性格、情感 | JavaScript | 0 | NOASSERTION | 2026-11-04 |
 | [youx123/dsh-shared-brain](https://github.com/youx123/dsh-shared-brain) | 共享大脑 · 让所有 DSH 会话共用同一套人设与记忆，按底线/认知/情感/本能/声音/网络/自动互动七层加权注入；表情包目录定时自动加载 | JavaScript | 0 | MIT | 2026-11-11 |
 | [Yslehui/dsh-rag-memory](https://github.com/Yslehui/dsh-rag-memory) | Local RAG long-term memory for DSH QQ bots: SQLite storage, Chinese-friendly BM25 + embedding retrieval with optional rerank, served over local HTTP. | JavaScript | 0 | MIT | 2026-11-01 |
 | [ystyle/chronomem](https://github.com/ystyle/chronomem) | 忆时塔 chronomem：以 MCP 服务形态提供的时间分层外部记忆（回想 + 语义总结）——含 dsh 会话活动采集插件 \| Time-layered memory as an MCP service.  | Cangjie | 0 | MIT | 2026-11-10 |

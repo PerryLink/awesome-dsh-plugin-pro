@@ -4,7 +4,7 @@ DSH 插件全量目录的「集成与分享」分册 / The "Integrations & Shari
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **2062**
+- 本册收录 / Entries in this volume: **2071**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -12,14 +12,21 @@ DSH 插件全量目录的「集成与分享」分册 / The "Integrations & Shari
 | --- | --- | --- | ---: | --- | --- |
 | [xmanrui/dsh-im](https://github.com/xmanrui/dsh-im) | 通过扫码或机器人凭据把IM机器人接入DeepSeek Harness（支持飞书、微信、钉钉、企业微信、QQ、Slack、Telegram、Discord和WhatsApp）。 Connect IM bots to DeepSeek Harness via QR code or credentials (9 channels). | JavaScript | 3749 | MIT | 2026-11-21 |
 | [anywhere-labs/Agents-Anywhere](https://github.com/anywhere-labs/Agents-Anywhere) | 跨设备的开源Agent工作台 | TypeScript | 3645 | Apache-2.0 | 2026-11-21 |
+| [liguobao/ds-harness-remote](https://github.com/liguobao/ds-harness-remote) | 基于 DeepSeek Harness 插件机制构建的远程访问方案，通过低延迟、端到端加密的 P2P 网络，支持使用 PC、移动端 和 Web 随时访问本地设备上的DSH 、CodeX、Cursor、Claude Code等工作区。 (Built on DeepSeek Harness plugins, this low-latency, end-to-end encrypted P2P solution lets PC, mobile, and web clients access local DSH, Codex, Cursor, and Claude Code workspaces.) | TypeScript | 3493 | MIT | 2026-11-21 |
+| [shaobeichen/dsh-pocket](https://github.com/shaobeichen/dsh-pocket) | 把 DeepSeek Harness 装进你的口袋：电脑上跑 dsh web，手机扫码即同步访问（局域网 + 公网，实时同屏）Put DeepSeek Harness in your pocket: run dsh web on your computer and access it synchronously by scanning a QR code on your phone (LAN + public network, real‑time screen mirroring) | JavaScript | 3106 | GPL-2.0 | 2026-11-21 |
 | [kenryu42/cc-safety-net](https://github.com/kenryu42/cc-safety-net) | A pre-execution guard for AI coding agents. It blocks destructive Git and file system commands, plus common attempts to access sensitive files, before a tool call runs. Supports Amp Code, Antigravity CLI, Claude Code, Codex, Cursor, DeepSeek Harness, Devin CLI, GitHub Copilot CLI, Grok Build, Hermes Agent, Kimi Code, OpenClaw, OpenCode, and Pi. | TypeScript | 2088 | MIT | 2026-11-21 |
 | [dingminhua/dsh-connect-workbuddy](https://github.com/dingminhua/dsh-connect-workbuddy) | Connect locally signed-in WorkBuddy models to DeepSeek Harness with a read-only credits overview and model management. | TypeScript | 1883 | MIT | 2026-11-21 |
+| [c1overzz/dsh-bili-scroll](https://github.com/c1overzz/dsh-bili-scroll) | DSH 插件：每天替你刷一轮 B站，读字幕挑出值得的、写一份日报，值得的 @ 你 | JavaScript | 1462 | MIT | 2026-11-21 |
 | [BotHarness/DeepSeekBot](https://github.com/BotHarness/DeepSeekBot) | Open-source GrokBot alternative built on DeepSeek Harness. Build your personal bot team: multiple personal agents with persistent memory, identities and permissions, extensible through DSH plugins.｜基于 DeepSeek Harness 的开源 GrokBot 平替：有长期记忆的个人 AI Bot 团队，支持多 Bot 协作、身份权限与插件生态扩展。MIT. | TypeScript | 957 | MIT | 2026-11-21 |
+| [dream-num/dsh-univer-office](https://github.com/dream-num/dsh-univer-office) | Give DeepSeek Harness a real office environment.  Univer Office Plugin brings spreadsheets, docs, slides, canvases, relational tables, and more into one runtime — with connected data, validation, versioned changes, and isolated worktrees for multi-agent collaboration. | TypeScript | 744 | Apache-2.0 | 2026-11-21 |
 | [aureth-labs/dsh-aurabot-qq](https://github.com/aureth-labs/dsh-aurabot-qq) | 让 DeepSeek Harness 里的 AI 以「大肥鱼」住进 QQ：会聊天、发表情、发语音、记事、发空间、刷 B 站、唱歌。功能都是模块，能开关、能自己写，还能从模块市场装更多（SnowLuma / OneBot v11）。 | JavaScript | 715 | MIT | 2026-11-21 |
 | [tencent-connect/dsh-qqbot](https://github.com/tencent-connect/dsh-qqbot) | 让 QQ Bot 接入 DeepSeek Harness（dsh）的官方插件 | TypeScript | 620 | MIT | 2026-11-21 |
 | [gitroomhq/postiz-agent](https://github.com/gitroomhq/postiz-agent) | Postiz Agents CLI - connect it to Claude / OpenClaw / etc, to schedule social media posts 🤖 | TypeScript | 586 | NOASSERTION | 2026-11-21 |
+| [WSL043/dsh-codex-subscription](https://github.com/WSL043/dsh-codex-subscription) | Use your ChatGPT Plus / Pro (Codex) subscription in DeepSeek Harness (DSH): GPT-6 &amp; Codex models, images, web search and quota via ChatGPT sign-in — no OpenAI API key. Beta: control DSH from the ChatGPT mobile app. 在 DSH 中使用 ChatGPT 订阅，并可用 ChatGPT 手机 App 远程控制。 | JavaScript | 523 | MIT | 2026-11-21 |
+| [Mars-Sea/dsh-commandcode-provider](https://github.com/Mars-Sea/dsh-commandcode-provider) | Command Code provider plugin for DeepSeek Harness (dsh). Adds Command Code model access, live model catalog, plan-aware model selection, reasoning effort, image input, web search, and multi-account support. | TypeScript | 489 | MIT | 2026-11-21 |
 | [xcisxc29/dsh-wechat](https://github.com/xcisxc29/dsh-wechat) | WeChat channel for DeepSeek Harness | TypeScript | 443 | MIT | 2026-11-20 |
 | [chenkezhen480/dsh-world](https://github.com/chenkezhen480/dsh-world) | 给鲸鲸一个完整的世界(包含记忆，配套的压缩策略，人设卡，微信QQ渠道，电脑操作，多世界实例运转等多项能力) | TypeScript | 359 | MIT | 2026-11-21 |
+| [Duskriver/dsh-opencode-go](https://github.com/Duskriver/dsh-opencode-go) | opencode-go订阅用户最佳DSH插件 | TypeScript | 348 | MIT | 2026-11-21 |
 | [flymysql/dsh-remote](https://github.com/flymysql/dsh-remote) | SSH remote workspaces for DeepSeek Harness: parallel projects across hosts, remote file browsing and editing, recursive search, terminals, Git diffs, and workspace-bound Agent tools to edit, build and test remotely. Optional IDE layout. | JavaScript | 340 | MIT | 2026-11-21 |
 | [Nwflower/dsh-chat-import](https://github.com/Nwflower/dsh-chat-import) | Import conversation history from 25+ AI coding agents into DeepSeek Harness as resumable sessions — tool calls, reasoning and results kept intact, with reverse export and sync. \| 把 25+ AI 编程 Agent 的聊天记录导入 DeepSeek Harness 继续对话，保留工具调用、推理与结果，支持反向导出与同步。 | JavaScript | 325 | MIT | 2026-11-21 |
 | [YUsaltyfish/dsh-onebot-qq](https://github.com/YUsaltyfish/dsh-onebot-qq) | DeepSeek Harness 的原生 QQ 机器人插件：微内核 + 子插件，Linux/Windows 通用。收消息、发图、生图、发表情，装完就能聊。此项目为个人因需求爱好，人力设计方案AI构建代码的插件，所以bug和不够合理的地方有许多，发出来仅为学习和分享 | JavaScript | 309 | MIT | 2026-11-21 |
@@ -493,6 +500,7 @@ DSH 插件全量目录的「集成与分享」分册 / The "Integrations & Shari
 | [CLASSLU/dsh-telegram-bridge](https://github.com/CLASSLU/dsh-telegram-bridge) | Telegram bridge for DeepSeek Harness (dsh): chat with your DSH agent from Telegram — access control, skills, workspace browsing, file transfer. | Shell | 2 | MIT | 2026-11-07 |
 | [clickyotter/dsh-wecom-soul-bot](https://github.com/clickyotter/dsh-wecom-soul-bot) | 企业微信智能机器人长连接 + 人设 + 长期记忆，DeepSeek Harness 插件 | TypeScript | 2 | MIT | 2026-11-12 |
 | [codingDuan/dsh-plugin-xquant](https://github.com/codingDuan/dsh-plugin-xquant) | One-command xquant MCP integration for DeepSeek Harness | TypeScript | 2 | MIT | 2026-09-12 |
+| [craigary/dsh-notion-plugin](https://github.com/craigary/dsh-notion-plugin) | Notion for DeepSeek Harness: MCP OAuth connection, 12 Notion skills, multi-workspace settings UI | JavaScript | 2 | MIT | 2026-11-12 |
 | [csustyang/dsh-garmin-coach](https://github.com/csustyang/dsh-garmin-coach) | Garmin Connect 运动健康 AI 教练插件 for DeepSeek Harness | JavaScript | 2 | MIT | 2026-11-08 |
 | [Culeot/dsh-weixin-bridge](https://github.com/Culeot/dsh-weixin-bridge) | test | JavaScript | 2 | MIT | 2026-08-24 |
 | [dangpangch/dsh-acp](https://github.com/dangpangch/dsh-acp) | dsh plugin to run DeepSeek Harness (dsh) agents in Zed’s Agent Panel. | JavaScript | 2 | MIT | 2026-10-01 |
@@ -604,6 +612,7 @@ DSH 插件全量目录的「集成与分享」分册 / The "Integrations & Shari
 | [tedcriss/dsh-matlab](https://github.com/tedcriss/dsh-matlab) | MATLAB Agentic Toolkit skills and MATLAB MCP Server tools for DeepSeek Harness. | JavaScript | 2 | NOASSERTION | 2026-11-21 |
 | [tianyingAquila/minecraft-native-mcp](https://github.com/tianyingAquila/minecraft-native-mcp) | Native Minecraft MCP with a DSH launcher, spatial perception, bounded actions and optional livestream widgets. | JavaScript | 2 | MIT | 2026-11-05 |
 | [TingRuDeng/dsh-feishu-bot](https://github.com/TingRuDeng/dsh-feishu-bot) | Feishu (Lark) private-chat frontend for DeepSeek Harness: drive, monitor, and approve local agents from Feishu, sharing sessions with the Web GUI | TypeScript | 2 | MIT | 2026-10-21 |
+| [TinyPandaGame/SpecsRelay-DSH](https://github.com/TinyPandaGame/SpecsRelay-DSH) | 把 DeepSeek 对话整理成开发需求，交给 DSH Agent 执行。仅支持 anywhere-labs DSH Desktop。 | JavaScript | 2 | MIT | 2026-09-25 |
 | [Tongyu3/dsh-qq-bot](https://github.com/Tongyu3/dsh-qq-bot) | DSH 的 QQ 机器人插件：NapCat + OneBot v11 接入，人设/记忆/存档/白名单/暖场/表情包/扩展，手机本地一键部署 | — | 2 | MIT | 2026-11-10 |
 | [treers2/qq-operations](https://github.com/treers2/qq-operations) | QQ NT desktop automation for DeepSeek Harness (DSH) skill - dynamic UI Automation locate, dual mode, self-check; 操控 QQ NT 桌面版的 DSH skill（UIA 类名定位/双模式/自检） | PowerShell | 2 | MIT | 2026-08-30 |
 | [TrueNix/dsh-anthropic-oauth](https://github.com/TrueNix/dsh-anthropic-oauth) | Bridge Claude Code OAuth (Pro/Max/Team) into DeepSeek Harness — reuses ~/.claude/.credentials.json, auto-refreshes, no hardcoding | JavaScript | 2 | NOASSERTION | 2026-10-10 |
