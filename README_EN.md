@@ -40,43 +40,43 @@ As of 2026-11-21 the catalog lists **29,675** verified repositories. Here is the
 ```mermaid
 mindmap
   root((DSH ecosystem 29675))
-    UI and experience · 8889
+    UI and experience · 8299
       Usage and billing panels
       Sidebar workbenches
       Skins and desktop pets
       Notifications and input
-    Utilities and more · 3395
-      Files and encodings
-      Format conversion
-    Agents automation workflows · 3117
+    Agents automation workflows · 3532
       Session and context management
       Scheduled loops and event wakeups
       Approval budget and checkpoints
-    Developer tools · 3097
+    Utilities and more · 3395
+      Files and encodings
+      Format conversion
+    Developer tools · 3218
       Git and diff
       Model gateways and keys
       Debugging and diagnostics
-    Web and browser · 3045
+    Web and browser · 2841
       Browser bridge and page control
       Web search with citations
       Archiving and web forensics
-    Integrations and sharing · 2071
+    Integrations and sharing · 2119
       Chat import and sharing
       Remote access
       IM and external integrations
-    Design media and vision · 1957
-      Image understanding and OCR
-      Design canvas and UI restoration
-      Speech synthesis and recognition
-    Knowledge and research · 1935
+    Knowledge and research · 2104
       Knowledge bases and cross-session memory
       Deep research
       Academia and math
-    Ecosystem and resources · 1389
+    Design media and vision · 2068
+      Image understanding and OCR
+      Design canvas and UI restoration
+      Speech synthesis and recognition
+    Ecosystem and resources · 1259
       Plugin markets and registries
       Skill libraries and plugin managers
       Templates and scaffolds
-    Multi-agent orchestration · 780
+    Multi-agent orchestration · 840
       Subagents and orchestration boards
       Fleets and agent teams
       Role division and acceptance checks
