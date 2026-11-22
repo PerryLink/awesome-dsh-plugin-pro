@@ -4,9 +4,9 @@ DSH 插件全量目录的「Agent、自动化与工作流（A–F）」分册 / 
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **937**
+- 本册收录 / Entries in this volume: **939**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
-- 最近人工复核 / Last review merge: **2026-11-21**
+- 最近人工复核 / Last review merge: **2026-11-22**
 
 | Project | Description | Language | Stars | License | Updated |
 | --- | --- | --- | ---: | --- | --- |
@@ -807,6 +807,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（A–F）」分册 / 
 | [Dayi-Z/dsh-safety-restart](https://github.com/Dayi-Z/dsh-safety-restart) | Safe, seamless restart for DeepSeek Harness: the agent can restart the host itself and resume afterwards. Four gates (restart-loop breaker, other sessions mid-turn, unresolvable profile bundles, unavailable app.relaunch) refuse with a reason instead of forcing it. | JavaScript | 0 | MIT | 2026-09-12 |
 | [dcchanInSz/dsh-kanban](https://github.com/dcchanInSz/dsh-kanban) | 任务看板插件 for DeepSeek Harness：列/卡片/拖拽，和会话 todo 打通，agent 可用 kanban_* 工具读写 | JavaScript | 0 | MIT | 2026-10-27 |
 | [ddll8023/dsh-rewind](https://github.com/ddll8023/dsh-rewind) | Modified dsh-rewind plugin for DeepSeek Harness with rewind mode choice (conversation-only or file rollback) | JavaScript | 0 | MIT | 2026-08-15 |
+| [deemo0666/pallas-phone-control](https://github.com/deemo0666/pallas-phone-control) | Phone Control for Pallas Agent: lets the AI operate other apps on your iPhone or iPad, set up on the device itself with no computer. 手机操控插件。 | Rust | 0 | NOASSERTION | 2026-11-21 |
 | [DeepCollaboration/DeepSeekCollaborationBoard-Plugin](https://github.com/DeepCollaboration/DeepSeekCollaborationBoard-Plugin) | A shared board for stations, workflows and projects in DeepSeek Harness. No server, no database — GitHub is the access gate. | JavaScript | 0 | MIT | 2026-10-30 |
 | [deepestevan/dsh-delete-guard](https://github.com/deepestevan/dsh-delete-guard) | Force every DeepSeek Harness file deletion through the OS Recycle Bin — deny the call, redirect to a file_trash tool. | JavaScript | 0 | MIT | 2026-10-23 |
 | [DeepseekDays/dsh-ofm-addition](https://github.com/DeepseekDays/dsh-ofm-addition) | Auto-continues a reply that was cut off at the output token limit, and gives every Our Free Model route its own request parameters (reasoning effort, max tokens, temperature, stop sequences) in DeepSeek Harness. | JavaScript | 0 | MIT | 2026-10-18 |
@@ -890,6 +891,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（A–F）」分册 / 
 | [Elysia-laoda/dsh-creativity-nudge](https://github.com/Elysia-laoda/dsh-creativity-nudge) | DSH 插件：在模型锁定路线的那一刻注入一次「先发散」提醒 —— 低频、硬预算、只落在决策点。Advisory creativity nudge for DeepSeek Harness. | JavaScript | 0 | MIT | 2026-10-24 |
 | [EmptyCollin/dsh-peak-valley-queue](https://github.com/EmptyCollin/dsh-peak-valley-queue) | Peak/valley pricing task queue for DeepSeek Harness | JavaScript | 0 | MIT | 2026-08-28 |
 | [EnhydraLutristus/dsh-recycle-bin](https://github.com/EnhydraLutristus/dsh-recycle-bin) | DSH 回收站插件：把工作区会话拖进回收站，保留 14 天后自动删除，可随时恢复或立即删除。 | JavaScript | 0 | MIT | 2026-10-18 |
+| [EonCosmos/dsh-pure-chat](https://github.com/EonCosmos/dsh-pure-chat) | dsh-纯对话插件 | JavaScript | 0 | MIT | 2026-11-21 |
 | [Equinox7379/dsh-session-repair](https://github.com/Equinox7379/dsh-session-repair) | Session log repair for DSH: fixes SessionFormatUnsupportedError by marking unknown events ignorable. | JavaScript | 0 | MIT | 2026-08-25 |
 | [Equinox7379/dsh-turn-watchdog](https://github.com/Equinox7379/dsh-turn-watchdog) | Turn watchdog for DSH: detects stuck turns and injects a quiet warning. | JavaScript | 0 | MIT | 2026-08-25 |
 | [erdholion/dsh-loop-guard](https://github.com/erdholion/dsh-loop-guard) | Result-aware stuck-loop guard for DeepSeek Harness: advisory nudges plus a monotonic hard stop. Only repeats with identical results count. | JavaScript | 0 | MIT | 2026-08-31 |

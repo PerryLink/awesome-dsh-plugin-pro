@@ -4,9 +4,9 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **1259**
+- 本册收录 / Entries in this volume: **1273**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
-- 最近人工复核 / Last review merge: **2026-11-21**
+- 最近人工复核 / Last review merge: **2026-11-22**
 
 | Project | Description | Language | Stars | License | Updated |
 | --- | --- | --- | ---: | --- | --- |
@@ -424,6 +424,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [Fnckerpoi/dsh-plugin-sirchmunk](https://github.com/Fnckerpoi/dsh-plugin-sirchmunk) | DSH集成sirchmunk插件管理。 | JavaScript | 1 | MIT | 2026-09-21 |
 | [FragrantLotus/dsh-plugin-chinese](https://github.com/FragrantLotus/dsh-plugin-chinese) | 给每个已安装的 DSH 插件自动补上中文功能简介。插件名保持原样，只翻译简介。 | JavaScript | 1 | MIT | 2026-11-15 |
 | [Fstrategy/switchboard-dsh](https://github.com/Fstrategy/switchboard-dsh) | Switchboard session board for DeepSeek Harness. Community port of Fstrategy/switchboard with native session facts, waiting actions, demo mode and zero-model-call off switch. | TypeScript | 1 | MIT | 2026-11-15 |
+| [fubai-fenzhi/dsh-procedures](https://github.com/fubai-fenzhi/dsh-procedures) | File-based experience cards for DSH and other agents: a matching tool error injects a one-line pointer to a local card (not the whole card), with hit stats, rarity, cross-machine sync, a community library and a portable kit. MIT. | JavaScript | 1 | MIT | 2026-11-21 |
 | [FuriousKinght/dsh-fk-rollback](https://github.com/FuriousKinght/dsh-fk-rollback) | DSH 配置快照与回滚插件。自动留痕、出问题能查、坏了能退回 —— 保证 DSH 本体能启动、能输入输出、功能正常。 | JavaScript | 1 | MIT | 2026-11-07 |
 | [Gamitrd6316/dsh-launcher](https://github.com/Gamitrd6316/dsh-launcher) | Manage and launch DeepSeek Harness with a beginner-friendly desktop GUI—no command line required. | C# | 1 | MIT | 2026-10-12 |
 | [GiantAxeint/DSH-P2M](https://github.com/GiantAxeint/DSH-P2M) | DSH 冲突管家（P2M）：自动拦截会让 DSH 闪退的同名服务注册/版本漂移等冲突，按用时排序、隔离肇事插件。DSH Plugin Conflict Manager: pre-empts crash-causing conflicts (duplicate service registration, version drift), usage-ranked, isolates offenders. | JavaScript | 1 | MIT | 2026-09-07 |
@@ -507,6 +508,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [luoyuejun9/dsh-plugin-forge](https://github.com/luoyuejun9/dsh-plugin-forge) | Human-gated DeepSeek Harness plugin creation, verification, and release studio | TypeScript | 1 | MIT | 2026-08-16 |
 | [Lzh3070/dsh-search-hub](https://github.com/Lzh3070/dsh-search-hub) | DeepSeek Harness 联网搜索多入口管理插件：DeepSeek 官方 / GLM（智谱）/ Kimi 多搜索模型共存，置顶一个web_search生效，设置页一键切换免重启 | TypeScript | 1 | MIT | 2026-10-13 |
 | [Lzhimie/DeepSeek-Harness-NB](https://github.com/Lzhimie/DeepSeek-Harness-NB) | DeepSeek Harness 桌面端增强发行版：内置社区插件中心（GitHub 插件市场、一键安装/更新、多镜像源）与皮肤引擎（自定义背景图片/视频、输入框背景六种模式、颜色与毛玻璃调节），自带 Git 图、任务看板、实时统计、Aegis、auto-mode、modlens、better-sidebar 七个功能插件。ZIP 解压即用、EXE 免管理员一键安装，运行数据与应用隔离，不含个人数据，默认官方皮肤，插件支持自动更新。 | JavaScript | 1 | MIT | 2026-08-18 |
+| [LZM-P/dsh-plugin-rack](https://github.com/LZM-P/dsh-plugin-rack) | DSH 插件管理台：所有插件一屏看完，一个开关直接开关，更新完自动热替换不用重启 / Plugin dashboard for DSH: every plugin in one list with a power switch, auto/manual flag, and hot-swapped updates. | JavaScript | 1 | MIT | 2026-11-21 |
 | [Makima667/dsh-smart-profile](https://github.com/Makima667/dsh-smart-profile) | Intelligent project detection and capability recommendations for DeepSeek Harness.  Visibility: Public | JavaScript | 1 | MIT | 2026-08-18 |
 | [math-lrz/dsh-plugin-meta](https://github.com/math-lrz/dsh-plugin-meta) | DSH meta-plugin suite: plugin-forge + plugin-auditor + skill-forge — the meta capability layer where everything is a plugin | JavaScript | 1 | MIT | 2026-08-15 |
 | [matrix1001/dsh-application-harness](https://github.com/matrix1001/dsh-application-harness) | NEXT GEN application platform based on Deepseek Harness | TypeScript | 1 | MIT | 2026-11-16 |
@@ -516,6 +518,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [mimajiushi/dsh-plugins](https://github.com/mimajiushi/dsh-plugins) | DeepSeek Harness (dsh) community plugins: AgentTeams approval switch and limits card, compaction model picker, gateway-wide LLM retry, plan-card sidebar, subagent model guard and toggle, web_fetch fake-ip allowance, and an IDE-style git changes panel. | JavaScript | 1 | MIT | 2026-10-01 |
 | [MokoKing666/dsh-aftereffects](https://github.com/MokoKing666/dsh-aftereffects) | Drive Adobe After Effects from DeepSeek Harness: build compositions and motion-graphics templates, then render MP4 or PNG without leaving the chat. | JavaScript | 1 | MIT | 2026-11-18 |
 | [Momojie-S/deepseek-harness-101](https://github.com/Momojie-S/deepseek-harness-101) | DeepSeek Harness 插件开发集 (submodule 索引) | TypeScript | 1 | — | 2026-11-12 |
+| [Mooling0602/awesome-mooling-dsh-plugins](https://github.com/Mooling0602/awesome-mooling-dsh-plugins) | My dsh-plugins. | TypeScript | 1 | MIT | 2026-11-21 |
 | [mouliangyu/dsh-plugins](https://github.com/mouliangyu/dsh-plugins) | Community plugins for DeepSeek Harness | JavaScript | 1 | MIT | 2026-10-03 |
 | [MRevenger/dsh-skillhub-market](https://github.com/MRevenger/dsh-skillhub-market) | Skillhub skill market for DeepSeek Harness — search, filter, download and manage Skillhub skills. | TypeScript | 1 | MIT | 2026-11-07 |
 | [my-dsh-plugin/dsh-skill-manager](https://github.com/my-dsh-plugin/dsh-skill-manager) | DeepSeek Harness 技能安装管理器:从 GitHub 安装/更新/卸载 Skills,分组展示已加载技能,可选兼容 Claude Code .claude/skills。Install/update/uninstall DSH skills from GitHub with loaded-skills overview &amp; .claude/skills compat. | TypeScript | 1 | Apache-2.0 | 2026-09-14 |
@@ -657,6 +660,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [AgentTools-Cloud/agent-tools-dsh](https://github.com/AgentTools-Cloud/agent-tools-dsh) | DeepSeek Harness plugin: find x402 paid APIs, MCP servers and A2A agents by intent from agent-tools.cloud, and safety-check MCP servers. | JavaScript | 0 | NOASSERTION | 2026-11-15 |
 | [agoudbg/agou-dsh-plugins](https://github.com/agoudbg/agou-dsh-plugins) | DSH (DeepSeek Harness) plugins by agoudbg. | JavaScript | 0 | MIT | 2026-11-11 |
 | [AhaCrazy/dsh-action-hub](https://github.com/AhaCrazy/dsh-action-hub) | Archived: moved to https://github.com/AhaCrazy/action-hub/tree/main/packages/dsh | JavaScript | 0 | MIT | 2026-10-27 |
+| [aiohow/dsh-prompt-wall](https://github.com/aiohow/dsh-prompt-wall) | 1077 image-generation prompt templates with example images, as a DSH plugin: card wall, search, favorites, per-model prompt adaptation. Fully local. 生图提示词选片墙，纯本地。 | JavaScript | 0 | NOASSERTION | 2026-11-21 |
 | [Akillll-DuoHe/dsh-resource-center](https://github.com/Akillll-DuoHe/dsh-resource-center) | Resource Center for the DeepSeek Harness web GUI: one sidebar entry that inventories installed plugin bundles and running feature modules. 资源中心：DSH 插件总览。 | JavaScript | 0 | MIT | 2026-11-01 |
 | [Alail691/dsh-plugins-in-settings](https://github.com/Alail691/dsh-plugins-in-settings) | dsh-plugin dsh deepseek-harness plugin-manager settings | JavaScript | 0 | MIT | 2026-10-16 |
 | [Aliboder/dsh-expert-hub](https://github.com/Aliboder/dsh-expert-hub) | DSH 专家中心：WorkBuddy 市场、AI 创建专家、详情即编辑、技能管理、按会话切换 | JavaScript | 0 | MIT | 2026-10-26 |
@@ -729,6 +733,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [chenhz01/dsh-sample-plugin](https://github.com/chenhz01/dsh-sample-plugin) | Verified sample plugins for DeepSeek Harness: hash_sum tool + tools/result hook (8/8 checks) | TypeScript | 0 | Apache-2.0 | 2026-10-15 |
 | [chinahhy/DSH-plugins](https://github.com/chinahhy/DSH-plugins) | Hoya自用DeepSeek-Harness插件仓库 | TypeScript | 0 | MIT | 2026-10-05 |
 | [Chip-G0202/dsh-model-radar](https://github.com/Chip-G0202/dsh-model-radar) | Model Radar: a four-task 150-point model intelligence benchmark plus 0–1000 real-world performance scoring for DeepSeek Harness. | JavaScript | 0 | MIT | 2026-11-10 |
+| [chrock-hyper/dsh-bundle-template](https://github.com/chrock-hyper/dsh-bundle-template) | TypeScript + tsdown template for DeepSeek Harness bundles: Host and Client halves, built artifacts, and contract checks | TypeScript | 0 | MIT | 2026-11-21 |
 | [chubbyclaw-com/dsh-acp-full](https://github.com/chubbyclaw-com/dsh-acp-full) | ChubbyClaw patch over @deepseek-ai/dsh-acp: a DeepSeek Harness profile that also reports AIR subagent and async-task background work over ACP. | JavaScript | 0 | MIT | 2026-10-07 |
 | [ckk-09/dsh-refix](https://github.com/ckk-09/dsh-refix) | Self-diagnosing, self-repairing, self-iterating dynamic plugin for DSH (DeepSeek Harness). DSH 自诊断·自修复·自迭代插件 | JavaScript | 0 | MIT | 2026-09-18 |
 | [clawk2026/dsh-precheck](https://github.com/clawk2026/dsh-precheck) | Security &amp; Trust Checks for DeepSeek Harness Plugins | TypeScript | 0 | MIT | 2026-11-11 |
@@ -740,6 +745,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [CodeDice1024/dsh-plugin-dev-assistant](https://github.com/CodeDice1024/dsh-plugin-dev-assistant) | DSH 插件开发助手：对话式引导，从零开始创建、测试、发布 DSH 插件 | TypeScript | 0 | — | 2026-09-04 |
 | [codeh007/mtmdsh](https://github.com/codeh007/mtmdsh) | Portable DeepSeek Harness plugins for mtm | TypeScript | 0 | MIT | 2026-09-20 |
 | [Codenestra/deepseek-harness-plugins](https://github.com/Codenestra/deepseek-harness-plugins) | DeepSeek Harness 插件：项目中枢、存储医生、回合级性能剖析器、失控看门狗、用量中心、插件工作台、插件医生。提供源码、安装包与中文使用说明。 | JavaScript | 0 | — | 2026-11-15 |
+| [coldrainthreeautumnleaves/dsh-concierge](https://github.com/coldrainthreeautumnleaves/dsh-concierge) | DeepSeek Harness 维护中心：应用与插件更新、回退与启停、GitHub 来源与 npm 安装、启动加速、聊天性能面板、打字机。 | JavaScript | 0 | MIT | 2026-11-21 |
 | [cookie-zl/colony-dsh-plugins](https://github.com/cookie-zl/colony-dsh-plugins) | @colony-agents/dsh-* plugins for DeepSeek Harness: workspace guard, artifact attribution, skill market, DingTalk/Feishu assistant panel. | JavaScript | 0 | Apache-2.0 | 2026-11-14 |
 | [CoolTea001/dsh-cool-plugins](https://github.com/CoolTea001/dsh-cool-plugins) | One repository for every DeepSeek Harness (DSH) plugin. Each plugin is still its own npm package, with its own version and its own install unit — only the source lives here. | TypeScript | 0 | MIT | 2026-11-19 |
 | [Corundum-Ling/dsh-desktop](https://github.com/Corundum-Ling/dsh-desktop) | 基于 Electron 的 DeepSeek Harness 桌面应用，内置运行环境，支持插件管理、社区插件市场与 Profile 管理。 | JavaScript | 0 | MIT | 2026-08-20 |
@@ -757,6 +763,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [Daphne999/dsh-auto-plugin-factory](https://github.com/Daphne999/dsh-auto-plugin-factory) | 每日需求雷达：采集 HN + GitHub 的求工具需求，对两个插件市场查重打分，产出 Markdown 日报。只判断，不产插件代码。 | JavaScript | 0 | — | 2026-11-15 |
 | [Daphne999/dsh-daily-digest](https://github.com/Daphne999/dsh-daily-digest) | A facts layer for daily watch: reports newly added plugins in the marketplace registry and new activity periods on watched pages; first run only builds a baseline, later runs report only deltas. | JavaScript | 0 | MIT | 2026-11-08 |
 | [Daphne999/dsh-drift](https://github.com/Daphne999/dsh-drift) | Capability drift detection for DSH plugins: store a baseline, then report only what an upgrade NEWLY gained. \| 插件能力漂移检测：存基线，升级后只报新增能力。 | JavaScript | 0 | MIT | 2026-11-11 |
+| [Daphne999/dsh-error-firstaid](https://github.com/Daphne999/dsh-error-firstaid) | First aid for DeepSeek Harness errors: paste the error text and get the most likely cause plus one concrete step to try, from a curated deterministic rule table. No model call, no machine scanning, and an explicit I-do-not-know when nothing matches. | JavaScript | 0 | MIT | 2026-11-21 |
 | [Daphne999/dsh-warden](https://github.com/Daphne999/dsh-warden) | Pre-install security checkup for DSH plugins: scans install scripts, native dependencies, outbound domains and dangerous APIs, cross-checks marketplace capability declarations, and rates risk on a 100-point scale. Read-only; never executes the plugin. | JavaScript | 0 | MIT | 2026-11-08 |
 | [davidgereb/dsh-lib-context-injection](https://github.com/davidgereb/dsh-lib-context-injection) | Context injection library to be used in DeepSeek Harness plugins. | JavaScript | 0 | MIT | 2026-08-16 |
 | [dd2673/dsh-wending-ssh-manager](https://github.com/dd2673/dsh-wending-ssh-manager) | Hardened multi-account SSH manager for DSH: profile-isolated storage, host-key pinning, Windows DPAPI secrets, pooled exec/SFTP, isolated tunnels, web terminal, cluster operations, and official agent tools. | TypeScript | 0 | Apache-2.0 | 2026-08-17 |
@@ -926,6 +933,8 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [lijma/dsh-plugin-marketplace](https://github.com/lijma/dsh-plugin-marketplace) | 帮助寻找DSH插件，引导安装，并持续在DeepSeek Harness内收集插件评分、FAQ、踩坑记录并分享到社区 | JavaScript | 0 | MIT | 2026-08-15 |
 | [Limnal-Ash/dsh-skill-manager](https://github.com/Limnal-Ash/dsh-skill-manager) | dsh的一个关于skill管理的插件 | JavaScript | 0 | MIT | 2026-10-25 |
 | [lingmingxi/dsh-plugin-subitem-status](https://github.com/lingmingxi/dsh-plugin-subitem-status) | DSH 插件界面增强：卡片显示子项状态，设置页显示提供者包名，方便 AI 定位插件并节省 token。 | JavaScript | 0 | MIT | 2026-10-11 |
+| [lingr7/dsh-client-probe](https://github.com/lingr7/dsh-client-probe) | 最小 DSH 客户端插件模板：验证本地 link 安装的包能否挂进 UI 槽位 | JavaScript | 0 | — | 2026-11-21 |
+| [lingr7/dsh-remote-hub](https://github.com/lingr7/dsh-remote-hub) | DSH 遥控器命令总线：单一监听 + 上下文栈 + owner 注册，把物理按键路由给该管的对象 | JavaScript | 0 | — | 2026-11-21 |
 | [Lionad-Morotar/dsh-plugins](https://github.com/Lionad-Morotar/dsh-plugins) | Lionad's DeepSeek Harness plugin monorepo | TypeScript | 0 | MIT | 2026-11-07 |
 | [lishize20040802-rgb/dsh-rigor-4](https://github.com/lishize20040802-rgb/dsh-rigor-4) | Rigor 4 community agent plugin for DeepSeek Harness, with portable install and uninstall workflows | JavaScript | 0 | MIT | 2026-09-16 |
 | [lishuo4096/dsh-plugin-authoring](https://github.com/lishuo4096/dsh-plugin-authoring) | DSH skills for writing, publishing and listing DeepSeek Harness (Cordis) plugins. | JavaScript | 0 | — | 2026-10-13 |
@@ -966,6 +975,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [malaxiya2019/dsh-cmp-skill-index](https://github.com/malaxiya2019/dsh-cmp-skill-index) | DSH plugin: list &amp; search the 70-skill index bundled with codex-mobile-pro (zero-build, pure JS) | JavaScript | 0 | MIT | 2026-08-15 |
 | [MangShe3-0/dsh-plugin-guard](https://github.com/MangShe3-0/dsh-plugin-guard) | Offline-first security scanner for DeepSeek Harness plugins: prompt injection, ransomware, exfiltration, and supply-chain risks. | JavaScript | 0 | MIT | 2026-08-18 |
 | [MaoYouShiJie/dsh-providers-hub](https://github.com/MaoYouShiJie/dsh-providers-hub) | dsh-providers-hub fork with client CSS fix: account-card horizontal overflow (unclickable right-side buttons) | JavaScript | 0 | MIT | 2026-10-31 |
+| [marchinlab/dsh-quiet-whale-girl](https://github.com/marchinlab/dsh-quiet-whale-girl) | 安静的鲸鱼娘 · Quiet Whale Girl — a DSH desktop pet plugin based on LivLiv Player and the Kujira community character. | JavaScript | 0 | Apache-2.0 | 2026-11-21 |
 | [MaresaN41/dsh-skill-scribe](https://github.com/MaresaN41/dsh-skill-scribe) | DeepSeek Harness 用プラグイン。作業から SKILL.md の候補を作り、人が承認するまで有効にしない / Drafts reusable SKILL.md proposals; nothing is activated until a human accepts it. | JavaScript | 0 | MIT | 2026-11-05 |
 | [Maxkun2333/dsh-plugin-catalog](https://github.com/Maxkun2333/dsh-plugin-catalog) | Plugin catalog for DeepSeek Harness: a settings-page tab listing every installed third-party plugin with what it does, its version, and whether an update is available. Rebuilds itself when you install or remove a plugin. | JavaScript | 0 | MIT | 2026-11-12 |
 | [mccxs/dsh-client-plugin-manager](https://github.com/mccxs/dsh-client-plugin-manager) | DeepSeek Harness 客户端插件管理器：分组插件清单 + 插件市场标签页（dsh-client-plugin-manager） | TypeScript | 0 | — | 2026-08-25 |
@@ -1098,6 +1108,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [sonwe1e/dsh-flow-next](https://github.com/sonwe1e/dsh-flow-next) | Flow Next for DeepSeek Harness: task context, native/PTC selection and check evidence. Experimental community preset. | JavaScript | 0 | MIT | 2026-10-18 |
 | [sorry123maker/dsh-plugin-manager](https://github.com/sorry123maker/dsh-plugin-manager) | dsh三方插件管理，支持安装启用停用，支持热重载 | JavaScript | 0 | MIT | 2026-08-18 |
 | [SouthM/dsh-nanshan-market-publish](https://github.com/SouthM/dsh-nanshan-market-publish) | 【南山】DSH插件市场发布：扫描本机正在开发的 DSH 组件，按官方 contributing.md 的要求分两轨引导完成 GitHub 代码提交与插件市场收录 PR，并生成 data/plugins/&lt;owner&gt;__&lt;repo&gt;.yml。 | JavaScript | 0 | MIT | 2026-11-12 |
+| [Spark-xY6/dsh-plugin-bio-thesis](https://github.com/Spark-xY6/dsh-plugin-bio-thesis) | Use your university's Word template to start and audit a thesis in DeepSeek Harness. Includes blind-review checks and a 65-item review checklist. | Python | 0 | MIT | 2026-11-20 |
 | [spike-faye-lei/spike-faye-lei-dsh-skills](https://github.com/spike-faye-lei/spike-faye-lei-dsh-skills) | spike-faye-lei/dsh-skills | Python | 0 | NOASSERTION | 2026-09-29 |
 | [sqzw-x/dsh-plugins](https://github.com/sqzw-x/dsh-plugins) | DeepSeek Harness 插件合集：一个 pnpm workspace、一套 CI、一套发布流水线；每个插件仍是独立的 npm 包。 | TypeScript | 0 | MIT | 2026-11-12 |
 | [sssdex/dsh-plugins](https://github.com/sssdex/dsh-plugins) | 自研 DeepSeek Harness 插件与预设合集，按功能分类 | JavaScript | 0 | — | 2026-11-15 |
@@ -1236,6 +1247,7 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [yogeek/dsh-plugin-toggle](https://github.com/yogeek/dsh-plugin-toggle) | Enable/disable DeepSeek Harness (dsh) plugins from Settings &gt; Plugins, grouped into collapsible categories | JavaScript | 0 | MIT | 2026-08-25 |
 | [YONAN1269/dsh-update-hub](https://github.com/YONAN1269/dsh-update-hub) | DSH 插件批量更新：侧栏角标、走 pnpm 安装侧绕过 bundle-in-use、启动/定时检测、空闲自动更新 | JavaScript | 0 | MIT | 2026-11-13 |
 | [yoshino-xiao7/dsh-codex](https://github.com/yoshino-xiao7/dsh-codex) | 社区维护的 DeepSeek Harness Codex 插件：OAuth、模型、图片与流式恢复；非官方 / Community Codex plugin for DSH: OAuth, models, images, stream recovery; unofficial. | JavaScript | 0 | Apache-2.0 | 2026-11-11 |
+| [yoshirusan/useful-dsh-plugins](https://github.com/yoshirusan/useful-dsh-plugins) | A short, verified starter kit of plugins for DeepSeek Harness (dsh), plus a browseable catalog. | JavaScript | 0 | MIT | 2026-11-21 |
 | [youchen-yc/dsh-plugin-ecosystem-guard](https://github.com/youchen-yc/dsh-plugin-ecosystem-guard) | DSH 插件生态守护：安装前冲突预检 + 跨插件权限网关 + 确认制维护（DeepSeek Harness 插件） | JavaScript | 0 | MIT | 2026-10-28 |
 | [ytclaw01/dsh-plugin-sets](https://github.com/ytclaw01/dsh-plugin-sets) | Save named scenes of DSH plugins, MCP servers and skills, and switch between them in one click. | JavaScript | 0 | MIT | 2026-11-18 |
 | [Yu1018/dsh-hub-center](https://github.com/Yu1018/dsh-hub-center) | DSH 左栏中枢（dsh-hub-center） | JavaScript | 0 | — | 2026-11-15 |
@@ -1243,7 +1255,9 @@ DSH 插件全量目录的「生态与资源」分册 / The "Ecosystem & Resource
 | [Yume-Hatsuyuki/dsh-preset-studio](https://github.com/Yume-Hatsuyuki/dsh-preset-studio) | DeepSeek Harness 的 Agent 预设扩展（可视化手动配置预设） | JavaScript | 0 | MIT | 2026-11-03 |
 | [yunfei07/ai-dsh-book](https://github.com/yunfei07/ai-dsh-book) | 一本面向 DeepSeek Harness 插件开发的双语实战书。 | MDX | 0 | MIT | 2026-08-15 |
 | [YUYUY9527/dsh-plugin-management](https://github.com/YUYUY9527/dsh-plugin-management) | 外部插件管理器 for DeepSeek Harness (dsh): inventory + one-click update for a profile's third-party plugin packages. Settings -&gt; Plugins UI + agent-facing tool. | JavaScript | 0 | MIT | 2026-09-23 |
+| [YYY-DXS/dsh-deepseek-hub](https://github.com/YYY-DXS/dsh-deepseek-hub) | 把 DeepSeek 网页会话同步成本地 Markdown 知识库，并发布 DIY 项目到 GitHub。 | JavaScript | 0 | MIT | 2026-11-21 |
 | [z324169276/hubei-exam-skills](https://github.com/z324169276/hubei-exam-skills) | 湖北技能高考计算机类 Agent Skills：按考纲出题、整卷组卷、判分与错因分析 | — | 0 | MIT | 2026-11-12 |
+| [zcx-zg/dsh-plugin-manager](https://github.com/zcx-zg/dsh-plugin-manager) | Manage installed DSH (DeepSeek Harness) plugins: list, enable, disable, delete - from model tools or a web Settings page. | JavaScript | 0 | MIT | 2026-11-21 |
 | [zefferry/dsh-plugin-manager-plus](https://github.com/zefferry/dsh-plugin-manager-plus) | DeepSeek Harness 插件管理增强：标签筛选、搜索排序、批量操作、图标与 AI 改名（非官方，Surface v1） | JavaScript | 0 | MIT | 2026-11-05 |
 | [Zeishuai-s-Project/ZeishuaiDeepSeekHarness](https://github.com/Zeishuai-s-Project/ZeishuaiDeepSeekHarness) | DSH的个人衍生版本，主要用于C#，C/C++，python，typescript开发 | TypeScript | 0 | MIT | 2026-09-12 |
 | [zephyrpersonal/dsh-plugin-development-skill](https://github.com/zephyrpersonal/dsh-plugin-development-skill) | A reusable agent skill that turns user ideas into DeepSeek Harness plugins. | Python | 0 | MIT | 2026-08-15 |

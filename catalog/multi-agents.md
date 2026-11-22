@@ -4,9 +4,9 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **840**
+- 本册收录 / Entries in this volume: **846**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
-- 最近人工复核 / Last review merge: **2026-11-21**
+- 最近人工复核 / Last review merge: **2026-11-22**
 
 | Project | Description | Language | Stars | License | Updated |
 | --- | --- | --- | ---: | --- | --- |
@@ -397,6 +397,7 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 | [Magica-Chen/dsh-preset-codex-claude](https://github.com/Magica-Chen/dsh-preset-codex-claude) | DeepSeek Harness agent preset: Codex and Claude Code as delegation subagents, each at a read-only and full-access tier. Use either — or both in parallel — in one task. | JavaScript | 1 | MIT | 2026-10-27 |
 | [marshfolx/dsh-subagent-setting](https://github.com/marshfolx/dsh-subagent-setting) | Configure the default provider / model / reasoning effort for subagents from the DeepSeek Harness Web settings page | JavaScript | 1 | MIT | 2026-09-30 |
 | [Master-chai/dsh-cyber-dept](https://github.com/Master-chai/dsh-cyber-dept) | 赛博 IT：DSH Agent Teams 像素办公室插件，支持任务看板、员工工牌和团队沟通。 | JavaScript | 1 | MIT | 2026-11-07 |
+| [MildTempest/dsh-team-collab-panel](https://github.com/MildTempest/dsh-team-collab-panel) | DSH 多模型团队协作面板：模型菜单内实时协作状态 + 手动偏好提交给队长 + 授权/上限编辑 \| Multi-model team collaboration panel for DeepSeek Harness | JavaScript | 1 | MIT | 2026-11-21 |
 | [MiloMMIN/dsh-agent-board](https://github.com/MiloMMIN/dsh-agent-board) | 跨 Agent 工作台:dsh persistent plugin that watches Claude Code / Codex / Kimi Code / Pi / Hermes and continues their work with one click | JavaScript | 1 | MIT | 2026-09-11 |
 | [mindtheory/opc-xuanji](https://github.com/mindtheory/opc-xuanji) | OPC-玄机 · 一人公司中枢 — 运行在 DSH 上的一人公司中枢插件（中枢调度 + 员工矩阵 + 三级沉淀 + TS 流程固化） | TypeScript | 1 | NOASSERTION | 2026-11-11 |
 | [Minhyuin/dsh-subagent-injection](https://github.com/Minhyuin/dsh-subagent-injection) | DSH Web plugin: configure priority-ordered provider/model/reasoning-effort routes for subagent delegation, and gate subagent_fork | JavaScript | 1 | MIT | 2026-10-17 |
@@ -459,6 +460,7 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 | [TT-Wang/dsh-agent-swarm](https://github.com/TT-Wang/dsh-agent-swarm) | #dsh-plugin Durable agent swarms for DeepSeek Harness: one-command planning, peer collaboration, independent verification, and an embedded sidebar. | JavaScript | 1 | MIT | 2026-10-25 |
 | [ttxl314/dsh-skill-lord-serf](https://github.com/ttxl314/dsh-skill-lord-serf) | DeepSeek Harness 插件：Lord/Serf 协议 0.5 技能，让 DSH 实现文件式多智能体编排（Lord 派活，Serf 干活）。  DeepSeek Harness plugin: Lord/Serf protocol 0.5 skills for file-based multi-agent orchestration. | JavaScript | 1 | MIT | 2026-08-21 |
 | [ttxs66666/dsh-review-gate](https://github.com/ttxs66666/dsh-review-gate) | Independent review gate for DeepSeek Harness: hand finished derivations and code to a reviewer subagent and feed its verdict back to the main model. | TypeScript | 1 | BSD-3-Clause | 2026-09-11 |
+| [Uneadlight/fatfish-lab](https://github.com/Uneadlight/fatfish-lab) | 一个跑在 DSH 里的 AI 编码智能体：手搓 4KB 页 B+树、Socket RPC、多智能体编排，151 项测试全绿，本地小模型 + 云端协同。 | Python | 1 | MIT | 2026-11-21 |
 | [Velestia-star/agent-skill](https://github.com/Velestia-star/agent-skill) | 一个自己创建子agent和skill的dsh插件，管理自己的agent团队 | JavaScript | 1 | MIT | 2026-11-14 |
 | [vitas/dsh-jev-subagent-dispatch](https://github.com/vitas/dsh-jev-subagent-dispatch) | Cut LLM costs: route routine tasks to cheap subagent models (DeepSeek Harness plugin) | JavaScript | 1 | MIT | 2026-10-13 |
 | [wanghj040530/dsh-swarm](https://github.com/wanghj040530/dsh-swarm) | Autonomous team collaboration plugin for DeepSeek Harness: captain splits tasks, specialized members with independent API/plugins run in isolated DSH subprocesses, JSONL mailbox IPC | JavaScript | 1 | MIT | 2026-10-25 |
@@ -509,6 +511,7 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 | [00wz/dsh-compaction-carryover](https://github.com/00wz/dsh-compaction-carryover) | Keeps skills and subagents in the DSH compaction checkpoint: the summarizer records a Carry-over section. | JavaScript | 0 | MIT | 2026-11-18 |
 | [00wz/dsh-subagent-gate](https://github.com/00wz/dsh-subagent-gate) | Ask a human before a delegated subagent widens its sandbox — a DSH plugin that re-arms child approval to \`ask\` and routes the request to you. | JavaScript | 0 | MIT | 2026-11-10 |
 | [08mamba24/dsh-subagent-compactor](https://github.com/08mamba24/dsh-subagent-compactor) | Manual context compaction for live direct subagents in DSH Desktop. Command and model tool; tested on Desktop 0.12.1. | JavaScript | 0 | — | 2026-11-10 |
+| [08mamba24/dsh-team-presets](https://github.com/08mamba24/dsh-team-presets) | Native role presets and one-click implementer/reviewer teams for DeepSeek Harness | JavaScript | 0 | — | 2026-11-21 |
 | [1149784810/jayhe-mdviewer](https://github.com/1149784810/jayhe-mdviewer) | General file previewer for DeepSeek Harness (dsh): vertical expandable produced-files list with per-type rendering — markdown, syntax-highlighted code, csv/tsv tables, images, text. | TypeScript | 0 | MIT | 2026-08-15 |
 | [123123liang/dsh-subagent-model-sync](https://github.com/123123liang/dsh-subagent-model-sync) | 子智能体模型切换：DSH 子智能体/团队队友的模型与思考强度手动切换，支持主会话一键同步 | JavaScript | 0 | MIT | 2026-10-26 |
 | [2025Bigeye/dsh-nanobot-subagent-link](https://github.com/2025Bigeye/dsh-nanobot-subagent-link) | Connect Nanobot instances to DeepSeek Harness,enabling DSH to operate NanoBot as a Sub-Agent | JavaScript | 0 | MIT | 2026-10-31 |
@@ -519,6 +522,7 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 | [a-molecule-of-ATP/dsh-subagent-model-guard](https://github.com/a-molecule-of-ATP/dsh-subagent-model-guard) | DeepSeek Harness plugin that gates subagent delegation against DSH's official model allow-list, with optional replacement tools for delegation and model discovery that bypass the session snapshot. | JavaScript | 0 | MIT | 2026-11-20 |
 | [a1286743184/dsh-subagent-ops](https://github.com/a1286743184/dsh-subagent-ops) | DSH plugin: subagent ops suite — model pool load balancing, pool management UI, health probe and auto-revive. | JavaScript | 0 | MIT | 2026-11-13 |
 | [A1311981684/dsh-pi-subagent](https://github.com/A1311981684/dsh-pi-subagent) | Pi as an out-of-process DSH subagent backend | JavaScript | 0 | MIT | 2026-11-12 |
+| [ABC144321/dsh-grok-bot](https://github.com/ABC144321/dsh-grok-bot) | Bot 群：给 DSH Bot 加群聊层（拉群 / @ 交接 / 圆桌 / 群目标），并把「Bot 模式」加进 DSH 的模式选择器。 | JavaScript | 0 | MIT | 2026-11-21 |
 | [adlternative/dsh-subagent-qoder-cloud](https://github.com/adlternative/dsh-subagent-qoder-cloud) | DeepSeek Harness (dsh) subagent provider for Qoder Cloud Agents | JavaScript | 0 | — | 2026-08-25 |
 | [adsqwui/dsh-subscription-agents](https://github.com/adsqwui/dsh-subscription-agents) | DeepSeek Harness plugin: use local Codex and Claude Code subscription CLIs as models and child agents | TypeScript | 0 | MIT | 2026-11-19 |
 | [AGSQ11/dsh-ai-council](https://github.com/AGSQ11/dsh-ai-council) | A role-driven enterprise AI deliberation plugin for DeepSeek Harness (DSH). | JavaScript | 0 | MIT | 2026-09-12 |
@@ -760,6 +764,7 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 | [SMPcosy/dsh-member-manager](https://github.com/SMPcosy/dsh-member-manager) | DSH plugin for a runnable company org: departments, employee codes, dual M/P channels, DAG task-graph dispatch, audit &amp; cost attribution — with a roster overlay for display names, roles, skills and model overrides. Zero runtime deps. | JavaScript | 0 | MIT | 2026-11-04 |
 | [soffits/dsh-restart-resume](https://github.com/soffits/dsh-restart-resume) | Continue the turns a DeepSeek Harness restart cut off, subagents included | JavaScript | 0 | NOASSERTION | 2026-11-15 |
 | [softspark/dsh-process-console](https://github.com/softspark/dsh-process-console) | Processes tab for DeepSeek Harness: every agent and subagent of a conversation as a live console with paired tool requests and responses, installed as one profile bundle. | TypeScript | 0 | Apache-2.0 | 2026-10-10 |
+| [songling715/dsh-subagent-workbench](https://github.com/songling715/dsh-subagent-workbench) | Dispatch, watch, and take over parallel subagents from DeepSeek Harness. | JavaScript | 0 | MIT | 2026-11-21 |
 | [sosiman/dsh-native-mode-router](https://github.com/sosiman/dsh-native-mode-router) | Autonomous runtime engine switcher (Standard, PTC, Team, Minimal) with in-flight Auto-Wakeup and live fleet observability for DeepSeek Harness. | JavaScript | 0 | — | 2026-11-12 |
 | [Sqhao-O/dsh-intercom](https://github.com/Sqhao-O/dsh-intercom) | Inter-session messaging plugin for DeepSeek Harness (dsh): let independent dsh sessions on one machine discover each other and exchange messages (send / ask / reply). Port of pi-intercom. | TypeScript | 0 | MIT | 2026-09-11 |
 | [SSHOOTING/dsh-plugin-subagent-board](https://github.com/SSHOOTING/dsh-plugin-subagent-board) | DSH plugin: See who the subagents are, what each is doing, dependencies, spend and whether results were merged — a read-only task tree. | TypeScript | 0 | NOASSERTION | 2026-11-20 |
@@ -770,6 +775,7 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 | [stone-brick/dsh-report-ledger](https://github.com/stone-brick/dsh-report-ledger) | DSH 插件：把「汇报」做成代理之间的一等交互原语 —— 可追溯的传递路径账本、回执/结案/修正，以及一个会话时间线标签页。 | TypeScript | 0 | MIT | 2026-11-06 |
 | [suifei/dsh-pmo-button](https://github.com/suifei/dsh-pmo-button) | PMO Review Loop for DeepSeek Harness (DSH plugin) — mount a senior project director for AI sessions: a persistent reviewer subagent with its own model/context, dual-line relay and STATUS auto-loop. 中文：为 AI 会话挂载一位“资深项目总监”。 | TypeScript | 0 | — | 2026-11-15 |
 | [sunlei1214/dsh-three-modes](https://github.com/sunlei1214/dsh-three-modes) | 在同一会话里切换的三种工作模式：讨论 / 对抗审查 / 任务执行。换提示词、收紧工具权限、改采样温度，不新建会话、不丢上下文。 | JavaScript | 0 | MIT | 2026-11-05 |
+| [Swcmb/dsh-spec-driven-delivery](https://github.com/Swcmb/dsh-spec-driven-delivery) | DSH agent preset: 规格驱动交付 — six fixed steps with brainstorming/spec/plan skills and a document-reviewer subagent | JavaScript | 0 | MIT | 2026-11-21 |
 | [t2094308-star/dsh-agent-contract](https://github.com/t2094308-star/dsh-agent-contract) | DSH 多智能体契约工作流引擎：契约注入 / 按角色委派 / 台账与审计 / 文档治理与索引 / 面板。 | JavaScript | 0 | MIT | 2026-10-04 |
 | [tengfeizhao1219/dsh-ai-collab](https://github.com/tengfeizhao1219/dsh-ai-collab) | DSH 插件：AI 多角色协作开发框架（文件即通信）—— 一键初始化协作约定文件，任何 DSH 会话通过 ai_collab_init 驱动多角色 AI 协作完成软件项目。 | Python | 0 | — | 2026-09-18 |
 | [tf961656585/dsh-plugin-sync-delegate](https://github.com/tf961656585/dsh-plugin-sync-delegate) | Synchronous delegation for DSH: delegate one task, wait for the answer, and never lose a slow child on timeout | JavaScript | 0 | MIT | 2026-11-10 |

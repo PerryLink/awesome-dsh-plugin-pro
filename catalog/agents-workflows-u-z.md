@@ -4,9 +4,9 @@ DSH 插件全量目录的「Agent、自动化与工作流（U–Z）」分册 / 
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **695**
+- 本册收录 / Entries in this volume: **698**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
-- 最近人工复核 / Last review merge: **2026-11-21**
+- 最近人工复核 / Last review merge: **2026-11-22**
 
 | Project | Description | Language | Stars | License | Updated |
 | --- | --- | --- | ---: | --- | --- |
@@ -374,6 +374,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（U–Z）」分册 / 
 | [WayJ/dsh-work](https://github.com/WayJ/dsh-work) | 基于dsh构建的个人工作Agent | TypeScript | 0 | MIT | 2026-09-13 |
 | [WBMGGGG/dsh-opticforge](https://github.com/WBMGGGG/dsh-opticforge) | OpticForge 3.1.1 — DSH 光电任务辅助插件：KB-first、多剧本激活、按维度取证、交叉核对、采信闸门、五段呈现；40 板块 / 324 条 KB、308 概念卡；纯 Node.js、零依赖、不联网、不执行动作。npm 暂不发布，从 GitHub 安装。 | JavaScript | 0 | MIT | 2026-11-17 |
 | [wcwplaygitbub/dsh-approve-for-me](https://github.com/wcwplaygitbub/dsh-approve-for-me) | dsh增加类似替我审批的能力 | JavaScript | 0 | — | 2026-08-16 |
+| [wednesday-solutions/chime-scheduler](https://github.com/wednesday-solutions/chime-scheduler) | Schedule and publish LinkedIn posts from your AI chat. Hosted MCP server: https://schedule.getchime.co/mcp | JavaScript | 0 | NOASSERTION | 2026-11-21 |
 | [weekitmo/oh-my-dsh-plugins](https://github.com/weekitmo/oh-my-dsh-plugins) | A curated collection of awesome plugins for DeepSeek Harness (DSH) — task notifications, LLM trace inspection, keybindings with a built-in terminal, and local agent delegation. | TypeScript | 0 | MIT | 2026-10-22 |
 | [wei200425/dsh-timeline](https://github.com/wei200425/dsh-timeline) | A DeepSeek Harness plugin that shows a session as a timeline: per turn, which files the conversation changed (with added/deleted lines) and which files it delivered.             DeepSeek Harness 插件：把对话显示成时间轴，按轮次列出改动的文件（含增删行数）与交付的产物。 | JavaScript | 0 | MIT | 2026-11-20 |
 | [Weihao654/dsh-workflow](https://github.com/Weihao654/dsh-workflow) | 把 plan → work → code → work → review → work → plan 这条角色链，从"靠模型自觉"变成可执行、可审计的轮次状态机：唯一 T0、按签名计数的失败、分层证据、阻塞式门禁、结构化交付。 | JavaScript | 0 | MIT | 2026-11-10 |
@@ -647,6 +648,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（U–Z）」分册 / 
 | [zgq0106/dsh-agent-session-tools](https://github.com/zgq0106/dsh-agent-session-tools) | 给 Agent 一组能直接操作会话的工具——不用绕提示词、不用打开界面，就能从当前会话里新建一个对接会话，或把一句话塞进另一个正在跑的会话。 | JavaScript | 0 | MIT | 2026-11-01 |
 | [zh-Littlebird/dsh-plugin-workflow-library](https://github.com/zh-Littlebird/dsh-plugin-workflow-library) | Turn repeatable DSH flows into reusable skills discovered per session. DSH 工作流库：把重复流程固化成可复用技能，新会话自动发现。 | JavaScript | 0 | MIT | 2026-11-08 |
 | [zhangcun1995521/deepwork](https://github.com/zhangcun1995521/deepwork) | Declare an enterprise world, derive the agent's tools and permissions from it, and enforce them. A platform on DeepSeek Harness. | TypeScript | 0 | MIT | 2026-11-13 |
+| [zhangfeilong1990/dsh-ppt-agent](https://github.com/zhangfeilong1990/dsh-ppt-agent) | DSH 高密度 PPT 报告生成插件 | JavaScript | 0 | MIT | 2026-11-21 |
 | [zhangguiping-xydt/dsh-session-lab](https://github.com/zhangguiping-xydt/dsh-session-lab) | DeepSeek Harness session teaching, evidence capsules, and controlled trajectory comparison | Python | 0 | MIT | 2026-09-03 |
 | [zhangyahao/dsh-context-curator](https://github.com/zhangyahao/dsh-context-curator) | 把 DeepSeek Harness 每轮模型请求里那些冗长但偶尔才用得上的提示词段，折叠成一行索引； 原文留在插件内存里，模型（或你）确实需要细节时再按名字取回。 | JavaScript | 0 | MIT | 2026-11-02 |
 | [zhangyahao/dsh-longtask-guard](https://github.com/zhangyahao/dsh-longtask-guard) | 长任务上下文护栏：把臃肿的会话历史外化到项目文件，让长会话不因上下文过大而中断；正文为空的回合会把 reasoning 归档并补一条可见消息。 | JavaScript | 0 | MIT | 2026-11-12 |
@@ -680,6 +682,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（U–Z）」分册 / 
 | [Zioove/gpt-6-astra-dsh-preset](https://github.com/Zioove/gpt-6-astra-dsh-preset) | DeepSeek Harness (dsh) agent preset + bundle plugin: the GPT-6 / Codex Astra persona on dsh standard toolset, with a preset-local reference skill and a slim spawned-subagent persona | JavaScript | 0 | NOASSERTION | 2026-09-26 |
 | [zknyy/dsh-session-highlight](https://github.com/zknyy/dsh-session-highlight) | DSH plugin: iridescent gradient + marquee highlight for the active session name | JavaScript | 0 | MIT | 2026-11-16 |
 | [zlqd123/dsh-timed-send](https://github.com/zlqd123/dsh-timed-send) | DSH 定时发送插件：选好时刻到点由 Host 真正发出。已有对话内排进当前对话，新会话界面每条各建一个；含 DeepSeek 峰谷时段（法定节假日/调休）一键选时。 | JavaScript | 0 | MIT | 2026-11-06 |
+| [zman406986/dsh-bot](https://github.com/zman406986/dsh-bot) | Grok-bot-like multitask dispatcher for dsh (DeepSeek Harness) | TypeScript | 0 | MIT | 2026-11-21 |
 | [ZoeHao2026/dsh-temporary-project](https://github.com/ZoeHao2026/dsh-temporary-project) | Temporary conversation option for the DeepSeek Harness Web GUI: one click creates a dedicated temporary project directory and starts an agent session without choosing a folder. | JavaScript | 0 | MIT | 2026-11-11 |
 | [zongyanbai/dsh-context-continuum](https://github.com/zongyanbai/dsh-context-continuum) | 把 DeepSeek Harness 的上下文压缩从「滚动重写的叙事摘要」改成「只追加的会话索引」；三条实测缺陷已取证，征集社区修复。 | TypeScript | 0 | MIT | 2026-10-09 |
 | [zou240/dsh-plugins](https://github.com/zou240/dsh-plugins) | DSH plugins: Rules &amp; Plans — turn a stated rule into a checkable card written into the right AGENTS.md; keep plans, a rule ledger, cross-file search and a timeline. | JavaScript | 0 | MIT | 2026-11-03 |

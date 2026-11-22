@@ -35,48 +35,48 @@
 ## 🗺️ 生态全景
 
 <!-- dsh:panorama:start -->
-截至 2026-11-21 共收录 **29678** 个经核实的仓库。它们长这样：
+截至 2026-11-21 共收录 **29957** 个经核实的仓库。它们长这样：
 
 ```mermaid
 mindmap
-  root((DSH 插件生态 29678))
-    界面与体验 · 8300
+  root((DSH 插件生态 29957))
+    界面与体验 · 8392
       用量与计费面板
       侧边栏工作台
       皮肤与桌面宠物
       通知与输入增强
-    Agent 自动化与工作流 · 3532
+    Agent 自动化与工作流 · 3548
       会话与上下文管理
       定时循环与事件唤醒
       审批、预算与检查点
-    实用工具与其他 · 3395
+    实用工具与其他 · 3473
       文件与编码
       格式转换
-    开发者工具 · 3219
+    开发者工具 · 3227
       Git 与 diff
       模型网关与密钥
       调试与诊断
-    网页与浏览器 · 2841
+    网页与浏览器 · 2866
       浏览器桥接与页面操作
       网页搜索与引用
       归档与网页取证
-    集成与分享 · 2119
+    集成与分享 · 2135
       会话导入与分享
       远程访问
       IM 与外部集成
-    知识与研究 · 2104
+    知识与研究 · 2110
       知识库与跨会话记忆
       深度研究
       学术与数学
-    设计媒体与视觉 · 2069
+    设计媒体与视觉 · 2087
       图片理解与 OCR
       设计画布与 UI 还原
       语音合成与识别
-    生态与资源 · 1259
+    生态与资源 · 1273
       插件市场与注册表
       技能库与插件管家
       开发模板与脚手架
-    多 Agent 编排协作 · 840
+    多 Agent 编排协作 · 846
       子代理与编排看板
       舰队与团队协作
       角色分工与任务验收
@@ -346,14 +346,14 @@ mindmap
 
 | 项目 | 简介 | 创建日期 |
 | --- | --- | --- |
-| [omdsh-dev/dsh-ego-browser](https://github.com/omdsh-dev/dsh-ego-browser) | 把给 Agent 用的 ego-lite 浏览器接进 DSH：13 个 ego_* 工具覆盖语义快照、定位点击、表单填充与 CDP 控制，内置运行时，Linux 开箱即用。 | 2026-08-07 |
-| [kaust-ark/ARK](https://github.com/kaust-ark/ARK) | idea2paper 科研流水线：6 个 agent 把一个想法做成一篇可复核的论文，DSH bundle 进专属 profile，评审发现可回看原始数据与 PDF 页。 | 2026-03-24 |
-| [roost-qq/dsh-roost](https://github.com/roost-qq/dsh-roost) | 让 AI 通过 Roost 住进 QQ：走官方接口收发消息，不用 hook 客户端。 | 2026-10-26 |
-| [LINYT1416/dsh-memory-persona-affect](https://github.com/LINYT1416/dsh-memory-persona-affect) | 给 DSH 装上活的脑子：海马体-皮层-前额叶-杏仁核的记忆系统、五十余机制的人格与六器官耦合的心情曲线，跑在同一个时钟上。 | 2026-11-20 |
-| [Greatbeing/Aesthetics-OS](https://github.com/Greatbeing/Aesthetics-OS) | 会拒绝的审美操作系统：三条红线加生成→审判→迭代闭环、欧拉五透镜与 22 个原生工具——不看实际成品不许说好看。 | 2026-11-19 |
-| [Kostyastudy/dsh-matu-tutor](https://github.com/Kostyastudy/dsh-matu-tutor) | 电子科大「码图」C 语言作业工作台：本地编译运行、真实提交评分，AI 导师带着学而不只是给答案。 | 2026-11-20 |
-| [aidc-lab/dsh-movie-workbench](https://github.com/aidc-lab/dsh-movie-workbench) | 找片工作台：TMDB / IMDb / 豆瓣一站搜索影视剧集，并自动发现 BT 资源。 | 2026-11-19 |
-| [Murphy2000-cyk/dsh-skill-plugin-tuning](https://github.com/Murphy2000-cyk/dsh-skill-plugin-tuning) | DSH 的 skill 与插件包工作台：合规体检 14 项、触发率实测、插件工具契约与配置死键检查。 | 2026-09-13 |
+| [JimLiu/open-artifact](https://github.com/JimLiu/open-artifact) | 开放、跨 Agent/跨模型的工件工作台：幻灯片、UI 设计、白板、表格、文档与动效全部存为本地纯文件，可编辑、批注、导出。 | 2026-11-17 |
+| [flashvayne/dsh-live-captions](https://github.com/flashvayne/dsh-live-captions) | DSH 实时字幕插件：识别系统声音与麦克风，双语字幕多语言互译，一键生成会议纪要，字幕浮层置顶可调。 | 2026-11-19 |
+| [nicken/dsh-browser-use](https://github.com/nicken/dsh-browser-use) | 低 token 的 CDP 浏览器控制插件 + 自托管 MCP 浏览器沙箱：容器化 Xvfb/Chromium、实时画面与轨迹回放，双层信任模型。 | 2026-11-21 |
+| [bigm4ngo/dsh-oh-my-gravity](https://github.com/bigm4ngo/dsh-oh-my-gravity) | 把已登录的 Google Antigravity CLI（agy）变成 DSH 里的模型提供商：无需 API key，ACP 传输、流式输出与工具审批。非官方。 | 2026-11-21 |
+| [ST31Orange/ark-agent-plan](https://github.com/ST31Orange/ark-agent-plan) | 火山方舟 Agent Plan 提供商套件：在原生 llm-pi-ai 适配器上接入豆包 Seed 2.1、DeepSeek V4.1、GLM-5.3 等当前模型目录。 | 2026-11-21 |
+| [whyguagua/dsh-qq-bridge](https://github.com/whyguagua/dsh-qq-bridge) | QQ 个人号（NapCat / OneBot11）接入 DSH：私聊/群聊、人格与记忆、生图与面板。 | 2026-11-21 |
+| [TwinsEarth/Ai-PRISON](https://github.com/TwinsEarth/Ai-PRISON) | 给 AI Agent 的分级能力剥夺与行为矫正基础设施：虚拟沙盒、行为监控、越狱防御与假释评估，Go 实现，npm 分发 DSH 插件。 | 2026-10-25 |
+| [Ez4code/dsh-music](https://github.com/Ez4code/dsh-music) | 让 AI（或经 dsh-im 的微信/QQ 机器人）控制 macOS 音乐 App：按名点播、暂停切歌、调音量、读播放状态，AppleScript + TCC 助手。 | 2026-11-21 |
 
 ## 📣 作者自荐
 
@@ -380,11 +380,11 @@ mindmap
 - **精选推荐 + 全量索引分层：** 首页只放经过筛选的精选推荐与自荐预览；[CATALOG.md](./CATALOG.md) 及其分类分册收录全部经审核的仓库；新增仓库先进入[待审核队列](./data/review/pending.md)，审核后合并（约定见 [data/review/README.md](./data/review/README.md)）。
 - **数据自动、推荐受控：** 原始快照与待审核队列每天由脚本自动刷新；全量目录与 Top 200 热度榜只在审核合并后重新生成（生成逻辑见 [scripts/merge.mjs](./scripts/merge.mjs) 与 [scripts/top.mjs](./scripts/top.mjs)，可随时切回 Top 100）；首页精选推荐、自荐与最近加入独立维护，避免刷星、蹭 Topic 等被污染的接口数据直接改写推荐内容。
 - **剔除蹭热度条目：** 带 `dsh-plugin` Topic 但并非 DSH 插件的仓库（平台本体、其他 Agent 工具、同名目录站等）以及拉黑仓库不计入目录与榜单，理由逐条记录在 [data/curated.json](./data/curated.json)（榜单另有 `leaderboard_exclusions`：保留在目录中、但不参与榜单排序的仓库），可随时复查与质疑。
-- **审核留痕：** 每个收录决定都可回查——核准日期在 [data/approved.json](./data/approved.json)，剔除与榜单排除理由逐条记录在 [data/curated.json](./data/curated.json)；大批量审核另附存档记录（如 [2026-11-21 审核记录](./data/review/2026-11-21.md)），全流程约定见 [data/review/README.md](./data/review/README.md)。
+- **审核留痕：** 每个收录决定都可回查——核准日期在 [data/approved.json](./data/approved.json)，剔除与榜单排除理由逐条记录在 [data/curated.json](./data/curated.json)；大批量审核另附存档记录（如 [2026-11-22 审核记录](./data/review/2026-11-22.md)），全流程约定见 [data/review/README.md](./data/review/README.md)。
 - **市场数据（npm feed）：** [awesome-dsh-plugin-feed](https://www.npmjs.com/package/awesome-dsh-plugin-feed) 发布 `market-catalog.json`（schema 3：完整已审核目录，每行带 `install_status` 与安装映射，另含官方订阅与编辑精选）和 `packages.json`（安装映射源）；由 `scripts/safe-market-catalog.mjs` 投影、`publish-npm-feed.mjs` 打包，国内经 npmmirror 镜像分发。字段见下游的[消费协议](https://github.com/bruc3van/dsh-market-pro/blob/master/docs/market-json-spec.md)。
 - **中文默认，中英双语：** 普通用户可以直接理解，英文读者也有独立入口。
 
-截至 2026-11-21，全量目录收录 **29678** 个仓库、**41** 种主要语言；其中 **27316** 个声明了许可证，**29354** 个未归档且未禁用（目录随审核合并更新，最新统计以 [CATALOG.md](./CATALOG.md) 为准）。
+截至 2026-11-21，全量目录收录 **29957** 个仓库、**41** 种主要语言；其中 **27569** 个声明了许可证，**29633** 个未归档且未禁用（目录随审核合并更新，最新统计以 [CATALOG.md](./CATALOG.md) 为准）。
 
 ## ⚠️ 使用与安全
 

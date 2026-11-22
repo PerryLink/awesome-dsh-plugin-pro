@@ -35,48 +35,48 @@ No extra plugin required — add the curated index directly to DSH's built-in Di
 ## 🗺️ Ecosystem at a glance
 
 <!-- dsh:panorama:start -->
-As of 2026-11-21 the catalog lists **29,678** verified repositories. Here is the shape of it:
+As of 2026-11-21 the catalog lists **29,957** verified repositories. Here is the shape of it:
 
 ```mermaid
 mindmap
-  root((DSH ecosystem 29678))
-    UI and experience · 8300
+  root((DSH ecosystem 29957))
+    UI and experience · 8392
       Usage and billing panels
       Sidebar workbenches
       Skins and desktop pets
       Notifications and input
-    Agents automation workflows · 3532
+    Agents automation workflows · 3548
       Session and context management
       Scheduled loops and event wakeups
       Approval budget and checkpoints
-    Utilities and more · 3395
+    Utilities and more · 3473
       Files and encodings
       Format conversion
-    Developer tools · 3219
+    Developer tools · 3227
       Git and diff
       Model gateways and keys
       Debugging and diagnostics
-    Web and browser · 2841
+    Web and browser · 2866
       Browser bridge and page control
       Web search with citations
       Archiving and web forensics
-    Integrations and sharing · 2119
+    Integrations and sharing · 2135
       Chat import and sharing
       Remote access
       IM and external integrations
-    Knowledge and research · 2104
+    Knowledge and research · 2110
       Knowledge bases and cross-session memory
       Deep research
       Academia and math
-    Design media and vision · 2069
+    Design media and vision · 2087
       Image understanding and OCR
       Design canvas and UI restoration
       Speech synthesis and recognition
-    Ecosystem and resources · 1259
+    Ecosystem and resources · 1273
       Plugin markets and registries
       Skill libraries and plugin managers
       Templates and scaffolds
-    Multi-agent orchestration · 840
+    Multi-agent orchestration · 846
       Subagents and orchestration boards
       Fleets and agent teams
       Role division and acceptance checks
@@ -345,14 +345,14 @@ Screened recent projects, updated from time to time:
 
 | Project | Description | Created |
 | --- | --- | --- |
-| [omdsh-dev/dsh-ego-browser](https://github.com/omdsh-dev/dsh-ego-browser) | Wire the ego-lite agent browser into DSH: 13 ego_* tools covering semantic snapshots, located clicks, form filling and CDP control, with a bundled runtime — works on Linux out of the box. | 2026-08-07 |
-| [kaust-ark/ARK](https://github.com/kaust-ark/ARK) | idea2paper research pipeline: six agents turn one idea into a verifiable paper; the DSH bundle runs in a dedicated profile and reviewers can inspect raw rows and PDF pages. | 2026-03-24 |
-| [roost-qq/dsh-roost](https://github.com/roost-qq/dsh-roost) | Move your AI into QQ through Roost: official-API messaging, no client hooking. | 2026-10-26 |
-| [LINYT1416/dsh-memory-persona-affect](https://github.com/LINYT1416/dsh-memory-persona-affect) | A living brain for DSH: hippocampus-cortex-prefrontal-amygdala memory, a fifty-mechanism persona and a six-organ mood curve, all running on one clock. | 2026-11-20 |
-| [Greatbeing/Aesthetics-OS](https://github.com/Greatbeing/Aesthetics-OS) | An aesthetic OS that says no: three red lines, a generate→judge→iterate loop, five Euler lenses and 22 native tools — no praise without inspecting the real artifact. | 2026-11-19 |
-| [Kostyastudy/dsh-matu-tutor](https://github.com/Kostyastudy/dsh-matu-tutor) | A workbench for UESTC APTAT C-language homework: compile locally, submit for a real score, and learn with an AI tutor instead of copied answers. | 2026-11-20 |
-| [aidc-lab/dsh-movie-workbench](https://github.com/aidc-lab/dsh-movie-workbench) | A movie finder: search TMDB, IMDb and Douban on one page and automatically discover BT resources. | 2026-11-19 |
-| [Murphy2000-cyk/dsh-skill-plugin-tuning](https://github.com/Murphy2000-cyk/dsh-skill-plugin-tuning) | A workbench for DSH skills and plugin packages: 14-point compliance audits, real trigger-rate evaluation, tool-contract and dead-config checks. | 2026-09-13 |
+| [JimLiu/open-artifact](https://github.com/JimLiu/open-artifact) | Open, agent- and model-agnostic artifacts: slides, UI designs, whiteboards, sheets, docs and motion saved locally as plain files — edit, comment, export. | 2026-11-17 |
+| [flashvayne/dsh-live-captions](https://github.com/flashvayne/dsh-live-captions) | Live captions for DSH: system-audio and microphone speech with bilingual subtitles and cross-language translation, plus one-click meeting minutes. | 2026-11-19 |
+| [nicken/dsh-browser-use](https://github.com/nicken/dsh-browser-use) | Low-token CDP browser control plugin plus a self-hosted MCP browser sandbox: containerized Xvfb/Chromium pods with live view and trace replay, at two trust levels. | 2026-11-21 |
+| [bigm4ngo/dsh-oh-my-gravity](https://github.com/bigm4ngo/dsh-oh-my-gravity) | Run your signed-in Google Antigravity CLI (agy) as a model provider inside DSH: no API key, ACP transport, streaming and tool approvals. Unofficial. | 2026-11-21 |
+| [ST31Orange/ark-agent-plan](https://github.com/ST31Orange/ark-agent-plan) | Volcengine Ark Agent Plan provider bundle: the current model catalog (Doubao Seed 2.1, DeepSeek V4.1, GLM-5.3) on the native llm-pi-ai adapter. | 2026-11-21 |
+| [whyguagua/dsh-qq-bridge](https://github.com/whyguagua/dsh-qq-bridge) | Bring your QQ personal account into DSH via NapCat / OneBot11: private and group chats, persona and memory, image generation, and a panel. | 2026-11-21 |
+| [TwinsEarth/Ai-PRISON](https://github.com/TwinsEarth/Ai-PRISON) | Defensive infrastructure for graded AI-agent capability deprivation: virtual sandboxing, behavior monitoring, jailbreak defense and parole review, in Go with an npm DSH plugin. | 2026-10-25 |
+| [Ez4code/dsh-music](https://github.com/Ez4code/dsh-music) | Let an AI agent — or a WeChat / QQ bot via dsh-im — control the macOS Music app: play by name, pause, skip, volume and now-playing, via AppleScript and a TCC helper. | 2026-11-21 |
 
 ## 📣 Author showcase
 
@@ -379,11 +379,11 @@ Self-submitted recommendations from plugin authors, following the [contributing 
 - **Layered: curated picks + full index:** the front page carries curated featured picks and the showcase preview; [CATALOG.md](./CATALOG.md) and its per-category volumes list every reviewed repository; new repositories first enter the [review queue](./data/review/pending.md) and appear after review and merge (convention: [data/review/README.md](./data/review/README.md)).
 - **Automated data, curated recommendations:** the raw snapshot and the review queue refresh daily by script; the catalog and Top 200 leaderboard are regenerated only after a review merge (generators: [scripts/merge.mjs](./scripts/merge.mjs), [scripts/top.mjs](./scripts/top.mjs), switchable back to Top 100); the home-page featured picks, showcase, and recently-joined sections are maintained separately, so polluted API data (star inflation, topic riders) never rewrites recommendations automatically.
 - **Riders removed:** repositories carrying the `dsh-plugin` topic without being DSH plugins (the platform itself, other agent tools, competing catalogs) and blacklisted repositories are excluded from the catalog and leaderboard, with per-repo reasons recorded in [data/curated.json](./data/curated.json) (the leaderboard additionally honors `leaderboard_exclusions` for repos that stay in the catalog but do not rank) — auditable and contestable at any time.
-- **Auditable review trail:** every inclusion decision can be checked — approval dates live in [data/approved.json](./data/approved.json), and each removal or leaderboard exclusion carries its reason in [data/curated.json](./data/curated.json); bulk reviews additionally keep a narrative record (e.g. the [2026-11-21 review log](./data/review/2026-11-21.md)), and the whole workflow is documented in [data/review/README.md](./data/review/README.md).
+- **Auditable review trail:** every inclusion decision can be checked — approval dates live in [data/approved.json](./data/approved.json), and each removal or leaderboard exclusion carries its reason in [data/curated.json](./data/curated.json); bulk reviews additionally keep a narrative record (e.g. the [2026-11-22 review log](./data/review/2026-11-22.md)), and the whole workflow is documented in [data/review/README.md](./data/review/README.md).
 - **Market data (npm feed):** [awesome-dsh-plugin-feed](https://www.npmjs.com/package/awesome-dsh-plugin-feed) publishes `market-catalog.json` (schema 3: the complete reviewed catalog, each row carrying `install_status` and its install mapping, plus the official subscription and the editorial picks) and `packages.json` (the install-mapping source). It is projected by `scripts/safe-market-catalog.mjs`, packaged by `publish-npm-feed.mjs`, and mirrored through npmmirror.
 - **Chinese by default, bilingual:** native readability for the main audience, with a dedicated English entry point.
 
-As of 2026-11-21, the catalog lists **29,678** repositories across **41** primary languages; **27,316** declare a license and **29,354** are neither archived nor disabled (the catalog updates after each review merge — see [CATALOG.md](./CATALOG.md) for current numbers).
+As of 2026-11-21, the catalog lists **29,957** repositories across **41** primary languages; **27,569** declare a license and **29,633** are neither archived nor disabled (the catalog updates after each review merge — see [CATALOG.md](./CATALOG.md) for current numbers).
 
 ## ⚠️ Usage & safety
 
