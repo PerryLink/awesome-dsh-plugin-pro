@@ -241840,6 +241840,173 @@
       "verified_by": "review",
       "install_mode": "manual",
       "manual_instructions": "npm 名 dsh-rescue-guard 的 registry repository 指向 raysnows/dsh-rescue-guard（他人包，corpus sweep 2026-11-21 核验）——同名不同主，不录。"
+    },
+    "mochi-fish/dsh-fish": {
+      "packages": [
+        {
+          "profile": "web",
+          "source": "npm:@ssamurias/dsh-fish",
+          "command": "dsh plugin --profile web add @ssamurias/dsh-fish",
+          "install": "@ssamurias/dsh-fish"
+        }
+      ],
+      "status": "repo-fallback",
+      "verified_date": "2026-11-22",
+      "verified_via": "manifest@package.json (npm repository match) @main",
+      "verified_by": "ci-auto"
+    },
+    "jimliu/open-artifact": {
+      "packages": [
+        {
+          "profile": "web",
+          "source": "npm:dsh-open-artifact",
+          "command": "dsh plugin --profile web add dsh-open-artifact",
+          "install": "dsh-open-artifact"
+        }
+      ],
+      "status": "readme-verified",
+      "verified_date": "2026-11-22",
+      "verified_via": "README@main",
+      "verified_by": "ci-auto"
+    },
+    "theplannerivan/planners-form": {
+      "packages": [
+        {
+          "profile": "web",
+          "source": "github:theplannerivan/planners-form",
+          "command": "dsh plugin --profile web add github:theplannerivan/planners-form",
+          "install": "https://github.com/theplannerivan/planners-form"
+        }
+      ],
+      "status": "repo-fallback",
+      "verified_date": "2026-11-22",
+      "verified_via": "manifest@package.json#dsh @main",
+      "verified_by": "ci-auto"
+    },
+    "fengshiyangrouguan/dsh-closure-pet": {
+      "packages": [
+        {
+          "profile": "web",
+          "source": "github:fengshiyangrouguan/dsh-closure-pet",
+          "command": "dsh plugin --profile web add github:fengshiyangrouguan/dsh-closure-pet",
+          "install": "https://github.com/fengshiyangrouguan/dsh-closure-pet"
+        }
+      ],
+      "status": "repo-fallback",
+      "verified_date": "2026-11-22",
+      "verified_via": "manifest@package.json#dsh @main",
+      "verified_by": "ci-auto"
+    },
+    "holosama212/dsh-rinko-nai": {
+      "packages": [
+        {
+          "profile": "web",
+          "source": "npm:dsh-rinko-nai",
+          "command": "dsh plugin --profile web add dsh-rinko-nai",
+          "install": "dsh-rinko-nai"
+        }
+      ],
+      "status": "repo-fallback",
+      "verified_date": "2026-11-22",
+      "verified_via": "manifest@package.json (npm repository match) @main",
+      "verified_by": "ci-auto"
+    },
+    "jinchezuo/dsh-interpret": {
+      "packages": [
+        {
+          "profile": "web",
+          "source": "github:jinchezuo/dsh-interpret",
+          "command": "dsh plugin --profile web add github:jinchezuo/dsh-interpret",
+          "install": "https://github.com/jinchezuo/dsh-interpret"
+        }
+      ],
+      "status": "repo-fallback",
+      "verified_date": "2026-11-22",
+      "verified_via": "manifest@package.json#dsh @main",
+      "verified_by": "ci-auto"
+    },
+    "xlnc-l/dsh-connect-madao": {
+      "packages": [
+        {
+          "profile": "web",
+          "source": "npm:dsh-connect-madao",
+          "command": "dsh plugin --profile web add dsh-connect-madao",
+          "install": "dsh-connect-madao"
+        }
+      ],
+      "status": "repo-fallback",
+      "verified_date": "2026-11-22",
+      "verified_via": "manifest@package.json (npm repository match) @main",
+      "verified_by": "ci-auto"
+    },
+    "aicivilization/dsh-her": {
+      "packages": [
+        {
+          "profile": "web",
+          "source": "npm:dsh-her",
+          "command": "dsh plugin --profile web add dsh-her",
+          "install": "dsh-her"
+        }
+      ],
+      "status": "repo-fallback",
+      "verified_date": "2026-11-22",
+      "verified_via": "manifest@package.json (npm repository match) @main",
+      "verified_by": "ci-auto"
+    },
+    "gaoqiaoliangjie666/dsh-qwen-connect": {
+      "packages": [
+        {
+          "profile": "web",
+          "source": "github:gaoqiaoliangjie666/dsh-qwen-connect",
+          "command": "dsh plugin --profile web add github:gaoqiaoliangjie666/dsh-qwen-connect",
+          "install": "https://github.com/gaoqiaoliangjie666/dsh-qwen-connect"
+        }
+      ],
+      "status": "repo-fallback",
+      "verified_date": "2026-11-22",
+      "verified_via": "manifest@package.json#dsh @main",
+      "verified_by": "ci-auto"
+    },
+    "nerv-base/dsh-theme-eva": {
+      "packages": [
+        {
+          "profile": "web",
+          "source": "npm:dsh-theme-eva",
+          "command": "dsh plugin --profile web add dsh-theme-eva",
+          "install": "dsh-theme-eva"
+        }
+      ],
+      "status": "repo-fallback",
+      "verified_date": "2026-11-22",
+      "verified_via": "manifest@package.json (npm repository match) @main",
+      "verified_by": "ci-auto"
+    },
+    "rindbeans/dsh-nocturne": {
+      "packages": [
+        {
+          "profile": "web",
+          "source": "github:rindbeans/dsh-nocturne",
+          "command": "dsh plugin --profile web add github:rindbeans/dsh-nocturne",
+          "install": "https://github.com/rindbeans/dsh-nocturne"
+        }
+      ],
+      "status": "repo-fallback",
+      "verified_date": "2026-11-22",
+      "verified_via": "manifest@package.json#dsh @main",
+      "verified_by": "ci-auto"
+    },
+    "kaust-ark/ark": {
+      "packages": [
+        {
+          "profile": "web",
+          "source": "github:kaust-ark/ARK#path:/integrations/dsh",
+          "install": "https://github.com/kaust-ark/ARK#path:/integrations/dsh",
+          "command": "dsh plugin --profile web add \"github:kaust-ark/ARK#path:/integrations/dsh\""
+        }
+      ],
+      "status": "readme-verified",
+      "verified_date": "2026-11-22",
+      "verified_via": "README + Git commit"
     }
   }
 }

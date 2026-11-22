@@ -1,0 +1,119 @@
+{
+  "full_name": "kaust-ark/ARK",
+  "originalPosition": 1,
+  "inputMode": "unmapped",
+  "mappedTargets": [],
+  "manualNote": null,
+  "ordinal": 1,
+  "batch": 1,
+  "stargazers_count": 38,
+  "startedAt": "2026-11-22T21:12:43.768Z",
+  "scope": "默认分支、README 已提取目标及已有安装映射；不穷举历史版本、不安装或执行插件",
+  "readmes": [
+    {
+      "path": "README.md",
+      "sha256": "160bbc7441e22773d302da6f1b2d85c28eb4c1c37894de1036ea816324af71ad",
+      "url": "https://github.com/kaust-ark/ARK/blob/925e1b0798fb2e37ff04d26ab9ddb455cf2dda18/README.md",
+      "ambiguous": false,
+      "localOnly": false,
+      "targets": []
+    },
+    {
+      "path": "README_zh.md",
+      "sha256": "472e83039aa11ce835333c5df6e29668fbf86b695c674bf293e5f07c2615f8a8",
+      "url": "https://github.com/kaust-ark/ARK/blob/925e1b0798fb2e37ff04d26ab9ddb455cf2dda18/README_zh.md",
+      "ambiguous": false,
+      "localOnly": false,
+      "targets": []
+    },
+    {
+      "path": "integrations/dsh/README.md",
+      "sha256": "488d7a3aa2a60953836006acb39b44d1e8d5d7db3d707d6ee9b578767abb25f1",
+      "url": "https://github.com/kaust-ark/ARK/blob/925e1b0798fb2e37ff04d26ab9ddb455cf2dda18/integrations/dsh/README.md",
+      "ambiguous": false,
+      "localOnly": false,
+      "targets": [
+        {
+          "install": "https://github.com/kaust-ark/ARK/releases/download/dsh-bundle-0.2.0-alpha.29/idea2paper-dsh-0.2.0-alpha.29.tgz",
+          "command": "dsh plugin --profile idea2paper add https://github.com/kaust-ark/ARK/releases/download/dsh-bundle-0.2.0-alpha.29/idea2paper-dsh-0.2.0-alpha.29.tgz",
+          "profile": "idea2paper"
+        }
+      ]
+    },
+    {
+      "path": "integrations/dsh/README_zh.md",
+      "sha256": "57e178a375221aac97758bb7af4e1054782137b554e1fe8366a8a071aea88a7c",
+      "url": "https://github.com/kaust-ark/ARK/blob/925e1b0798fb2e37ff04d26ab9ddb455cf2dda18/integrations/dsh/README_zh.md",
+      "ambiguous": false,
+      "localOnly": false,
+      "targets": [
+        {
+          "install": "https://github.com/kaust-ark/ARK/releases/download/dsh-bundle-0.2.0-alpha.29/idea2paper-dsh-0.2.0-alpha.29.tgz",
+          "command": "dsh plugin --profile idea2paper add https://github.com/kaust-ark/ARK/releases/download/dsh-bundle-0.2.0-alpha.29/idea2paper-dsh-0.2.0-alpha.29.tgz",
+          "profile": "idea2paper"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "origin": "repository_discovery",
+      "name": "idea2paper-dsh",
+      "version": "0.2.0-alpha.29",
+      "path": "integrations/dsh",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kaust-ark/ARK",
+        "commit": "925e1b0798fb2e37ff04d26ab9ddb455cf2dda18",
+        "path": "integrations/dsh"
+      },
+      "manifestSha256": "253480d060a008ce4cf2ad05021204e980e41194f062741eb2e99defe11c3f9b",
+      "manifestUrl": "https://github.com/kaust-ark/ARK/blob/925e1b0798fb2e37ff04d26ab9ddb455cf2dda18/integrations/dsh/package.json",
+      "status": "eligible_metadata",
+      "declaredRange": "0.2.1-rc.2 || 0.2.2-rc.5",
+      "compatibilityUnconstrained": false,
+      "declaredCompatibleWithHost": true,
+      "plugin": {
+        "name": "idea2paper-dsh",
+        "versions": [
+          {
+            "version": "0.2.0-alpha.29",
+            "publishTimestamp": 1795172511,
+            "source": {
+              "type": "git",
+              "url": "https://github.com/kaust-ark/ARK",
+              "commit": "925e1b0798fb2e37ff04d26ab9ddb455cf2dda18",
+              "path": "integrations/dsh"
+            },
+            "engines": {
+              "dsh": "0.2.1-rc.2 || 0.2.2-rc.5"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "target": "https://github.com/kaust-ark/ARK/releases/download/dsh-bundle-0.2.0-alpha.29/idea2paper-dsh-0.2.0-alpha.29.tgz",
+      "status": "unsupported_source",
+      "code": "unsupported_tarball",
+      "reason": "format-1 不支持直接 tarball 来源；需提供 npm 包或可核实的 Git 来源"
+    }
+  ],
+  "mappingFindings": [
+    {
+      "code": "documented_target_not_mapped",
+      "target": "https://github.com/kaust-ark/ARK/releases/download/dsh-bundle-0.2.0-alpha.29/idea2paper-dsh-0.2.0-alpha.29.tgz",
+      "action": "核实下列来源结果后由维护者补录，不自动覆盖映射"
+    }
+  ],
+  "errors": [],
+  "repository": {
+    "url": "https://github.com/kaust-ark/ARK",
+    "commit": "925e1b0798fb2e37ff04d26ab9ddb455cf2dda18",
+    "releaseTags": 107,
+    "reader": "github_objects_api"
+  },
+  "discoveryWarnings": [],
+  "outcome": "mapping_can_be_added",
+  "finishedAt": "2026-11-22T21:12:47.146Z"
+}
