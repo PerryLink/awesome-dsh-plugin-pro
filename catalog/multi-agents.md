@@ -4,7 +4,7 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **776**
+- 本册收录 / Entries in this volume: **779**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -117,7 +117,6 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 | [alex04130/dsh-forge](https://github.com/alex04130/dsh-forge) | DeepSeek Harness 扩展套件：运行时注入器、子代理派发与模型路由策略、插件市场/技能/插件管理面板、浏览器桥与 MCP 集成。 | JavaScript | 5 | MIT | 2026-09-15 |
 | [ccll/dsh-advisor-flow](https://github.com/ccll/dsh-advisor-flow) | DeepSeek Harness plugin: on-demand executor/advisor workflow ported from pi-advisor-flow — ask_advisor, review gates, usage ledger, privacy tiers | JavaScript | 5 | MIT | 2026-11-10 |
 | [Chruix/dsh-team-model](https://github.com/Chruix/dsh-team-model) | DeepSeek Harness 插件：让 Agent Teams 的每个队友拥有自己的模型（模型可指定 + Web UI 三处切换 + 切换后持续生效） | JavaScript | 5 | MIT | 2026-11-19 |
-| [DRQRTS/dsh-cds-mode](https://github.com/DRQRTS/dsh-cds-mode) | CDS 模式（Chen's DS）— a multi-agent development mode for DeepSeek Harness. You talk to one persona; it dispatches 56 personas that hand work to each other directly. | JavaScript | 5 | MIT | 2026-10-08 |
 | [Fish-under-sea/dsh-fish](https://github.com/Fish-under-sea/dsh-fish) | 自用 DSH（DeepSeek Harness）插件聚合包：一个 pnpm 工作区装齐 8 个插件（5 个自建 + 3 个上游补充版：AgentTeams / 思考强度 / 免费模型），子插件源码在 packages/ 下 | JavaScript | 5 | MIT | 2026-11-12 |
 | [flg1217/dsh-subagent-codebuddy](https://github.com/flg1217/dsh-subagent-codebuddy) | CodeBuddy CLI ACP 子代理插件:dsh subagent provider + subagent_codebuddy 工具 | TypeScript | 5 | MIT | 2026-11-14 |
 | [hanxuanliang/dsh-chaos](https://github.com/hanxuanliang/dsh-chaos) | Durable multi-agent collaboration for DeepSeek Harness: channels, threads, tasks, and resumable agent sessions. | TypeScript | 5 | MIT | 2026-09-21 |
@@ -250,6 +249,7 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 | [starry-sky-blip/dsh-tri-model](https://github.com/starry-sky-blip/dsh-tri-model) | 多模型分层协同插件 for DeepSeek Harness：规划 → 执行 → 审查 → 自动返工，端点/协议/模型/层级全在设置面板里配。 | JavaScript | 2 | MIT | 2026-11-04 |
 | [Sum556677/dsh-workspace-orchestrator](https://github.com/Sum556677/dsh-workspace-orchestrator) | DSH plugin orchestration and workspace-isolation manager: plugin scanning, per-workspace isolated instances, and a standalone rescue entry. | JavaScript | 2 | — | 2026-10-25 |
 | [Tacrine/oh-my-dsh-omo-fork-chs](https://github.com/Tacrine/oh-my-dsh-omo-fork-chs) | Oh My DSH Chs - unofficial Simplified-Chinese fork of the tri-agent preset (Atlas orchestration + Prometheus planning), packaged for DeepSeek Harness. Content licensed under the upstream SUL-1.0; see NOTICE.md. | JavaScript | 2 | NOASSERTION | 2026-11-12 |
+| [TaoruiLiu19/DSH-LLSA](https://github.com/TaoruiLiu19/DSH-LLSA) | DeepSeek Harness 多智能体插件｜LeanLink 精简协作通信 \| HUD 实时展示 Agent 工作状态 | JavaScript | 2 | MIT | 2026-11-14 |
 | [tkaiz0406/dsh-delegation-hub](https://github.com/tkaiz0406/dsh-delegation-hub) | DSH plugin: pin a separate LLM route for delegated subagents (Agency experts, Agent Teams members) while the main agent keeps its own model. Settings page included. | JavaScript | 2 | MIT | 2026-11-12 |
 | [TwinsEarth/dsh-windows2macos](https://github.com/TwinsEarth/dsh-windows2macos) | W2M是一个开源（MIT）的 AI 智能体舰队编排工具——用同一个 DeepSeek 、豆包、WorkBuddy账号把"你自己的多台机器"（Windows/Mac）编成一个舰队，统一派发命令、协作&amp;协同开发。组件有三块：Relay（HTTP+SSE 协调服务器）、Agent（每台机器上跑、执行白名单命令）、Plugin（给 Agent 用的 18 个工具，如 w2m_run/w2m_devices） | JavaScript | 2 | MIT | 2026-11-05 |
 | [valarjin01/dsh-ai-roundtable](https://github.com/valarjin01/dsh-ai-roundtable) | 多AI模型讨论_圆桌会议：几个 AI 就同一议题展开探讨，首轮互不可见，之后由中立调度员决定谁发言；只摊开角度与分歧，判断留给你。 | JavaScript | 2 | MIT | 2026-11-11 |
@@ -361,6 +361,7 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 | [libaie/dsh-flotilla](https://github.com/libaie/dsh-flotilla) | Multi-repo workflow isolation skill for DeepSeek Harness - one isolated entry agent per repo, one controller for cross-project dispatch, model routing &amp; hash-chained ledger | PowerShell | 1 | MIT | 2026-08-28 |
 | [lilinshuei/codeforge-team](https://github.com/lilinshuei/codeforge-team) | 40 人 Agent 软件交付团队 · 你觉得自己玩 Agent 就可以不要考虑 PC 性能消耗的话，就来试试这个 Agent 团吧！记得叫他们火力全开！ \| A 40-agent software delivery team for DeepSeek Harness — tell them to go full throttle. | JavaScript | 1 | MIT | 2026-11-10 |
 | [linsan2999-hash/dsh-orchestrator-mode](https://github.com/linsan2999-hash/dsh-orchestrator-mode) | Orchestrator mode for DSH: the session-selected model plans read-only, a configured executor model implements, and two hand-off tools move control between phases inside one conversation. | JavaScript | 1 | MIT | 2026-11-19 |
+| [LiuHongXuMaritime/dsh-hifleet-mcp](https://github.com/LiuHongXuMaritime/dsh-hifleet-mcp) | a dsh pulgin aim to get data from hifleet so as to do research &gt; | JavaScript | 1 | — | 2026-11-13 |
 | [loveXbanshee/dsh-fleet](https://github.com/loveXbanshee/dsh-fleet) | dsh-fleet by Punica Studio: a fleet console for DeepSeek Harness ? manage local + remote dsh instances, read cross-device conversation history (token-gated). | JavaScript | 1 | MIT | 2026-09-22 |
 | [ltmroberthk915/dsh-session-telecom](https://github.com/ltmroberthk915/dsh-session-telecom) | 跨目录 / 跨项目的 DSH 会话内置通话：任意两条会话直接收发消息、工具级唤醒、只读查看与用量。 | JavaScript | 1 | MIT | 2026-11-08 |
 | [Luislariosss/PLUGIN-DSH-WORKER](https://github.com/Luislariosss/PLUGIN-DSH-WORKER) | Puente Claude Code &lt;-&gt; DeepSeek Harness: delega tareas a DSH y usa sus workers (Agent Teams) desde Claude Code | JavaScript | 1 | MIT | 2026-11-09 |
@@ -621,6 +622,7 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 | [Lindemellis/dsh-tavern-extras](https://github.com/Lindemellis/dsh-tavern-extras) | DSH Tavern plugin: edit-and-resend the last message, plus a long-form novel writing mode with projects, subagent review and editable prompts \| 编辑上一条发言 + 长篇写作模式 | JavaScript | 0 | MIT | 2026-10-07 |
 | [Lingrui98/dsh-plugin-team-model-routing](https://github.com/Lingrui98/dsh-plugin-team-model-routing) | DSH plugin: let an Agent Teams Lead choose the provider, model, and reasoning effort of each teammate it spawns. | JavaScript | 0 | MIT | 2026-10-15 |
 | [liuguangyu272/dsh-team-budget](https://github.com/liuguangyu272/dsh-team-budget) | DeepSeek Harness team budget plugin: managed API keys, usage analytics, monthly quotas and model access. 自托管团队额度管理。 | JavaScript | 0 | MIT | 2026-11-12 |
+| [lj100886/dsh-team-canvas](https://github.com/lj100886/dsh-team-canvas) | Agent Teams 泳道看板 for DeepSeek Harness — 依赖 DAG 连线 + 通讯流，布局移植自 cc-haha | JavaScript | 0 | MIT | 2026-10-20 |
 | [lkuliuying/dsh-mutipleagent](https://github.com/lkuliuying/dsh-mutipleagent) | DeepSeek Harness 多 Agent 3D 协作办公室插件：在 3D 场景中观察真实主会话、子 Agent、工具活动与汇报 | JavaScript | 0 | MIT | 2026-11-10 |
 | [lkyxuan/dsh-kiki](https://github.com/lkyxuan/dsh-kiki) | Kiki for DeepSeek Harness: install Kiki from inside DSH, see DSH sessions as cards in Kiki, hand tasks to Kiki's team | JavaScript | 0 | MIT | 2026-11-19 |
 | [lloydzhou/dsh-subagent-codebuddy](https://github.com/lloydzhou/dsh-subagent-codebuddy) | DeepSeek Harness profile bundle: run subagent delegations in the local CodeBuddy CLI (ACP) with a pinned model | TypeScript | 0 | MIT | 2026-11-05 |
@@ -692,6 +694,7 @@ DSH 插件全量目录的「多 Agent 编排与协作」分册 / The "Multi-Agen
 | [shizhanyu13/dsh-waom](https://github.com/shizhanyu13/dsh-waom) | @shizhanyu13/dsh-waom — DSH plugin: autonomous-ops (WAOM). Monitor / decide / drive a subagent fix / evaluate independently (GAN). dsh-plugin. | JavaScript | 0 | MIT | 2026-08-28 |
 | [Siphon2673/dsh-submodelrouter](https://github.com/Siphon2673/dsh-submodelrouter) | Two-tier (normal/high) effort routing for DSH subagent delegation | JavaScript | 0 | MIT | 2026-11-16 |
 | [SivanCola/dsh-subagent-reasonix](https://github.com/SivanCola/dsh-subagent-reasonix) | DeepSeek Harness plugin: delegate one task to your local Reasonix as a subagent (Reasonix 子智能体) | — | 0 | MIT | 2026-11-10 |
+| [SivanCola/dsh-zentao-hub](https://github.com/SivanCola/dsh-zentao-hub) | DSH 的禅道面板：读取指派给我的需求/任务/Bug，按分支派发 Agent，并把状态流转回写禅道。ZenTao panel for DSH. | JavaScript | 0 | MIT | 2026-11-17 |
 | [smitfire/team](https://github.com/smitfire/team) | DSH team orchestrator, isolated worktree workers, visible advisor, and OCR/cross-family review gate | TypeScript | 0 | MIT | 2026-11-16 |
 | [soffits/dsh-restart-resume](https://github.com/soffits/dsh-restart-resume) | Continue the turns a DeepSeek Harness restart cut off, subagents included | JavaScript | 0 | NOASSERTION | 2026-11-15 |
 | [softspark/dsh-process-console](https://github.com/softspark/dsh-process-console) | Processes tab for DeepSeek Harness: every agent and subagent of a conversation as a live console with paired tool requests and responses, installed as one profile bundle. | TypeScript | 0 | Apache-2.0 | 2026-10-10 |

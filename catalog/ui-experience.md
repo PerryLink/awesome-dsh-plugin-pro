@@ -4,7 +4,7 @@ DSH 插件全量目录的「界面与体验（A–F）」分册 / The "UI & Expe
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **2467**
+- 本册收录 / Entries in this volume: **2462**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -71,7 +71,6 @@ DSH 插件全量目录的「界面与体验（A–F）」分册 / The "UI & Expe
 | [10086ggqq/dsh_theme_terraria](https://github.com/10086ggqq/dsh_theme_terraria) | 把 DeepSeek Harness 的 AI 编码控制台变成泰拉瑞亚像素世界——向导陪你写代码，真实对话、工具审批、难度切换，单文件零依赖。 | HTML | 30 | MIT | 2026-11-13 |
 | [aceice01/dsh-whale-pet](https://github.com/aceice01/dsh-whale-pet) | DeepSeek 鲸鱼娘桌宠：DSH Desktop 桌宠 + Web 版悬浮桌宠，晓伊神经网络语音、撒娇互动、任务完成提醒 | HTML | 30 | NOASSERTION | 2026-11-17 |
 | [appthin/dsh-mcp-manager-plus](https://github.com/appthin/dsh-mcp-manager-plus) | MCP 服务器管理插件：在 DeepSeek Harness 设置界面的左侧边栏新增「MCP 管理」页面。MCP Server Management Plugin: A new "MCP Management" page has been added to the left sidebar of the DeepSeek Harness settings interface, allowing you to directly view, enable/disable, edit, restart, delete, and add MCP servers. | JavaScript | 30 | MIT | 2026-11-19 |
-| [Darianliu23/dsh-stardew-blind-whale-farmer](https://github.com/Darianliu23/dsh-stardew-blind-whale-farmer) | 大肥鱼种白饭 Blind Whale Farmer: let DeepSeek play Stardew Valley without a vision model (SMAPI mod + MCP + DSH plugin) | C# | 30 | MIT | 2026-11-21 |
 | [crazywoola/dsh-balance](https://github.com/crazywoola/dsh-balance) | DeepSeek Harness balance plugin for the Settings page | TypeScript | 28 | MIT | 2026-11-14 |
 | [coeasy/dsh-go](https://github.com/coeasy/dsh-go) | DeepSeek Harness 插件市场导航站 | JavaScript | 27 | — | 2026-11-21 |
 | [DIAG5/dsh-better-input](https://github.com/DIAG5/dsh-better-input) | BetterInput是一套输入增强套件：语音识别、提示词优化、输入更多文件类型，各类文件转Md，交互体验优化等——把每一种喂给智能体的输入都变得更好。BetterInput is an input-enhancement suite — voice recognition, prompt optimization, more file types, everything-to-Markdown conversion, and UX refinements — making every input you feed an agent better. | JavaScript | 27 | MIT | 2026-11-19 |
@@ -827,7 +826,6 @@ DSH 插件全量目录的「界面与体验（A–F）」分册 / The "UI & Expe
 | [BaihaWhite/attach-plus](https://github.com/BaihaWhite/attach-plus) | DSH web-ui plugin: '/' command-button glyph + '+' attach button with separated image/document/other uploads | JavaScript | 1 | MIT | 2026-08-25 |
 | [baihejiangnan/dsh-settings-organizer](https://github.com/baihejiangnan/dsh-settings-organizer) | Customizable hierarchical DSH settings navigation organizer | JavaScript | 1 | MIT | 2026-09-12 |
 | [bailiyyds/dsh-live2dwaifu](https://github.com/bailiyyds/dsh-live2dwaifu) | 给 DSH 网页右下角请一个 Live2D 角色：星空壁纸底、本地语音包朗读、聊天回复自动念。基于 FujiwaraReisen/dsh-live2dwaifu（MIT）的改版。 | JavaScript | 1 | NOASSERTION | 2026-11-06 |
-| [baimengyan242-dot/BAI](https://github.com/baimengyan242-dot/BAI) | Native DeepSeek Harness plugin for local chat archives, reviewed long-term memory, cross-session recall, backups, and configurable storage. Chinese UI with bilingual guides. | TypeScript | 1 | — | 2026-11-12 |
 | [baizz-520/dsh-theme-studio](https://github.com/baizz-520/dsh-theme-studio) | DSH 主题工坊 — 可自定义背景色/背景图、字体、输入框、边栏颜色的 DeepSeek Harness 主题插件（实时生效，43 项测试） | JavaScript | 1 | MIT | 2026-10-17 |
 | [baka-world/dsh-notify](https://github.com/baka-world/dsh-notify) | DeepSeek Harness desktop notification plugin (notify-send / D-Bus) | JavaScript | 1 | — | 2026-09-11 |
 | [baka-world/dsh-sidebar-modes](https://github.com/baka-world/dsh-sidebar-modes) | DeepSeek Harness sidebar modes plugin: compact mode, right sidebar, collapsible rail | JavaScript | 1 | — | 2026-08-16 |
@@ -1665,7 +1663,6 @@ DSH 插件全量目录的「界面与体验（A–F）」分册 / The "UI & Expe
 | [bauerelizabeth07139/dsh-pet-dafeiyu](https://github.com/bauerelizabeth07139/dsh-pet-dafeiyu) | 大肥鱼 (Dafeiyu) desktop pet for the DeepSeek Harness Web GUI — a chibi character with a three-frame walk cycle, blinking, idle micro-scenes and drop physics, a steel basin on her head, voiced Chinese dialogue, sound effects and music on separate switches, plus a link with dsh-pet-liangzi. | JavaScript | 0 | MIT | 2026-11-19 |
 | [bauerelizabeth07139/dsh-pet-liangzi](https://github.com/bauerelizabeth07139/dsh-pet-liangzi) | 梁子 (Liangzi) desktop pet for the DeepSeek Harness Web GUI — a realistic character with a three-frame walk cycle, blinking, idle micro-scenes and drop physics, voiced Chinese dialogue, sound effects and music on separate switches, plus a father-and-daughter link with dsh-pet-dafeiyu. | JavaScript | 0 | MIT | 2026-10-16 |
 | [bauerelizabeth07139/MDSM](https://github.com/bauerelizabeth07139/MDSM) | MDSM (Male DeepSeek Mascot) appearance layer for the DeepSeek Harness Web GUI: chat wallpaper with opacity, blur and scrim controls, an avatar brand mark, and a Settings section. | JavaScript | 0 | MIT | 2026-10-05 |
-| [bauerelizabeth07139/opencode-tokenrhythm-image-mcp](https://github.com/bauerelizabeth07139/opencode-tokenrhythm-image-mcp) | DeepSeek Harness plugin and OpenCode MCP server: generate images with TokenRhythm (qwen-image-2.0, wan2.7-image) and save them to a directory you choose. Exposes mcp__tokenrhythm_image__generate_image. | JavaScript | 0 | MIT | 2026-10-08 |
 | [Bavoch/dsh-plugins](https://github.com/Bavoch/dsh-plugins) | 面向 DeepSeek Harness 的社区插件，涵盖侧栏、会话、任务状态和额度显示 | JavaScript | 0 | MIT | 2026-11-18 |
 | [bbaz123/dsh-turn-chime](https://github.com/bbaz123/dsh-turn-chime) | DSH 回合结束提示音插件：每轮任务结束时在宿主端播放提示音。 | JavaScript | 0 | — | 2026-10-22 |
 | [bbboy31/dsh-terminal-tabs](https://github.com/bbboy31/dsh-terminal-tabs) | Terminals view tab for DeepSeek Harness web UI — live background job count, streaming output, one-click kill | JavaScript | 0 | MIT | 2026-09-05 |
@@ -1791,6 +1788,7 @@ DSH 插件全量目录的「界面与体验（A–F）」分册 / The "UI & Expe
 | [Caho1/dsh-component-picker](https://github.com/Caho1/dsh-component-picker) | Claude-style element picker for the dsh built-in Browser: hover-highlight, pick, and send the element/component/props/source with your message. | JavaScript | 0 | MIT | 2026-11-09 |
 | [CAI-KUN-MAX/prompt-polish](https://github.com/CAI-KUN-MAX/prompt-polish) | Icon-only prompt optimizer plugin for the DeepSeek Harness composer. | JavaScript | 0 | MIT | 2026-11-11 |
 | [CAI-MH/dsh-agent-group-panel](https://github.com/CAI-MH/dsh-agent-group-panel) | 飞书多助手机器人控制台：开启/关闭/重连守护进程、状态与最近动态、直达任务工作区 — DSH bundle。 | JavaScript | 0 | MIT | 2026-09-10 |
+| [Caiccc-a11y/dsh-wyymusic-player](https://github.com/Caiccc-a11y/dsh-wyymusic-player) | 一款可以在DSH里听wyy的插件 | JavaScript | 0 | NOASSERTION | 2026-10-11 |
 | [caichangzhan/dsh-topic-wall](https://github.com/caichangzhan/dsh-topic-wall) | 多会话对话墙 DSH 插件：置顶/进行中/集合卡片、真实历史、卡内回复、审批、模型切换、三主题 | JavaScript | 0 | MIT | 2026-11-05 |
 | [caidows/dsh-quick-model-switch](https://github.com/caidows/dsh-quick-model-switch) | Codex-style model picker for the DeepSeek Harness composer: draggable reasoning-effort slider, model list, no default stop. | JavaScript | 0 | MIT | 2026-11-17 |
 | [caijiachen34/dsh-sophnet-balance](https://github.com/caijiachen34/dsh-sophnet-balance) | SophNet balance and usage monitor for DeepSeek Harness Web GUI | JavaScript | 0 | MIT | 2026-09-11 |
@@ -1931,7 +1929,6 @@ DSH 插件全量目录的「界面与体验（A–F）」分册 / The "UI & Expe
 | [chy1021653908/want-to-type](https://github.com/chy1021653908/want-to-type) | Theme-matched typing effects, companions, combos and sounds for DSH. | JavaScript | 0 | OFL-1.1 | 2026-11-02 |
 | [CIBUDAYI3906/dsh-workspace-nest](https://github.com/CIBUDAYI3906/dsh-workspace-nest) | 侧边栏工作区多级树：任意一级新建子工作区与会话，会话可置顶到最近一级文件夹（DSH 插件） | JavaScript | 0 | MIT | 2026-11-21 |
 | [ciceroyang/dsh-followup-actions](https://github.com/ciceroyang/dsh-followup-actions) | DeepSeek Harness 追问快捷键：回答下面多一排按钮（翻译、说人话、缩成三句、找漏洞…），点一下就填好追问，给不知道怎么接着问的人用。 | JavaScript | 0 | MIT | 2026-09-17 |
-| [cinderzhan/dsh-plugin-dew](https://github.com/cinderzhan/dsh-plugin-dew) | See what your other coding agents are doing from inside DSH: Claude Code, Codex, Cursor and DSH sessions, their state, and their scheduled tasks. | JavaScript | 0 | MIT | 2026-08-26 |
 | [cinewave0/cinewave0-dsh-quick-panel](https://github.com/cinewave0/cinewave0-dsh-quick-panel) | DSH 快捷面板：待办、提醒、实时消息、问题卡和快速输入。 | JavaScript | 0 | MIT | 2026-11-11 |
 | [cinewave0/dsh-quick-panel-mac](https://github.com/cinewave0/dsh-quick-panel-mac) | DSH 快捷面板 macOS 版：浮岛、待办、提醒、实时消息、审批接管 | JavaScript | 0 | MIT | 2026-11-09 |
 | [cion771/dsh-status](https://github.com/cion771/dsh-status) | DeepSeek API 服务状态胶囊：在 DeepSeek Harness 标题栏右上角显示 status.deepseek.com 的实时状态，灯色随受损服务比例从绿到橙再到红。 | HTML | 0 | MIT | 2026-11-04 |
@@ -2154,7 +2151,6 @@ DSH 插件全量目录的「界面与体验（A–F）」分册 / The "UI & Expe
 | [Diomchen/dsh-zoo](https://github.com/Diomchen/dsh-zoo) | LAN pets for DeepSeek Harness: neighbors' pets visit your desktop, and yours can visit theirs. · 局域网 DSH 宠物互相串门。 | JavaScript | 0 | — | 2026-11-12 |
 | [Dippppper/dsh-history-search](https://github.com/Dippppper/dsh-history-search) | DeepSeek Harness (dsh) plugin: a right-sidebar tab that lists your own messages in the current conversation, filters them by keyword, and jumps to the matching message. | JavaScript | 0 | MIT | 2026-11-11 |
 | [dirtywork22/dsh-client-ui-skin-bayern](https://github.com/dirtywork22/dsh-client-ui-skin-bayern) | Bayern Munich skin for the dsh web GUI: home-red/away-white canvases, real match-photo backdrops for 19 first-team players plus drawn shirt, squad-wall, Allianz-Arena and plain backdrops. | JavaScript | 0 | NOASSERTION | 2026-10-28 |
-| [diudiu62/dsh-connect-loomy](https://github.com/diudiu62/dsh-connect-loomy) | 把本机已登录的 Loomy（讯飞办公助手）聊天模型接入 DeepSeek Harness：支持多账号、在输入框旁的抽屉里切换账号、查看各账号积分与扣分流水。 | JavaScript | 0 | MIT | 2026-11-19 |
 | [DIV7NE/dsh-plugins](https://github.com/DIV7NE/dsh-plugins) | DeepSeek Harness (DSH) web plugins: a model-generated next prompt in the composer, and an integrated terminal for chat code blocks. | JavaScript | 0 | MIT | 2026-09-13 |
 | [dixieWithHeart/dsh-notify-chime](https://github.com/dixieWithHeart/dsh-notify-chime) | DSH 插件：工作完成 / 中断 / 出错 / Agent 提问时播放提示音（Windows Toast 可选） | JavaScript | 0 | MIT | 2026-11-12 |
 | [djt889/dsh-drag-to-attachment](https://github.com/djt889/dsh-drag-to-attachment) | DSH（DeepSeek Harness）Web UI 插件：把本地任意文件/文件夹拖入或粘贴为附件（图片、任意文件、整个文件夹）或定位真实路径——一个开关，两种模式。dsh-plugin for DeepSeek Harness: drop or paste local files/folders as attachments or locate real paths — one toggle, two modes. | JavaScript | 0 | BSD-3-Clause | 2026-08-17 |
@@ -2170,7 +2166,6 @@ DSH 插件全量目录的「界面与体验（A–F）」分册 / The "UI & Expe
 | [doctorpancode/dsh-useof-skill-panel](https://github.com/doctorpancode/dsh-useof-skill-panel) | Per-turn skill audit for DeepSeek Harness plus an in-app skill manager. Fork of dsh-echocat-skill-panel with the composer strip removed. | JavaScript | 0 | MIT | 2026-10-17 |
 | [doctorpancode/ncm-player5](https://github.com/doctorpancode/ncm-player5) | 网易云音乐浮窗播放器（ncm-player5）：完整继承 ncm-player4（歌单/歌词/歌词翻译/播放队列/账号登录，适配皮肤主题；点击播放窗口外即收起为迷你条；迷你条无操作 3 秒自动退出为右下角音符按钮；播放中该按钮随音乐节奏（低频鼓点）跳动；右下角图标支持左键长按拖动），新增：遇到因下架/无版权而无法播放的歌曲时自动跳过，播放下一首 | JavaScript | 0 | MIT | 2026-10-29 |
 | [DoctorxPriestess/dsh-status-indicator](https://github.com/DoctorxPriestess/dsh-status-indicator) | A Windows system-tray indicator that monitors and controls a local DeepSeek Harness (DSH) web instance — the process started by dsh web | PowerShell | 0 | MIT | 2026-09-12 |
-| [doebkblcya/dsh-vision-bridge](https://github.com/doebkblcya/dsh-vision-bridge) | Dynamic vision bridge plugin for the DSH Web GUI: pasted images are recognized on demand via Bailian vision models (qwen3-vl-flash / qwen-vl-ocr) | JavaScript | 0 | — | 2026-08-17 |
 | [doer1296/dsh-plugin-voice](https://github.com/doer1296/dsh-plugin-voice) | DeepSeek Harness 语音插件：火山 seed-tts 云端 TTS（自动回退 SAPI/Huihui 离线）+ 桌面通知 + 场景化 WAV 提示音 + 提问自动呼叫。DSH 原生集成，零 Python 依赖，Windows 原生。 | JavaScript | 0 | NOASSERTION | 2026-09-01 |
 | [DoggyHU/dsh-notify](https://github.com/DoggyHU/dsh-notify) | 任务提示音：DSH 需要确认或一轮结束时播放 Windows 提示音，音效可在设置页挑选并试听 | JavaScript | 0 | — | 2026-10-21 |
 | [DoggyHU/dsh-quote-annotate-pro-standalone](https://github.com/DoggyHU/dsh-quote-annotate-pro-standalone) | 本地 fork（MIT）：上游 dsh-quote-annotate-pro + 文档预览划词时引用块带上来源文件路径 | JavaScript | 0 | MIT | 2026-10-22 |

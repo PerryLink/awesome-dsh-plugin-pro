@@ -4,7 +4,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（N–T）」分册 / 
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **693**
+- 本册收录 / Entries in this volume: **696**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -139,6 +139,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（N–T）」分册 / 
 | [taxueseek/dsh-router-flash](https://github.com/taxueseek/dsh-router-flash) | 探索模式 · DeepSeek V4 Flash 专用，兼容其他开源模型。减少 Token 消耗，有效提升使用效率 | JavaScript | 3 | NOASSERTION | 2026-11-14 |
 | [telagod/dsh-ledger-compact](https://github.com/telagod/dsh-ledger-compact) | dsh-plugin: OMP-style ingress shaping plus optional local /fast-compact for DeepSeek Harness | JavaScript | 3 | MIT | 2026-09-21 |
 | [Tests4gptplay/deepseek-servant](https://github.com/Tests4gptplay/deepseek-servant) | 基于 DeepSeek Harness 的自主 AI 助理插件，支持目标规划、持续执行、多 Agent 协作、任务接续、故障恢复与技能学习。 | JavaScript | 3 | AGPL-3.0 | 2026-11-12 |
+| [Nana7mi0721/dsh-comfyui-agent](https://github.com/Nana7mi0721/dsh-comfyui-agent) | DSH（DeepSeek Harness）ComfyUI 插件：让 Agent 直接驱动本机 ComfyUI 出图 —— 文生图/图生图、跑画布工作流、节点与模型查询、看图与上传，兼容 DSH 0.2.0-rc.2。 | JavaScript | 2 | MIT | 2026-11-09 |
 | [navid-kianfar/dsh-tasks-manager](https://github.com/navid-kianfar/dsh-tasks-manager) | DeepSeek Harness plugin: a project task board kept with the project as a queryable SQLite file, with a kanban/list view in the Web Client, model-facing task tools, and cards you can dispatch to the agent as background jobs. | TypeScript | 2 | MIT | 2026-10-15 |
 | [ne-ilyxa/dsh-session-drafts](https://github.com/ne-ilyxa/dsh-session-drafts) | Cursor-style draft chats for DeepSeek Harness (DSH): New Session reuses the empty draft — and only mints a fresh one when every draft has unsent text — so empty placeholders never stack, exactly like Cursor's (or Telegram's) chat list. | JavaScript | 2 | BSD-3-Clause | 2026-10-04 |
 | [neuneed/dsh-shuorenhua](https://github.com/neuneed/dsh-shuorenhua) | dsh-shuorenhua | TypeScript | 2 | MIT | 2026-11-05 |
@@ -297,6 +298,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（N–T）」分册 / 
 | [songrui111/dsh-readprune](https://github.com/songrui111/dsh-readprune) | Frugal tool layer for DeepSeek Harness: precise file reading and a self-serve tool catalog, so long sessions stop re-billing whole files and forgotten tools. | JavaScript | 1 | — | 2026-10-30 |
 | [sorbitol25/dsh-persona-switch](https://github.com/sorbitol25/dsh-persona-switch) | Live persona switching for DeepSeek Harness (dsh): switch the system-prompt persona from a running session - TUI, Web UI or headless - no restart. Published on npm as dsh-persona-switch. | JavaScript | 1 | MIT | 2026-10-20 |
 | [Soulize/dsh-continue-on-limit-host](https://github.com/Soulize/dsh-continue-on-limit-host) | Auto-continue for DeepSeek Harness: when a local model hits its output-token cap, automatically send "continue" so the reply keeps flowing | JavaScript | 1 | — | 2026-09-28 |
+| [SssoGin/MALTS](https://github.com/SssoGin/MALTS) | Multi-Agent Long-Task Scheduling and Growth System for AI coding agents, with file-based state, verification, handoff, and reusable learning. | Python | 1 | MIT | 2026-11-04 |
 | [stansz/dsh-convo-mode](https://github.com/stansz/dsh-convo-mode) | DeepSeek Harness bundle: a per-session conversation mode (composer chip, /conversation command, conversation policy prompt, read-only tool policy). | JavaScript | 1 | MIT | 2026-11-11 |
 | [Stars-ETO/dsh-think-guard](https://github.com/Stars-ETO/dsh-think-guard) | DeepSeek Harness 独立监察插件：检查任务思考过程与交付结果，支持文档和图片审阅，支持自动审核权限工具申请 | JavaScript | 1 | MIT | 2026-11-08 |
 | [StarterMonk/dsh-adhd-session-mode](https://github.com/StarterMonk/dsh-adhd-session-mode) | DeepSeek Harness plugin converted from ayghri/i-have-adhd: ADHD-friendly output shaping that takes effect in a single session, never globally. | JavaScript | 1 | MIT | 2026-10-11 |
@@ -364,6 +366,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（N–T）」分册 / 
 | [new-Beginner/dsh-default-prompt](https://github.com/new-Beginner/dsh-default-prompt) | DeepSeek Harness 基础默认系统提示词插件，紧跟在系统提示词之后注入，像 Codex 一样提供核心指导与全局指令 | JavaScript | 0 | MIT | 2026-09-14 |
 | [NFdrybattery/dsh-handitoff](https://github.com/NFdrybattery/dsh-handitoff) | DeepSeek Harness plugin: write a workspace handoff document from a long session, then resume the work in a fresh session. | JavaScript | 0 | MIT | 2026-11-01 |
 | [nicecx/dsh-auto-approver](https://github.com/nicecx/dsh-auto-approver) | Configurable auto-approval for DeepSeek Harness: intercepts approval/request and answers allowed-once/rejected by policy (allow-all/allowlist/off + denyAlways), with a full audit log. | JavaScript | 0 | MIT | 2026-08-31 |
+| [nicklin99/dsh-find-jobs](https://github.com/nicklin99/dsh-find-jobs) | dsh个人求职插件 | TypeScript | 0 | — | 2026-09-06 |
 | [Nico-2222/dsh-mys-checkin](https://github.com/Nico-2222/dsh-mys-checkin) | MiYoushe (米游社) daily check-in for DeepSeek Harness — 原神 / 星穹铁道 / 绝区零 / 崩坏3 / 未定事件簿 / 崩坏学园2 | JavaScript | 0 | MIT | 2026-11-10 |
 | [Nico233333/dsh-persona](https://github.com/Nico233333/dsh-persona) | Global persona system for DeepSeek Harness: one persona mounted across every session, dedicated persona page, editable card library, any-format import. | JavaScript | 0 | MIT | 2026-11-06 |
 | [nidehogger/dsh-tool-compass](https://github.com/nidehogger/dsh-tool-compass) | Model-classified tool compass for DeepSeek Harness: agents see categories and pull tools on demand. | JavaScript | 0 | MIT | 2026-11-08 |

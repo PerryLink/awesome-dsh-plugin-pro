@@ -4,7 +4,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（U–Z）」分册 / 
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **608**
+- 本册收录 / Entries in this volume: **612**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -107,6 +107,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（U–Z）」分册 / 
 | [WindDreamboat/dsh_laap](https://github.com/WindDreamboat/dsh_laap) | 插件-dsh意识工程最小实现 | TypeScript | 3 | Apache-2.0 | 2026-11-02 |
 | [wuuuuu123-32/dsh-session-delete](https://github.com/wuuuuu123-32/dsh-session-delete) | DSH 会话删除插件：会话列表「⋯」菜单支持删除 / 批量删除会话，删除是移入 Windows 回收站而非永久删除，误删可还原；删除前扫描并列出该会话的产出。 | JavaScript | 3 | MIT | 2026-11-17 |
 | [xueccci/dsh-prompt-lab](https://github.com/xueccci/dsh-prompt-lab) | Agent-structured prompt optimizer for DeepSeek Harness (dsh). Modes: normal/slim/expand. Engines: local, hybrid, DSH, cloud API. Modal confirm with score and continue-optimize. | JavaScript | 3 | MIT | 2026-10-16 |
+| [xyzYaeMiko/dsh-session-groups](https://github.com/xyzYaeMiko/dsh-session-groups) | dsh会话分组插件（仿edge标签页分组） | JavaScript | 3 | MIT | 2026-11-18 |
 | [yangdongzhen590/dsh-knj-workflow](https://github.com/yangdongzhen590/dsh-knj-workflow) | Config-driven development-task orchestration plugin for DeepSeek Harness: workflows + task management + stage progress UI. | JavaScript | 3 | — | 2026-11-08 |
 | [yangyongzhen/dsh-session-export](https://github.com/yangyongzhen/dsh-session-export) | Export DeepSeek Harness sessions to Markdown for review, blogging and audit. dsh plugin. | JavaScript | 3 | — | 2026-09-30 |
 | [YaoleWu/review-workflow](https://github.com/YaoleWu/review-workflow) | Structured agent reviews with independent panelists, disagreement resolution, and a separate critic. | JavaScript | 3 | MIT | 2026-10-15 |
@@ -183,6 +184,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（U–Z）」分册 / 
 | [watericetangcw/dsh-approve-for-me](https://github.com/watericetangcw/dsh-approve-for-me) | An Automated Escalation Reviewer Plugin for DeepSeek Harness | TypeScript | 1 | MIT | 2026-09-18 |
 | [wbushihenshuai-design/dsh-error-improvement](https://github.com/wbushihenshuai-design/dsh-error-improvement) | Standalone DSH plugin: user-confirmed anti-regression lessons for DeepSeek Harness | TypeScript | 1 | MIT | 2026-09-29 |
 | [wdj20050927/dsh-quality-guard](https://github.com/wdj20050927/dsh-quality-guard) | 发消息前先让另一个模型读一遍：DSH 插件的回复质检（引擎 selfcheck-guard + 可视化面板） | JavaScript | 1 | MIT | 2026-11-10 |
+| [weicy98/dsh-permission-remote](https://github.com/weicy98/dsh-permission-remote) | 把一台 Linux 或 macOS 机器上的目录做成 DeepSeek Harness（DSH）工作区。标准会话里的 bash、read、write、edit、read_image、glob、grep 在那台机器上执行。只读、工作区可写、完全放开，以及一次放宽，仍用这个会话现有的 Permissions 和审批卡片。并支持普通会话中连接已添加的主机 | TypeScript | 1 | — | 2026-11-12 |
 | [whateverboy2333/dsh-round-table](https://github.com/whateverboy2333/dsh-round-table) | Round-table meetings, editable task cards and member workflows for DeepSeek Harness desktop. | JavaScript | 1 | MIT | 2026-10-14 |
 | [William123666/dsh-reasoning-cn](https://github.com/William123666/dsh-reasoning-cn) | Unofficial DeepSeek Harness plugin for Simplified-Chinese reasoning steering and opt-in translation. | TypeScript | 1 | MIT | 2026-08-19 |
 | [William20100221/dsh-clear-conversation](https://github.com/William20100221/dsh-clear-conversation) | DeepSeek Harness (dsh) plugin: say "clear everything above" and old turns stop being sent to the model, saving tokens. | JavaScript | 1 | MIT | 2026-11-04 |
@@ -289,10 +291,12 @@ DSH 插件全量目录的「Agent、自动化与工作流（U–Z）」分册 / 
 | [zpz8175-netizen/dsh-session-work-log](https://github.com/zpz8175-netizen/dsh-session-work-log) | 会话标题栏上的工作记录面板：列出这个会话的轮次和已发生的动作，搜索并一键跳回那一条。 | JavaScript | 1 | MIT | 2026-11-20 |
 | [zsxian11/dsh-flywheel](https://github.com/zsxian11/dsh-flywheel) | 面向 DeepSeek Harness（DSH） 的「会话飞轮」插件 。在单会话隔离下，让一条龙长会话接近当前句只带工作集；用项目级产物图 + 倒排在会话之间传递短卡。 | TypeScript | 1 | MIT | 2026-10-09 |
 | [zyf2492313716-cloud/dsh-session-hub](https://github.com/zyf2492313716-cloud/dsh-session-hub) | Cross-agent session hub for DeepSeek Harness (DSH) - seamless import &amp; search across OpenCode, Claude Code, Antigravity, and DSH | JavaScript | 1 | MIT | 2026-11-11 |
+| [zzz123123lll/workflow-canvas-sidebar](https://github.com/zzz123123lll/workflow-canvas-sidebar) | Visual AI project workflows for DeepSeek Harness: sources, discussions, revisions and deliverables. | Python | 1 | MIT | 2026-11-02 |
 | [ZZZZZZZ-ZZZZZ/dsh-session-trash](https://github.com/ZZZZZZZ-ZZZZZ/dsh-session-trash) | Session trash for DeepSeek Harness: move conversations to a trash, restore them, or delete them permanently after a second confirmation. | TypeScript | 1 | NOASSERTION | 2026-10-16 |
 | [uckkk/dsh-session-search](https://github.com/uckkk/dsh-session-search) | DSH 会话全文搜索：跨所有本地会话按关键词检索（支持 zstd 与明文存储）。Full-text search across DeepSeek Harness sessions. | JavaScript | 0 | MIT | 2026-10-26 |
 | [uckkk/dsh-task-estimate](https://github.com/uckkk/dsh-task-estimate) | 任务时间估算 | JavaScript | 0 | MIT | 2026-08-20 |
 | [Underwater008/deepshell](https://github.com/Underwater008/deepshell) | A native macOS shell for the official DeepSeek Harness. No Electron, no telemetry, no vendor gateway — ~150 lines of Swift + one bash script. | JavaScript | 0 | — | 2026-09-22 |
+| [universe-st/dsh-session-scheduler](https://github.com/universe-st/dsh-session-scheduler) | Session scheduling tools for DeepSeek Harness (DSH): open a session in any project, message a running or stopped session (queue or steer), stop its turn, archive or restore it, and wait for it to finish. | JavaScript | 0 | MIT | 2026-11-17 |
 | [UnKnownFish125/dsh-livetaskboard](https://github.com/UnKnownFish125/dsh-livetaskboard) | 派生动态任务看板插件：独立任务状态机、存储、看板 UI、外援（sol + 保底子代理）；从 dsh-deepmemory 派生。 | Python | 0 | AGPL-3.0 | 2026-09-01 |
 | [Unstivl/dsh-session-stitch](https://github.com/Unstivl/dsh-session-stitch) | DeepSeek Harness 插件：在会话之间搬运问答、删除中间轮次，并在对话原位留下可折叠标记。 Move Q&amp;A between DSH sessions, remove middle turns, leave markers. | JavaScript | 0 | MIT | 2026-11-08 |
 | [UPxianyu/dsh-approval-latency](https://github.com/UPxianyu/dsh-approval-latency) | Tells the model when a tool call waited for a human approval, so a late answer is not mistaken for broken code. 审批等太久时回传「这是人类延迟」，设置页可切换自适应 / 固定时长。 | JavaScript | 0 | MIT | 2026-10-18 |

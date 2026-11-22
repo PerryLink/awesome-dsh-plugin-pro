@@ -4,7 +4,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（A–F）」分册 / 
 
 [← 目录总览 / Catalog index](../CATALOG.md) · [中文首页](../README.md) · [English home](../README_EN.md) · [Star Top 200](../TOP200.md) · [JSON data](../data/repositories.json)
 
-- 本册收录 / Entries in this volume: **821**
+- 本册收录 / Entries in this volume: **824**
 - 快照日期 / Snapshot date: **2026-11-21 UTC**
 - 最近人工复核 / Last review merge: **2026-11-21**
 
@@ -92,6 +92,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（A–F）」分册 / 
 | [brunhildzhou/dsh-context-zip](https://github.com/brunhildzhou/dsh-context-zip) | DSH 插件：接管 DeepSeek Harness 的会话压缩，产出结构化交接摘要、可回查分段与检索工具｜A DSH plugin that takes over session compaction. | JavaScript | 5 | MIT | 2026-10-30 |
 | [CII-Joint-Lab-BIGC/dsh-collaborator](https://github.com/CII-Joint-Lab-BIGC/dsh-collaborator) | DSH协作助手｜帮助 DeepSeek Harness 看清领域、理解用户起点、解释技术取舍，边交流边推进。A collaboration plugin for DeepSeek Harness. 持续更新维护中。 | JavaScript | 5 | — | 2026-11-19 |
 | [domitor-syh/dsh-rollback](https://github.com/domitor-syh/dsh-rollback) | TRAE-style conversation rollback plugin for DeepSeek Harness | TypeScript | 5 | MIT | 2026-11-16 |
+| [DRQRTS/dsh-cds-mode](https://github.com/DRQRTS/dsh-cds-mode) | CDS 模式（Chen's DS）— a multi-agent development mode for DeepSeek Harness. You talk to one persona; it dispatches 56 personas that hand work to each other directly. | JavaScript | 5 | MIT | 2026-10-08 |
 | [dygin/dsh-recover-context](https://github.com/dygin/dsh-recover-context) | dsh agent context make recover or reedit | TypeScript | 5 | Apache-2.0 | 2026-10-25 |
 | [Ebony-Vinyl/dsh-augment](https://github.com/Ebony-Vinyl/dsh-augment) | Token-saving context compression + evidence-backed self-evolution for DeepSeek Harness. | JavaScript | 5 | MIT | 2026-11-20 |
 | [fakechris/dsh-track](https://github.com/fakechris/dsh-track) | DSH Track Bridge 插件：嵌入式任务管理引擎——决策点协议、念头捕获墙、Linear 形 issue 存储（bundle），AI 与人之间的任务轨道 | HTML | 5 | BSD-3-Clause | 2026-11-12 |
@@ -667,6 +668,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（A–F）」分册 / 
 | [chunqing286/dsh-guard-degen](https://github.com/chunqing286/dsh-guard-degen) | Degeneration guard for DeepSeek Harness: contains runaway symbol streams at the model boundary and repairs polluted artifacts and sessions. 退化守卫：拦截模型输出退化符号流，修复被污染的工件与会话。 | JavaScript | 0 | MIT | 2026-10-31 |
 | [chuxindd/dsh-context-enhancement](https://github.com/chuxindd/dsh-context-enhancement) | 适用于 DeepSeek Harness 的单会话上下文增强工具，力求化解会话在触发 /compact 上下文压缩后损失信息过多，导致前后表现“判若两人”的技术困境。 | TypeScript | 0 | MIT | 2026-09-20 |
 | [ciceroyang/dsh-prompt-library](https://github.com/ciceroyang/dsh-prompt-library) | DeepSeek Harness 常用指令库：一份写好中文提示词的清单，搜一下、点一下就能填进输入框，给不熟悉怎么写提示词的人用。 | JavaScript | 0 | MIT | 2026-09-17 |
+| [cinderzhan/dsh-plugin-dew](https://github.com/cinderzhan/dsh-plugin-dew) | See what your other coding agents are doing from inside DSH: Claude Code, Codex, Cursor and DSH sessions, their state, and their scheduled tasks. | JavaScript | 0 | MIT | 2026-08-26 |
 | [Cindy-ponoiyvhj/dsh-search-first](https://github.com/Cindy-ponoiyvhj/dsh-search-first) | Makes DSH agents look for existing work before they build. | JavaScript | 0 | MIT | 2026-11-05 |
 | [citydirector/dsh-loop-rescue](https://github.com/citydirector/dsh-loop-rescue) | DSH plugin that cuts model repetition loops mid-stream, prunes them from the session log, and resumes automatically. | JavaScript | 0 | MIT | 2026-11-01 |
 | [CleverYyt/dsh-session-categories](https://github.com/CleverYyt/dsh-session-categories) | DSH Web plugin: group sessions into categories, start a session inside one, and get AI category &amp; title suggestions after each turn. | JavaScript | 0 | MIT | 2026-11-11 |
@@ -786,6 +788,7 @@ DSH 插件全量目录的「Agent、自动化与工作流（A–F）」分册 / 
 | [EricZhouziRui/dsh-session-purge](https://github.com/EricZhouziRui/dsh-session-purge) | DSH 插件：彻底删除会话并清理转录目录、投影缓存、spill、工作区记账；支持空白会话批量删除、自动收尾和应用内更新。 | JavaScript | 0 | MIT | 2026-11-07 |
 | [erlingmijiang/dsh-lorebooklike-prompt-tool](https://github.com/erlingmijiang/dsh-lorebooklike-prompt-tool) | dsh插件，模仿酒馆世界书设计的分层提示词注入。DSH 的声明式提示词注入层：分层锚点、蓝绿灯、可复现概率、三面正则替换。类酒馆世界书，但不是角色扮演前端，而是提示词工程工具。 | JavaScript | 0 | MIT | 2026-10-19 |
 | [Ernesto-yuan/dsh-theme-switcher](https://github.com/Ernesto-yuan/dsh-theme-switcher) | Personalization for DeepSeek Harness: 20 light/dark palettes including macaron gradients and a rainbow, eight emoji backgrounds plus a custom image, frosted glass, and a pinned sidebar page. | JavaScript | 0 | MIT | 2026-11-18 |
+| [Ersith/akasha-book-v2](https://github.com/Ersith/akasha-book-v2) | Akasha - auditable external-brain memory toolkit for LLM agents. Clean history; no personal memory snapshot. | JavaScript | 0 | MIT | 2026-10-26 |
 | [esketids/dsh-forget-session-en](https://github.com/esketids/dsh-forget-session-en) | English fork of dsh-forget-session — a two-step Forget session action for DeepSeek Harness | JavaScript | 0 | MIT | 2026-10-22 |
 | [EtbyStudio/dsh-commands](https://github.com/EtbyStudio/dsh-commands) | File-based slash commands for DeepSeek Harness — auto-discovered from Markdown files, with hot reload | TypeScript | 0 | MIT | 2026-09-30 |
 | [evanfang0054/dsh-init](https://github.com/evanfang0054/dsh-init) | Claude Code style /init command for DeepSeek Harness (DSH): generates CLAUDE.md and symlinks AGENTS.md to it | JavaScript | 0 | MIT | 2026-09-01 |
