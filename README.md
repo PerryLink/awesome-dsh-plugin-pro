@@ -360,7 +360,6 @@ mindmap
 插件作者按 [CONTRIBUTING](./CONTRIBUTING.md#作者自荐--self-promotion) 规范自行提交的推荐位：**不经编辑部审核，也不代表质量或安全背书**，安装前请自行评估（见下方「使用与安全」）。本区最多保留 30 条，区满后先进先出；条目若被上方[精选推荐](#-精选推荐)收录，会从本区移除、不占名额。首页只展示**最近 10 条**，完整列表见 [SHOWCASE.md](./SHOWCASE.md)。
 
 <!-- dsh:showcase:start -->
-- **[dsh-config-manager](https://github.com/xiajiajun516/dsh-config-manager)**（[@xiajiajun516](https://github.com/xiajiajun516) · 2026-09-27）— DeepSeek Harness（DSH）配置的备份、恢复、导出、导入、迁移与同步：覆盖设置 / Provider / 插件 / MCP / 技能 / Agent 预设 / 工作区；写盘前先 dry-run 预览、冲突逐项决策、失败自动回滚，跨机自动重映射绝对路径；勾选「导出密钥」后凭据随加密快照迁移（scrypt + AES-256-GCM），另内置配置市场可一键安装共享配置。
 - **[dsh-backup](https://github.com/xiaoyuyu6420/dsh-backup)**（[@xiaoyuyu6420](https://github.com/xiaoyuyu6420) · 2026-09-30）— 一条命令备份与恢复整个 `~/.dsh`（会话、设置、技能、MCP、凭据）：重启后继续跑的定时自动备份与分级保留、升级前自动快照、会话日志体检与定点修复、升级迁移预检、宿主起不来时也能用的进程外救援通道；凭据归档前默认脱敏、明文只落本机 vault，支持私有仓库 GitHub 同步做跨机迁移。适合把 DSH 当主力工具、不想被升级或换机弄丢数据的用户；npm 包名 `@xiaoyuyu6420/dsh-backup`。
 - **[dsh-cost-meter](https://github.com/Han-1413141/dsh-cost-meter)**（[@Han-1413141](https://github.com/Han-1413141) · 2026-10-02）— 在 DSH 中查看会话和模型费用、Token 用量、预算、服务商余额及 Coding Plan 额度，支持中英文界面。
 - **[dsh-piggy](https://github.com/CLICGGER-TYPES/dsh-piggy)**（[@CLICGGER-TYPES](https://github.com/CLICGGER-TYPES) · 2026-10-03）— 在 DSH Web 里养一只随真实工作成长的猪：照顾、学习、打工、钓鱼、图鉴和换肤；不注册模型工具，也不向对话注入宠物状态。npm 包 `dsh-piggy`，另有独立桌面版。
@@ -370,6 +369,7 @@ mindmap
 - **[AgentCompare](https://github.com/lijiaqi-AI-Product-Manager/dsh-agent-compare)**（[@lijiaqi-AI-Product-Manager](https://github.com/lijiaqi-AI-Product-Manager) · 2026-11-04）— 鲸挑细选 AgentCompare：在 DSH Desktop/Web 主对话中比较 2–4 版回答、文件或网页；中英双语，同步主对话上下文，保留选择理由并审查采用。 [界面与演示](https://github.com/lijiaqi-AI-Product-Manager/dsh-agent-compare/blob/v3.3.0/docs/storefront-gallery.md)
 - **[BloomTutor](https://github.com/Li-Evan/BloomTutor)**（[@Li-Evan](https://github.com/Li-Evan) · 2026-11-16）— 一对一 AI 导师 Skill 包：bloom-tutor 先写学习大纲，再在工作区每次写一篇 Markdown 课文，下一篇按你标的 ??? 和反馈来调整；另带六个 learn-* 学习方法 Skill。
 - **[dsh-isolation-gate](https://github.com/huanlin-labs/dsh-isolation-gate)**（[@huanlin-labs](https://github.com/huanlin-labs) · 2026-11-19）— 给 DSH 加一层目录门禁：把盘符和目录按「禁 / 只读 / 可读写删」分级，AI 每次读取、写入或删除前先过闸，越权操作直接被拒，每个决定都留审计日志。
+- **[dsh-xiaomi-tts](https://github.com/ppy-web/dsh-plugin-xiaomi-mimo-tts)**（[@ppy-web](https://github.com/ppy-web) · 2026-11-20）— 音色工坊：为 DSH 添加小米 MiMo、豆包 Seed、BreezeBlue、DeepSeek 与浏览器语音，支持接入外部供应商与本地语音模型；提供文本过滤、实时流式朗读、音频历史试听与下载、可选 UI 音效及宿主事件播报，并开放客户端、宿主、Agent 与 HTTP 联动接口，已对接桌宠、QQ Bot、AI Passport 与小说听书。npm 包：`dsh-xiaomi-tts`。
 <!-- dsh:showcase:end -->
 
 [查看全部 30 条自荐 →](./SHOWCASE.md)
