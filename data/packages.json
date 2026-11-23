@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-22",
+  "updated_at": "2026-11-23",
   "entries": {
     "00080000/dsh-project-memory": {
       "packages": [
@@ -51668,19 +51668,6 @@
       "verified_date": "2026-11-21",
       "verified_via": "README@main"
     },
-    "margbug01/dsh-ma-plugins": {
-      "packages": [
-        {
-          "profile": "web",
-          "install": "https://github.com/margbug01/dsh-ma-plugins#path:dsh-web-search-tavily",
-          "source": "github:margbug01/dsh-ma-plugins#path:dsh-web-search-tavily",
-          "command": "dsh plugin --profile web add github:margbug01/dsh-ma-plugins#path:dsh-web-search-tavily"
-        }
-      ],
-      "status": "readme-verified",
-      "verified_date": "2026-11-21",
-      "verified_via": "README@main"
-    },
     "lisniuse/dsh-modal-enhancer": {
       "packages": [
         {
@@ -87425,19 +87412,6 @@
       "verified_date": "2026-11-21",
       "verified_via": "README@master"
     },
-    "tangweiwei227/dsh-asc": {
-      "packages": [
-        {
-          "profile": "web",
-          "install": "https://github.com/Tangweiwei227/dsh-asc",
-          "source": "github:Tangweiwei227/dsh-asc",
-          "command": "dsh plugin --profile web add github:Tangweiwei227/dsh-asc"
-        }
-      ],
-      "status": "readme-verified",
-      "verified_date": "2026-11-21",
-      "verified_via": "README@main"
-    },
     "supersyh-sss/dsh-voice-assistant": {
       "packages": [
         {
@@ -89127,19 +89101,6 @@
           "install": "https://github.com/782042369/dsh-model-compat-guard",
           "source": "github:782042369/dsh-model-compat-guard",
           "command": "dsh plugin --profile web add github:782042369/dsh-model-compat-guard"
-        }
-      ],
-      "status": "readme-verified",
-      "verified_date": "2026-11-21",
-      "verified_via": "README@main"
-    },
-    "tangweiwei227/dsh-mediaops": {
-      "packages": [
-        {
-          "profile": "desktop",
-          "install": "https://github.com/Tangweiwei227/DSH-MediaOps",
-          "source": "github:Tangweiwei227/DSH-MediaOps",
-          "command": "dsh plugin --profile desktop add github:Tangweiwei227/DSH-MediaOps"
         }
       ],
       "status": "readme-verified",
@@ -104268,19 +104229,6 @@
           "install": "https://github.com/TestFox000/dsh-deepseek-peak-whale",
           "source": "github:TestFox000/dsh-deepseek-peak-whale",
           "command": "dsh plugin --profile web add github:TestFox000/dsh-deepseek-peak-whale"
-        }
-      ],
-      "status": "readme-verified",
-      "verified_date": "2026-11-21",
-      "verified_via": "README@main"
-    },
-    "xiex16070-jpg/dsh-prompt-enhance": {
-      "packages": [
-        {
-          "profile": "desktop",
-          "install": "https://github.com/xiex16070-jpg/dsh-prompt-enhance",
-          "source": "github:xiex16070-jpg/dsh-prompt-enhance",
-          "command": "dsh plugin --profile desktop add github:xiex16070-jpg/dsh-prompt-enhance"
         }
       ],
       "status": "readme-verified",
@@ -144053,19 +144001,6 @@
           "install": "https://github.com/wulusai2333/dsh-chat-demo",
           "source": "github:wulusai2333/dsh-chat-demo",
           "command": "dsh plugin --profile web add github:wulusai2333/dsh-chat-demo"
-        }
-      ],
-      "status": "readme-verified",
-      "verified_date": "2026-11-21",
-      "verified_via": "README@main"
-    },
-    "nullcolorcat/dsh-agent-team-fix": {
-      "packages": [
-        {
-          "profile": "web",
-          "install": "https://github.com/NULLCOLORcat/dsh-Agent-team-fix",
-          "source": "github:NULLCOLORcat/dsh-Agent-team-fix",
-          "command": "dsh plugin --profile web add github:NULLCOLORcat/dsh-Agent-team-fix"
         }
       ],
       "status": "readme-verified",
@@ -216586,15 +216521,6 @@
       "install_mode": "manual",
       "manual_instructions": "README 文档化 npm 名 @ruirui0701/dsh-skin-bubu，registry 404（corpus sweep 2026-11-21 核验）；发布后可恢复 npm 映射。"
     },
-    "xiaoxiaolelang-ai/dsh-next-steps": {
-      "packages": [],
-      "status": "readme-verified",
-      "verified_date": "2026-11-21",
-      "verified_via": "review",
-      "verified_by": "review",
-      "install_mode": "manual",
-      "manual_instructions": "README 文档化 npm 名 dsh-next-steps，registry 404（corpus sweep 2026-11-21 核验）；发布后可恢复 npm 映射。"
-    },
     "iamwaller/dsh-usage-spend": {
       "packages": [],
       "status": "readme-verified",
@@ -236602,20 +236528,6 @@
       "verified_via": "review",
       "verified_by": "review"
     },
-    "bvbhu/dsh-as-one": {
-      "packages": [
-        {
-          "profile": "default",
-          "install": "https://github.com/bvbhu/dsh-as-one",
-          "source": "github:bvbhu/dsh-as-one",
-          "command": "dsh plugin --profile default add github:bvbhu/dsh-as-one"
-        }
-      ],
-      "status": "readme-verified",
-      "verified_date": "2026-11-21",
-      "verified_via": "review",
-      "verified_by": "review"
-    },
     "elfgzp/dsh-llm-minimax": {
       "packages": [
         {
@@ -241124,20 +241036,6 @@
       "verified_via": "review",
       "verified_by": "review"
     },
-    "zbh13782-lang/dsh-ask-reader": {
-      "packages": [
-        {
-          "profile": "default",
-          "install": "https://github.com/zbh13782-lang/dsh-ask-reader",
-          "source": "github:zbh13782-lang/dsh-ask-reader",
-          "command": "dsh plugin --profile default add github:zbh13782-lang/dsh-ask-reader"
-        }
-      ],
-      "status": "readme-verified",
-      "verified_date": "2026-11-21",
-      "verified_via": "review",
-      "verified_by": "review"
-    },
     "overtowind/dsh-grouped-sessions": {
       "packages": [
         {
@@ -242007,6 +241905,77 @@
       "status": "readme-verified",
       "verified_date": "2026-11-22",
       "verified_via": "README + Git commit"
+    },
+    "bb-84c/deepseek-harness-mobile-solution": {
+      "packages": [],
+      "status": "readme-verified",
+      "verified_date": "2026-11-23",
+      "verified_via": "review",
+      "verified_by": "review",
+      "install_mode": "manual",
+      "manual_instructions": "Remote/mobile companion, monorepo of two DSH plugins. README documents: `dsh --profile mobile install` (one-command installer) or direct adds `dsh plugin --profile mobile add @bb-84c/dsh-mobile-cli` + `dsh plugin --profile web add @bb-84c/dsh-mobile-server` — but both npm packages are not yet on the registry (404 as of 2026-11-23), so the commands cannot be paste-verified; revisit once published."
+    },
+    "tangwei227/dsh-asc": {
+      "packages": [
+        {
+          "profile": "web",
+          "install": "https://github.com/Tangwei227/dsh-asc",
+          "source": "github:Tangwei227/dsh-asc",
+          "command": "dsh plugin --profile web add github:Tangwei227/dsh-asc"
+        }
+      ],
+      "status": "readme-verified",
+      "verified_date": "2026-11-21",
+      "verified_via": "README@main"
+    },
+    "tangwei227/dsh-mediaops": {
+      "packages": [
+        {
+          "profile": "desktop",
+          "install": "https://github.com/Tangwei227/DSH-MediaOps",
+          "source": "github:Tangwei227/DSH-MediaOps",
+          "command": "dsh plugin --profile desktop add github:Tangwei227/DSH-MediaOps"
+        }
+      ],
+      "status": "readme-verified",
+      "verified_date": "2026-11-21",
+      "verified_via": "README@main"
+    },
+    "nullcolorcat/dsh-smarter-subagent-level": {
+      "packages": [
+        {
+          "profile": "web",
+          "install": "https://github.com/NULLCOLORcat/dsh-Smarter-Subagent-level",
+          "source": "github:NULLCOLORcat/dsh-Smarter-Subagent-level",
+          "command": "dsh plugin --profile web add github:NULLCOLORcat/dsh-Smarter-Subagent-level"
+        }
+      ],
+      "status": "readme-verified",
+      "verified_date": "2026-11-21",
+      "verified_via": "README@main"
+    },
+    "xiaoxiaolelang-ai/dsh-next-move": {
+      "packages": [],
+      "status": "readme-verified",
+      "verified_date": "2026-11-21",
+      "verified_via": "review",
+      "verified_by": "review",
+      "install_mode": "manual",
+      "manual_instructions": "README 文档化 npm 名 dsh-next-move，registry 404（corpus sweep 2026-11-21; repo renamed dsh-next-steps → dsh-next-move 2026-11-23, npm name per README@main 核验）；发布后可恢复 npm 映射。"
+    },
+    "zbh13782-lang/dsh-pin-bookmarks": {
+      "packages": [
+        {
+          "profile": "default",
+          "install": "https://github.com/zbh13782-lang/dsh-pin-bookmarks",
+          "source": "github:zbh13782-lang/dsh-pin-bookmarks",
+          "command": "dsh plugin --profile default add github:zbh13782-lang/dsh-pin-bookmarks"
+        }
+      ],
+      "status": "readme-verified",
+      "verified_date": "2026-11-21",
+      "verified_via": "review",
+      "verified_by": "review"
     }
   }
 }
