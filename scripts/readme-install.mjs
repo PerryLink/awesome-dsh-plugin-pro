@@ -52,12 +52,28 @@ export function cleanSegment(raw) {
 export function commandsFrom(text) {
   const segments = [];
   let fence = null;
-  for (const raw of String(text).split(/\r?\n/)) {
-    const marker = /^\s*(`{3,}|~{3,})/.exec(raw)?.[1];
+  let pending = '';
+  for (const rawLine of String(text).split(/\r?\n/)) {
+    const marker = /^\s*(`{3,}|~{3,})/.exec(rawLine)?.[1];
     if (marker) {
       if (fence === null) fence = marker;
-      else if (marker[0] === fence[0] && marker.length >= fence.length) fence = null;
+      else if (marker[0] === fence[0] && marker.length >= fence.length) {
+        fence = null;
+        pending = '';
+      }
       continue;
+    }
+    let raw = rawLine;
+    if (fence !== null) {
+      if (pending) raw = `${pending} ${rawLine.trimStart()}`;
+      // Join POSIX shell line continuations (`command \`) inside fenced code
+      // blocks so multi-line `dsh plugin … add \` invocations stay whole.
+      // Requiring leading whitespace before `\` avoids misfiring on Windows paths.
+      if (/(?:^|\s)\\\s*$/.test(raw)) {
+        pending = raw.replace(/\\\s*$/, '').trimEnd();
+        continue;
+      }
+      pending = '';
     }
     const inlineCommands = [...raw.matchAll(/`([^`]+)`/g)]
       .map((m) => cleanSegment(m[1])).filter((line) => /\bdsh\s+plugin\b/.test(line));

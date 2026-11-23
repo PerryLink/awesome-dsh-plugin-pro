@@ -31,5 +31,5 @@ jobs:
           node-version: 22
       - name: Re-verify every mapped entry against its upstream README
         run: node scripts/reverify-packages.mjs
-      - name: Run the extractor unit tests
-        run: node --test scripts/test-readme-install.mjs
+      - name: Run the extractor and reverify unit tests
+        run: node --test scripts/test-readme-install.mjs scripts/test-reverify-packages.mjs

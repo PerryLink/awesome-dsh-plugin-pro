@@ -7,18 +7,22 @@
 // rewritten. This offline pass is what keeps it honest:
 //
 //   - envelope and entry schema (statuses, dates, install modes)
-//   - keys are lowercase owner/repo slugs that exist in the current snapshot
-//     (a renamed or deleted repo must have its key fixed, like pending.md
-//     rename handling)
-//   - keys never point at excluded_repos entries
+//   - keys are lowercase owner/repo slugs; entries missing from the current
+//     snapshot hard-fail when they are not in data/approved.json (typos or
+//     orphans left behind after review), or under --strict-snapshot, and warn
+//     while they remain in data/approved.json awaiting the daily review window
+//     (so daily snapshot refreshes do not break downstream market/feed runs
+//     before the maintainer processes pending.md)
+//   - keys never point at excluded_repos entries (checked for both command and
+//     manual install modes)
 //   - each package's command actually contains its declared source (the
 //     coherence of the "copy this" line users will paste)
 //
-// Warnings cover soft mismatches (not yet approved, catalog-only repos,
-// github sources outside the snapshot). A later CI stage can add upstream
-// re-verification — fetch each repo's README and confirm the documented
-// command still matches what we recorded; this pass deliberately stays
-// offline and dependency-free.
+// Warnings cover soft mismatches (snapshot-absent approved entries awaiting
+// review, market-excluded repos, github sources outside the snapshot). A later
+// CI stage adds upstream re-verification — fetch each repo's README and confirm
+// the documented command still matches what we recorded; this pass deliberately
+// stays offline and dependency-free.
 
 import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
@@ -26,17 +30,20 @@ import { fileURLToPath } from 'node:url';
 import { installRef, isPasteSafeCommand } from './readme-install.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const strictSnapshot = process.argv.includes('--strict-snapshot');
 const errors = [];
 const warnings = [];
 
-const [rawPackages, curatedRaw, snapshotRaw] = await Promise.all([
+const [rawPackages, curatedRaw, snapshotRaw, approvedRaw] = await Promise.all([
   readFile(resolve(root, 'data/packages.json'), 'utf8'),
   readFile(resolve(root, 'data/curated.json'), 'utf8'),
   readFile(resolve(root, 'data/repositories.json'), 'utf8'),
+  readFile(resolve(root, 'data/approved.json'), 'utf8'),
 ]);
 
 const curated = JSON.parse(curatedRaw);
 const snapshot = JSON.parse(snapshotRaw);
+const approved = JSON.parse(approvedRaw);
 
 let packages;
 try {
@@ -53,6 +60,9 @@ const STATUSES = new Set(['readme-verified', 'install-verified', 'repo-fallback'
 
 const snapshotNames = new Set(
   (snapshot.repositories || []).map((repo) => String(repo.full_name).toLowerCase()),
+);
+const approvedNames = new Set(
+  Object.keys(approved || {}).map((key) => key.toLowerCase()),
 );
 const excludedNames = new Set(
   Object.keys(curated.excluded_repos || {}).map((key) => key.toLowerCase()),
@@ -129,66 +139,69 @@ for (const [slug, entry] of Object.entries(entries)) {
     if ((entry.packages ?? []).length > 0) {
       errors.push(`${slug}: install_mode "manual" must not declare packages`);
     }
-    continue;
-  }
-
-  const pkgs = entry.packages;
-  if (!Array.isArray(pkgs) || pkgs.length === 0) {
-    errors.push(`${slug}: command install needs a non-empty packages array`);
-    continue;
-  }
-  for (const [index, pkg] of pkgs.entries()) {
-    const where = `${slug} packages[${index}]`;
-    packageCount += 1;
-    if (typeof pkg.command !== 'string' || !pkg.command.includes('plugin')) {
-      errors.push(`${where}: command must be a dsh plugin install command`);
-    } else if (/[<>]/.test(pkg.command)) {
-      errors.push(`${where}: command contains placeholder syntax (<…>) — quote it via install_mode "manual" instead of publishing it as copyable`);
-    } else if (!isPasteSafeCommand(pkg.command)) {
-      errors.push(`${where}: command contains shell syntax outside the paste-safe whitelist (; | $ \` ( ) \\ …, or an unterminated quote) — record one plain \`dsh plugin … add\` invocation`);
-    }
-    if (typeof pkg.profile !== 'string' || !pkg.profile.trim()) {
-      errors.push(`${where}: profile must be a non-empty string`);
-    }
-    const source = typeof pkg.source === 'string' ? pkg.source : '';
-    const match = SOURCE_KIND.exec(source);
-    if (!match) {
-      errors.push(`${where}: source must look like npm:… / github:… / url:… / link:…`);
-      continue;
-    }
-    const [, kind, payload] = match;
-    // The command users copy must carry the exact thing it installs — the
-    // npm name, the github slug, or the URL. link: sources are local paths,
-    // so there is nothing stable to cross-check.
-    if (kind !== 'link' && typeof pkg.command === 'string' && !pkg.command.includes(payload)) {
-      errors.push(`${where}: command does not contain its ${kind}: source (${payload})`);
-    }
-    // install is the string the official "添加插件" box recognizes: the npm
-    // package name (version included) or the Git repository URL — derived
-    // from source via the shared installRef rule.
-    const expectedInstall = installRef(source);
-    if (pkg.install === undefined) {
-      errors.push(`${where}: install is required — the paste-ready install name (expected "${expectedInstall}")`);
-    } else if (pkg.install !== expectedInstall) {
-      errors.push(`${where}: install must be "${expectedInstall}", got ${JSON.stringify(pkg.install)}`);
-    } else if (kind === 'github') {
-      // The box takes the repo URL while the command keeps the CLI ref
-      // (github:owner/repo[#ref]) — both must at least agree on the slug.
-      if (!pkg.command.includes(payload.split('#')[0])) {
-        errors.push(`${where}: command does not reference the repo of its source (${payload})`);
+  } else {
+    const pkgs = entry.packages;
+    if (!Array.isArray(pkgs) || pkgs.length === 0) {
+      errors.push(`${slug}: command install needs a non-empty packages array`);
+    } else {
+      for (const [index, pkg] of pkgs.entries()) {
+        const where = `${slug} packages[${index}]`;
+        packageCount += 1;
+        if (typeof pkg.command !== 'string' || !pkg.command.includes('plugin')) {
+          errors.push(`${where}: command must be a dsh plugin install command`);
+        } else if (/[<>]/.test(pkg.command)) {
+          errors.push(`${where}: command contains placeholder syntax (<…>) — quote it via install_mode "manual" instead of publishing it as copyable`);
+        } else if (!isPasteSafeCommand(pkg.command)) {
+          errors.push(`${where}: command contains shell syntax outside the paste-safe whitelist (; | $ \` ( ) \\ …, or an unterminated quote) — record one plain \`dsh plugin … add\` invocation`);
+        }
+        if (typeof pkg.profile !== 'string' || !pkg.profile.trim()) {
+          errors.push(`${where}: profile must be a non-empty string`);
+        }
+        const source = typeof pkg.source === 'string' ? pkg.source : '';
+        const match = SOURCE_KIND.exec(source);
+        if (!match) {
+          errors.push(`${where}: source must look like npm:… / github:… / url:… / link:…`);
+          continue;
+        }
+        const [, kind, payload] = match;
+        // The command users copy must carry the exact thing it installs — the
+        // npm name, the github slug, or the URL. link: sources are local paths,
+        // so there is nothing stable to cross-check.
+        if (kind !== 'link' && typeof pkg.command === 'string' && !pkg.command.includes(payload)) {
+          errors.push(`${where}: command does not contain its ${kind}: source (${payload})`);
+        }
+        // install is the string the official "添加插件" box recognizes: the npm
+        // package name (version included) or the Git repository URL — derived
+        // from source via the shared installRef rule.
+        const expectedInstall = installRef(source);
+        if (pkg.install === undefined) {
+          errors.push(`${where}: install is required — the paste-ready install name (expected "${expectedInstall}")`);
+        } else if (pkg.install !== expectedInstall) {
+          errors.push(`${where}: install must be "${expectedInstall}", got ${JSON.stringify(pkg.install)}`);
+        } else if (kind === 'github') {
+          // The box takes the repo URL while the command keeps the CLI ref
+          // (github:owner/repo[#ref]) — both must at least agree on the slug.
+          if (!pkg.command.includes(payload.split('#')[0])) {
+            errors.push(`${where}: command does not reference the repo of its source (${payload})`);
+          }
+        }
+        // github:owner/repo#ref — the ref suffix is not part of the slug.
+        if (kind === 'github' && !snapshotNames.has(payload.split('#')[0].toLowerCase())) {
+          warnings.push(`${where}: github source ${payload} is not in the snapshot (cross-org / renamed source?)`);
+        }
       }
     }
-    // github:owner/repo#ref — the ref suffix is not part of the slug.
-    if (kind === 'github' && !snapshotNames.has(payload.split('#')[0].toLowerCase())) {
-      warnings.push(`${where}: github source ${payload} is not in the snapshot (cross-org / renamed source?)`);
-    }
   }
 
-  if (!snapshotNames.has(slug)) {
-    errors.push(`${slug}: not in the current snapshot — renamed or deleted repo, fix the key`);
-  }
   if (excludedNames.has(slug)) {
     errors.push(`${slug}: excluded_repos entry must not carry a packages mapping`);
+  }
+  if (!snapshotNames.has(slug)) {
+    if (!approvedNames.has(slug) || strictSnapshot) {
+      errors.push(`${slug}: not in the current snapshot — renamed or deleted repo, fix the key`);
+    } else {
+      warnings.push(`${slug}: not in the current snapshot (still in approved.json — awaiting daily review cleanup/migration)`);
+    }
   }
   if (marketExcludedNames.has(slug)) {
     warnings.push(`${slug}: market-excluded repo — recorded, but it will not appear in the market catalog`);

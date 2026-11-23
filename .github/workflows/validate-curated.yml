@@ -61,9 +61,11 @@ jobs:
           scripts/test-mapping-gate.mjs
           scripts/test-publish-npm-feed.mjs
           scripts/test-readme-install.mjs
+          scripts/test-reverify-packages.mjs
           scripts/test-rename-sync.mjs
           scripts/test-render.mjs
           scripts/test-star-anomaly.mjs
+          scripts/test-validate-packages.mjs
       - name: Test the DSH subscription generator
         run: |
           npm ci --ignore-scripts --prefix scripts/host-market

@@ -282,3 +282,37 @@ test('isSelfTarget matches whole names, never substrings', () => {
   assert.equal(isSelfTarget(t('@scope/dsh-foo@1.0.0'), 'acme', 'dsh-foo'), true);
   assert.equal(isSelfTarget(t('dsh-foo-extra'), 'acme', 'dsh-foo'), false);
 });
+
+test('commandsFrom joins POSIX backslash line continuations inside fenced code blocks', () => {
+  const githubCont = [
+    '```bash',
+    'dsh plugin --profile web add \\',
+    '  github:shuaweng/DSH_xieshujing#v0.1.3-alpha.1',
+    '```',
+  ].join('\n');
+  const gh = extractInstallTargets(githubCont, { owner: 'shuaweng', repo: 'dsh_xieshujing' });
+  assert.equal(gh.picks.length, 1);
+  assert.equal(gh.picks[0].source, 'github:shuaweng/DSH_xieshujing#v0.1.3-alpha.1');
+  assert.equal(gh.picks[0].command, 'dsh plugin --profile web add github:shuaweng/DSH_xieshujing#v0.1.3-alpha.1');
+
+  const urlCont = [
+    '```sh',
+    'dsh plugin --profile web add \\',
+    '  https://github.com/fatmo666/Caushell/releases/latest/download/caushell-dsh-bash.tgz',
+    '```',
+  ].join('\n');
+  const url = extractInstallTargets(urlCont, { owner: 'fatmo666', repo: 'caushell' });
+  assert.equal(url.picks.length, 1);
+  assert.equal(url.picks[0].source, 'url:https://github.com/fatmo666/Caushell/releases/latest/download/caushell-dsh-bash.tgz');
+
+  // Windows trailing backslash without leading whitespace is not a POSIX continuation.
+  const winPath = [
+    '```powershell',
+    'dsh plugin --profile web add D:\\plugins\\local\\',
+    'dsh plugin --profile web add dsh-demo',
+    '```',
+  ].join('\n');
+  const win = extractInstallTargets(winPath, { owner: 'o', repo: 'dsh-demo' });
+  assert.equal(win.picks.length, 1);
+  assert.equal(win.picks[0].source, 'npm:dsh-demo');
+});

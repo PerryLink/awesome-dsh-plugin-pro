@@ -33,50 +33,36 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const README_NAMES = ['README.md', 'readme.md', 'README.zh-CN.md', 'README_zh.md', 'README_CN.md', 'README.zh.md', 'README-EN.md', 'README_EN.md'];
 const CONCURRENCY = 10;
 
-const [packages, snapshot] = await Promise.all([
-  readFile(resolve(root, 'data/packages.json'), 'utf8').then(JSON.parse),
-  readFile(resolve(root, 'data/repositories.json'), 'utf8').then(JSON.parse),
-]);
+// Repositories whose DSH plugin install documentation lives in a subdirectory
+// README rather than the repository root (monorepos / multi-host projects).
+// Checking the documented subpage first keeps them genuinely re-verified every
+// week instead of silently exempting them.
+export const SUBPAGE_READMES = {
+  'tiwe0/geochat': ['plugins/deepseek-harness/README.md'],
+  'chenamel/deterministic-pixel-art': ['integrations/dsh/README.md'],
+};
 
-const branchBySlug = new Map(
-  (snapshot.repositories || []).map((repo) => [String(repo.full_name).toLowerCase(), repo.default_branch]),
-);
-
-const readmeCache = new Map();
-async function fetchReadme(slug) {
-  if (readmeCache.has(slug)) return readmeCache.get(slug);
-  const branch = branchBySlug.get(slug) ?? 'main';
-  const attempt = async () => {
-    for (const name of README_NAMES) {
-      try {
-        const res = await fetch(`https://raw.githubusercontent.com/${slug}/${branch}/${name}`, {
-          signal: AbortSignal.timeout(20000),
-          headers: { 'User-Agent': 'awesome-dsh-plugin-pro packages-reverify' },
-        });
-        if (!res.ok) continue;
-        const text = await res.text();
-        if (text.length >= 40) return text;
-      } catch {}
-    }
-    return null;
-  };
-  const result = (await attempt()) ?? (await attempt()); // one retry across the name list
-  readmeCache.set(slug, result);
-  return result;
-}
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const retryAfterMs = (res) => {
+  const raw = res.headers?.get?.('retry-after')?.trim();
+  if (!raw) return 2000;
+  const sec = Number(raw);
+  if (Number.isFinite(sec)) return Math.min(Math.max(sec * 1000, 1000), 10000);
+  const until = Date.parse(raw);
+  if (Number.isFinite(until)) return Math.min(Math.max(until - Date.now(), 1000), 10000);
+  return 2000;
+};
 
 // A recorded source counts as still-documented when the extractor picks it,
 // OR its package token appears anywhere after an `add` in an install line
 // (covers multi-package single-line installs and suites beyond the pick cap).
-const normalKey = (source) => (source.startsWith('npm:') ? `npm:${npmBase(source.slice(4))}` : source);
+export const normalKey = (source) => (source.startsWith('npm:') ? `npm:${npmBase(source.slice(4))}` : source);
 
-async function reverifyEntry(slug, record) {
+// Pure README verification for one command-mode mapping record. Separated from
+// network I/O so every drift / equivalence rule is directly unit-testable.
+export function verifyReadmeText(slug, record, text) {
   const problems = [];
   const notes = [];
-  const text = await fetchReadme(slug);
-  if (text === null) {
-    return { problems, notes: [...notes, `README unreachable (${branchBySlug.get(slug) ?? 'main'} branch)`] };
-  }
   if ((record.install_mode ?? 'command') === 'manual') return { problems, notes };
 
   const [owner, repo] = slug.split('/');
@@ -114,9 +100,9 @@ async function reverifyEntry(slug, record) {
   // tags and SHAs all normalize away; path fragments lose leading/trailing
   // slashes (`#path:/x` ≡ `#path:x`).
   const githubNorm = (s) => {
-    const [repo, ...refs] = githubBare(s).replace(/^github:/i, '').split('#');
+    const [repoPart, ...refs] = githubBare(s).replace(/^github:/i, '').split('#');
     const paths = refs.flatMap((r) => r.split('&')).filter((p) => /path/i.test(p)).map((p) => p.replace(/^path:\/*/i, 'path:').replace(/\/+$/, ''));
-    return paths.length ? repo.toLowerCase() + '#' + paths.join('&') : repo.toLowerCase();
+    return paths.length ? repoPart.toLowerCase() + '#' + paths.join('&') : repoPart.toLowerCase();
   };
   const upstreamTokens = new Set(
     found.flatMap((f) => [f.target, npmBase(f.target), githubNorm(f.target)]),
@@ -153,11 +139,27 @@ async function reverifyEntry(slug, record) {
     const inlineRe = /`([^`\n]+)`/g;
     while ((inlineM = inlineRe.exec(text))) proseTokens.add(inlineM[1]);
   }
+  const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const mentionsNeedle = (needle, tokens) => {
     if (!needle) return false;
-    const re = new RegExp(`(^|[^\\w@/.-])${needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|[^\\w-])`);
+    const re = new RegExp(`(^|[^\\w@/.-])${escapeRe(needle)}($|[^\\w-])`);
     for (const token of tokens) if (re.test(token)) return true;
     return false;
+  };
+  // Bare self-repo release equivalence (2026-11-21 bare-address policy):
+  // rapid-release repos whose README pastes a versioned self-repo Release or
+  // Archive tarball (`https://github.com/<owner>/<repo>/releases/download/…tgz`)
+  // are recorded as bare `github:<owner>/<repo>` so downstream resolves the
+  // latest release without daily drift churn. If the README stops documenting
+  // any self-repo release tarball, drift still fires.
+  const selfReleaseRe = new RegExp(
+    `https://github\\.com/${escapeRe(slug)}/(?:releases/(?:download|latest/download)|archive)/\\S+\\.(?:tgz|tar\\.gz)`,
+    'i',
+  );
+  const hasSelfReleaseUrl = () => {
+    for (const token of upstreamTokens) if (selfReleaseRe.test(token)) return true;
+    for (const token of proseTokens) if (selfReleaseRe.test(token)) return true;
+    return selfReleaseRe.test(text);
   };
 
   for (const pkg of record.packages ?? []) {
@@ -172,6 +174,10 @@ async function reverifyEntry(slug, record) {
       record.status === 'repo-fallback' &&
       pkg.source.startsWith('github:') &&
       pkg.source.slice(7).split('#')[0].toLowerCase() === slug;
+    const bareSelfRepo =
+      pkg.source.startsWith('github:') &&
+      !pkg.source.includes('#') &&
+      pkg.source.slice(7).toLowerCase() === slug;
     const manifestFallback =
       record.status === 'repo-fallback' &&
       typeof record.verified_via === 'string' &&
@@ -192,7 +198,8 @@ async function reverifyEntry(slug, record) {
       upstreamTokens.has(payload) ||
       upstreamTokens.has(npmBase(payload)) ||
       upstreamTokens.has(githubNorm(payload)) ||
-      proseDocumented;
+      proseDocumented ||
+      (bareSelfRepo && hasSelfReleaseUrl());
     if (!stillDocumented) {
       problems.push(`${slug}: recorded target ${pkg.source} is no longer documented in the upstream README — update or drop the mapping`);
       continue;
@@ -255,85 +262,161 @@ async function reverifyEntry(slug, record) {
   return { problems, notes };
 }
 
-async function summaryBlock(title, body) {
-  if (!process.env.GITHUB_STEP_SUMMARY) return;
-  await appendFile(process.env.GITHUB_STEP_SUMMARY, `### ${title}\n\n${body}\n\n`);
-}
+async function main() {
+  const [packages, snapshot] = await Promise.all([
+    readFile(resolve(root, 'data/packages.json'), 'utf8').then(JSON.parse),
+    readFile(resolve(root, 'data/repositories.json'), 'utf8').then(JSON.parse),
+  ]);
 
-// ---------------------------------------------------------------------------
-// Pass 1: every mapped entry, feed or not.
-const problems = [];
-const notes = [];
-const mappedSlugs = Object.keys(packages.entries);
-const queue = [...mappedSlugs];
-const workers = Array.from({ length: CONCURRENCY }, async () => {
-  while (queue.length) {
-    const slug = queue.shift();
-    const result = await reverifyEntry(slug, packages.entries[slug]);
-    problems.push(...result.problems);
-    notes.push(...result.notes);
-  }
-});
-await Promise.all(workers);
+  const branchBySlug = new Map(
+    (snapshot.repositories || []).map((repo) => [String(repo.full_name).toLowerCase(), repo.default_branch]),
+  );
 
-// ---------------------------------------------------------------------------
-// Pass 2: registry verification — every recorded npm target must exist. A
-// pinned semver must be a published version; a non-semver pin (@next,
-// @latest, …) must be a dist-tag. Registry/network errors are warnings, not
-// drift — they say nothing about the data.
-const registryProblems = [];
-const npmQueue = [];
-for (const [slug, record] of Object.entries(packages.entries)) {
-  for (const pkg of record.packages ?? []) {
-    if (typeof pkg.source === 'string' && pkg.source.startsWith('npm:')) npmQueue.push({ slug, spec: pkg.source.slice(4) });
+  const readmeCache = new Map();
+  async function fetchReadme(slug) {
+    if (readmeCache.has(slug)) return readmeCache.get(slug);
+    const branch = branchBySlug.get(slug) ?? 'main';
+    const candidates = [...(SUBPAGE_READMES[slug] ?? []), ...README_NAMES];
+    const fetchOne = async (name) => {
+      const url = `https://raw.githubusercontent.com/${slug}/${branch}/${name}`;
+      for (let tries = 0; tries < 2; tries++) {
+        try {
+          const res = await fetch(url, {
+            signal: AbortSignal.timeout(20000),
+            headers: { 'User-Agent': 'awesome-dsh-plugin-pro packages-reverify' },
+          });
+          if (res.status === 429 || res.status >= 500) {
+            if (tries === 0) {
+              await sleep(retryAfterMs(res));
+              continue;
+            }
+            return null;
+          }
+          if (!res.ok) return null;
+          const text = await res.text();
+          return text.length >= 40 ? text : null;
+        } catch {
+          if (tries === 0) await sleep(1000);
+        }
+      }
+      return null;
+    };
+    const attempt = async () => {
+      for (const name of candidates) {
+        const text = await fetchOne(name);
+        if (text !== null) return text;
+      }
+      return null;
+    };
+    const result = (await attempt()) ?? (await attempt()); // one retry across the name list
+    readmeCache.set(slug, result);
+    return result;
   }
-}
-const SEMVER = /^\d+\.\d+\.\d+(-[\w.-]+)?(\+[\w.-]+)?$/;
-const registryWorkers = Array.from({ length: CONCURRENCY }, async () => {
-  while (npmQueue.length) {
-    const { slug, spec } = npmQueue.shift();
-    const at = spec.lastIndexOf('@');
-    const name = at > 0 ? spec.slice(0, at) : spec;
-    const pin = at > 0 ? spec.slice(at + 1) : null;
-    const encoded = name.startsWith('@') ? `/@${encodeURIComponent(name.slice(1))}` : `/${encodeURIComponent(name)}`;
-    try {
-      const res = await fetch(`https://registry.npmjs.org${encoded}`, {
-        headers: { Accept: 'application/vnd.npm.install-v1+json' },
-        signal: AbortSignal.timeout(20000),
-      });
-      if (res.status === 404) {
-        registryProblems.push(`${slug}: npm package ${spec} does not exist on the registry — drop the target or switch the entry to manual`);
-        continue;
-      }
-      if (!res.ok) {
-        notes.push(`${slug}: registry lookup for ${spec} returned HTTP ${res.status} — retry next run`);
-        continue;
-      }
-      if (pin === null) continue;
-      const doc = await res.json();
-      const resolved = SEMVER.test(pin) ? doc.versions?.[pin] : doc['dist-tags']?.[pin];
-      if (!resolved) {
-        registryProblems.push(`${slug}: ${spec} pins a ${SEMVER.test(pin) ? 'version' : 'dist-tag'} ("${pin}") that was never published — update or drop the pin`);
-      }
-    } catch (error) {
-      notes.push(`${slug}: registry lookup for ${spec} failed (${error.message}) — retry next run`);
+
+  async function reverifyEntry(slug, record) {
+    // Skip manual-only entries BEFORE touching raw.githubusercontent.com:
+    // manual_instructions are hand-written prose with no extractable target.
+    if ((record.install_mode ?? 'command') === 'manual') return { problems: [], notes: [] };
+    const text = await fetchReadme(slug);
+    if (text === null) {
+      return { problems: [], notes: [`README unreachable (${branchBySlug.get(slug) ?? 'main'} branch)`] };
+    }
+    return verifyReadmeText(slug, record, text);
+  }
+
+  async function summaryBlock(title, body) {
+    if (!process.env.GITHUB_STEP_SUMMARY) return;
+    await appendFile(process.env.GITHUB_STEP_SUMMARY, `### ${title}\n\n${body}\n\n`);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Pass 1: every command-mode mapped entry (manual entries skipped upfront).
+  const problems = [];
+  const notes = [];
+  const mappedSlugs = Object.keys(packages.entries);
+  const commandSlugs = mappedSlugs.filter((slug) => (packages.entries[slug].install_mode ?? 'command') !== 'manual');
+  const manualSkipped = mappedSlugs.length - commandSlugs.length;
+  const queue = [...commandSlugs];
+  const workers = Array.from({ length: CONCURRENCY }, async () => {
+    while (queue.length) {
+      const slug = queue.shift();
+      const result = await reverifyEntry(slug, packages.entries[slug]);
+      problems.push(...result.problems);
+      notes.push(...result.notes);
+    }
+  });
+  await Promise.all(workers);
+
+  // ---------------------------------------------------------------------------
+  // Pass 2: registry verification — every recorded npm target must exist. A
+  // pinned semver must be a published version; a non-semver pin (@next,
+  // @latest, …) must be a dist-tag. Registry/network errors are warnings, not
+  // drift — they say nothing about the data.
+  const registryProblems = [];
+  const npmQueue = [];
+  for (const [slug, record] of Object.entries(packages.entries)) {
+    for (const pkg of record.packages ?? []) {
+      if (typeof pkg.source === 'string' && pkg.source.startsWith('npm:')) npmQueue.push({ slug, spec: pkg.source.slice(4) });
     }
   }
-});
-await Promise.all(registryWorkers);
-problems.push(...registryProblems);
+  const SEMVER = /^\d+\.\d+\.\d+(-[\w.-]+)?(\+[\w.-]+)?$/;
+  const registryWorkers = Array.from({ length: CONCURRENCY }, async () => {
+    while (npmQueue.length) {
+      const { slug, spec } = npmQueue.shift();
+      const at = spec.lastIndexOf('@');
+      const name = at > 0 ? spec.slice(0, at) : spec;
+      const pin = at > 0 ? spec.slice(at + 1) : null;
+      const encoded = name.startsWith('@') ? `/@${encodeURIComponent(name.slice(1))}` : `/${encodeURIComponent(name)}`;
+      try {
+        let res = await fetch(`https://registry.npmjs.org${encoded}`, {
+          headers: { Accept: 'application/vnd.npm.install-v1+json' },
+          signal: AbortSignal.timeout(20000),
+        });
+        if (res.status === 429 || res.status >= 500) {
+          await sleep(retryAfterMs(res));
+          res = await fetch(`https://registry.npmjs.org${encoded}`, {
+            headers: { Accept: 'application/vnd.npm.install-v1+json' },
+            signal: AbortSignal.timeout(20000),
+          });
+        }
+        if (res.status === 404) {
+          registryProblems.push(`${slug}: npm package ${spec} does not exist on the registry — drop the target or switch the entry to manual`);
+          continue;
+        }
+        if (!res.ok) {
+          notes.push(`${slug}: registry lookup for ${spec} returned HTTP ${res.status} — retry next run`);
+          continue;
+        }
+        if (pin === null) continue;
+        const doc = await res.json();
+        const resolved = SEMVER.test(pin) ? doc.versions?.[pin] : doc['dist-tags']?.[pin];
+        if (!resolved) {
+          registryProblems.push(`${slug}: ${spec} pins a ${SEMVER.test(pin) ? 'version' : 'dist-tag'} ("${pin}") that was never published — update or drop the pin`);
+        }
+      } catch (error) {
+        notes.push(`${slug}: registry lookup for ${spec} failed (${error.message}) — retry next run`);
+      }
+    }
+  });
+  await Promise.all(registryWorkers);
+  problems.push(...registryProblems);
 
-// ---------------------------------------------------------------------------
-// Report.
-console.log(`re-verified ${mappedSlugs.length} mapped entries against upstream READMEs`);
-if (problems.length) {
-  console.error(`\n${problems.length} drift problem(s):`);
-  for (const problem of problems) console.error(`  ✗ ${problem}`);
-  await summaryBlock('⚠️ Packages mapping drift', problems.map((p) => `- ${p}`).join('\n'));
-}
-if (notes.length) {
-  for (const note of notes) console.warn(`Warning: ${note}`);
-  await summaryBlock('Packages re-verification notes', notes.map((n) => `- ${n}`).join('\n'));
+  // ---------------------------------------------------------------------------
+  // Report.
+  console.log(`re-verified ${commandSlugs.length} command entries against upstream READMEs (${manualSkipped} manual skipped)`);
+  if (problems.length) {
+    console.error(`\n${problems.length} drift problem(s):`);
+    for (const problem of problems) console.error(`  ✗ ${problem}`);
+    await summaryBlock('⚠️ Packages mapping drift', problems.map((p) => `- ${p}`).join('\n'));
+  }
+  if (notes.length) {
+    for (const note of notes) console.warn(`Warning: ${note}`);
+    await summaryBlock('Packages re-verification notes', notes.map((n) => `- ${n}`).join('\n'));
+  }
+
+  if (problems.length) process.exit(1);
 }
 
-if (problems.length) process.exit(1);
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  await main();
+}
